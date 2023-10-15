@@ -21,18 +21,6 @@
         ]
       },
       {
-        "name": "Masseter",
-        "type": "MELEE",
-        "components": [
-          {
-            "part": "BLADE"
-          },
-          {
-            "part": "HANDLE"
-          }
-        ]
-      },
-      {
         "name": "Zylok",
         "type": "SECONDARY",
         "components": [
@@ -41,6 +29,18 @@
           },
           {
             "part": "RECEIVER"
+          }
+        ]
+      },
+      {
+        "name": "Masseter",
+        "type": "MELEE",
+        "components": [
+          {
+            "part": "BLADE"
+          },
+          {
+            "part": "HANDLE"
           }
         ]
       }
@@ -837,7 +837,7 @@
   },
   {
     "imgLink": "https://n9e5v4d8.ssl.hwcdn.net/uploads/4d57da42c98a161620c793727bfe1584.jpg",
-    "status": "RESURGENCE",
+    "status": "VAULT",
     "released": 20190706,
     "setName": "Wukong",
     "primeItems": [
@@ -893,7 +893,7 @@
   },
   {
     "imgLink": "https://n9e5v4d8.ssl.hwcdn.net/uploads/e119dbb56e99bca2a1c27bbff9852818.jpg",
-    "status": "RESURGENCE",
+    "status": "VAULT",
     "released": 20190402,
     "setName": "Equinox",
     "primeItems": [
@@ -1005,7 +1005,7 @@
   },
   {
     "imgLink": "https://n9e5v4d8.ssl.hwcdn.net/uploads/15f6ae2f16b9a8141591d42210fcf86e.jpeg",
-    "status": "VAULT",
+    "status": "RESURGENCE",
     "released": 20180925,
     "setName": "Chroma",
     "primeItems": [
@@ -1102,7 +1102,7 @@
   },
   {
     "imgLink": "https://n9e5v4d8.ssl.hwcdn.net/uploads/3ecd12cdc3ddfa048e8a9a702648b4f2.jpeg",
-    "status": "VAULT",
+    "status": "RESURGENCE",
     "released": 20180320,
     "setName": "Zephyr",
     "primeItems": [
