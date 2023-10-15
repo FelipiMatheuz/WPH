@@ -1,0 +1,164 @@
+[
+    {
+        "name": "Akbronco",
+        "type": "SECONDARY",
+        "components": [
+            {
+                "part": "BRONCO"
+            },
+            {
+                "part": "BRONCO"
+            },
+            {
+                "part": "LINK"
+            }
+        ]
+    },
+    {
+        "name": "Aklex",
+        "type": "SECONDARY",
+        "components": [
+            {
+                "part": "LEX"
+            },
+            {
+                "part": "LEX"
+            },
+            {
+                "part": "LINK"
+            }
+        ]
+    },
+    {
+        "name": "Akvasto",
+        "type": "SECONDARY",
+        "components": [
+            {
+                "part": "VASTO"
+            },
+            {
+                "part": "VASTO"
+            },
+            {
+                "part": "LINK"
+            }
+        ]
+    },
+    {
+        "name": "Braton",
+        "type": "PRIMARY",
+        "components": [
+            {
+                "part": "BARREL"
+            },
+            {
+                "part": "STOCK"
+            },
+            {
+                "part": "RECEIVER"
+            }
+        ]
+    },
+    {
+        "name": "Bronco",
+        "type": "SECONDARY",
+        "components": [
+            {
+                "part": "BARREL"
+            },
+            {
+                "part": "RECEIVER"
+            }
+        ]
+    },
+    {
+        "name": "Burston",
+        "type": "PRIMARY",
+        "components": [
+            {
+                "part": "BARREL"
+            },
+            {
+                "part": "STOCK"
+            },
+            {
+                "part": "RECEIVER"
+            }
+        ]
+    },
+    {
+        "name": "Fang",
+        "type": "MELEE",
+        "components": [
+            {
+                "part": "BLADE"
+            },
+            {
+                "part": "BLADE"
+            },
+            {
+                "part": "HANDLE"
+            },
+            {
+                "part": "HANDLE"
+            }
+        ]
+    },
+    {
+        "name": "Lex",
+        "type": "SECONDARY",
+        "components": [
+            {
+                "part": "BARREL"
+            },
+            {
+                "part": "RECEIVER"
+            }
+        ]
+    },
+    {
+        "name": "Orthos",
+        "type": "MELEE",
+        "components": [
+            {
+                "part": "BLADE"
+            },
+            {
+                "part": "BLADE"
+            },
+            {
+                "part": "HANDLE"
+            }
+        ]
+    },
+    {
+        "name": "Paris",
+        "type": "PRIMARY",
+        "components": [
+            {
+                "part": "ULIMB"
+            },
+            {
+                "part": "LLIMB"
+            },
+            {
+                "part": "GRIP"
+            },
+            {
+                "part": "STRING"
+            }
+        ]
+    },
+    {
+        "name": "Vasto",
+        "type": "SECONDARY",
+        "components": [
+            {
+                "part": "BARREL"
+            },
+            {
+                "part": "RECEIVER"
+            }
+        ]
+    }
+]
