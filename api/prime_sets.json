@@ -1,5 +1,64 @@
 [
   {
+    "imgLink": "https://warframe-web-assets.nyc3.cdn.digitaloceanspaces.com/uploads/thumbnails/22f9399fc8ab62f336674db143f2de96_1600x900.png",
+    "status": "ACTIVE",
+    "released": 20240117,
+    "setName": "Gauss",
+    "primeItems": [
+      {
+        "name": "Gauss",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Acceltra",
+        "type": "PRIMARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "STOCK"
+          }
+        ]
+      },
+      {
+        "name": "Akarius",
+        "type": "SECONDARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "LINK"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://warframe-web-assets.nyc3.cdn.digitaloceanspaces.com/uploads/thumbnails/fc9e09a4ca79eddd55383762476c71e1_1600x900.png",
     "status": "ACTIVE",
     "released": 20231018,
@@ -319,7 +378,7 @@
   },
   {
     "imgLink": "https://n9e5v4d8.ssl.hwcdn.net/uploads/d60c5791a323aaeafba03714603474b3.jpg",
-    "status": "ACTIVE",
+    "status": "VAULT",
     "released": 20220328,
     "setName": "Garuda",
     "primeItems": [
