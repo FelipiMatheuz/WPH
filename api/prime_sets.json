@@ -1,5 +1,58 @@
 [
   {
+    "imgLink": "https://www-static.warframe.com/uploads/thumbnails/8213634f493ec5e3f17b926497ae6870_1600x900.png",
+    "status": "ACTIVE",
+    "released": 20240501,
+    "setName": "Protea",
+    "primeItems": [
+      {
+        "name": "Protea",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Velox",
+        "type": "SECONDARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          }
+        ]
+      },
+      {
+        "name": "Okina",
+        "type": "MELEE",
+        "components": [
+          {
+            "part": "HANDLE"
+          },
+          {
+            "part": "HANDLE"
+          },
+          {
+            "part": "BLADE"
+          },
+          {
+            "part": "BLADE"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://warframe-web-assets.nyc3.cdn.digitaloceanspaces.com/uploads/thumbnails/22f9399fc8ab62f336674db143f2de96_1600x900.png",
     "status": "ACTIVE",
     "released": 20240117,
