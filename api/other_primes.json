@@ -30,6 +30,21 @@
         ]
     },
     {
+        "name": "Akmagnus",
+        "type": "SECONDARY",
+        "components": [
+            {
+                "part": "MAGNUS"
+            },
+            {
+                "part": "MAGNUS"
+            },
+            {
+                "part": "LINK"
+            }
+        ]
+    },
+    {
         "name": "Akvasto",
         "type": "SECONDARY",
         "components": [
