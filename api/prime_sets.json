@@ -1,5 +1,55 @@
 [
   {
+    "imgLink": "https://www-static.warframe.com/uploads/f58dca51d72b5c01957b81bdc04ac452.jpg",
+    "status": "ACTIVE",
+    "released": 20240821,
+    "setName": "Sevagoth",
+    "primeItems": [
+      {
+        "name": "Sevagoth",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Epitaph",
+        "type": "SECONDARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          }
+        ]
+      },
+      {
+        "name": "Nautilus",
+        "type": "OTHER",
+        "components": [
+          {
+            "part": "CARAPACE"
+          },
+          {
+            "part": "CEREBRUM"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://www-static.warframe.com/uploads/8213634f493ec5e3f17b926497ae6870.jpg",
     "status": "ACTIVE",
     "released": 20240501,
