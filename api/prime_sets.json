@@ -1,5 +1,61 @@
 [
   {
+    "imgLink": "https://www-static.warframe.com/uploads/98149d24274b4e55f0d992713c99b102.png",
+    "status": "ACTIVE",
+    "released": 20241113,
+    "setName": "Xaku",
+    "primeItems": [
+      {
+        "name": "Xaku",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Trumna",
+        "type": "PRIMARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "STOCK"
+          }
+        ]
+      },
+      {
+        "name": "Quassus",
+        "type": "MELEE",
+        "components": [
+          {
+            "part": "HANDLE"
+          },
+          {
+            "part": "HANDLE"
+          },
+          {
+            "part": "BLADE"
+          },
+          {
+            "part": "BLADE"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://www-static.warframe.com/uploads/f58dca51d72b5c01957b81bdc04ac452.jpg",
     "status": "ACTIVE",
     "released": 20240821,
@@ -319,7 +375,7 @@
   },
   {
     "imgLink": "https://www-static.warframe.com/uploads/17806948a87f33e6e6f93f81ab6dc125.png",
-    "status": "ACTIVE",
+    "status": "VAULT",
     "released": 20221214,
     "setName": "Baruuk",
     "primeItems": [
@@ -378,7 +434,7 @@
   },
   {
     "imgLink": "https://www-static.warframe.com/uploads/eb94e8216684486f2d8254fac05cbac9.png",
-    "status": "ACTIVE",
+    "status": "VAULT",
     "released": 20221005,
     "setName": "Revenant",
     "primeItems": [
