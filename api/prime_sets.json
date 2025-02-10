@@ -1,5 +1,61 @@
 [
   {
+    "imgLink": "https://www-static.warframe.com/uploads/0750c7a0a9d9b4448e472a5236e00f7f.png",
+    "status": "ACTIVE",
+    "released": 20250212,
+    "setName": "Lavos",
+    "primeItems": [
+      {
+        "name": "Lavos",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Cedo",
+        "type": "PRIMARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "STOCK"
+          }
+        ]
+      },
+      {
+        "name": "Dual Zoren",
+        "type": "MELEE",
+        "components": [
+          {
+            "part": "HANDLE"
+          },
+          {
+            "part": "HANDLE"
+          },
+          {
+            "part": "BLADE"
+          },
+          {
+            "part": "BLADE"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://www-static.warframe.com/uploads/98149d24274b4e55f0d992713c99b102.png",
     "status": "ACTIVE",
     "released": 20241113,
@@ -322,7 +378,7 @@
   },
   {
     "imgLink": "https://www-static.warframe.com/uploads/8260dab07e051d35bcef1a2a82c22965.png",
-    "status": "ACTIVE",
+    "status": "VAULT",
     "released": 20230315,
     "setName": "Hildryn",
     "primeItems": [
