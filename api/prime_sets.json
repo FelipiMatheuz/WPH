@@ -1,5 +1,58 @@
 [
   {
+    "imgLink": "https://www-static.warframe.com/uploads/fa1e1e78aebf1a585e899fd0fb29e2cb.png",
+    "status": "ACTIVE",
+    "released": 20250521,
+    "setName": "Yareli",
+    "primeItems": [
+      {
+        "name": "Yareli",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Daikyu",
+        "type": "PRIMARY",
+        "components": [
+          {
+            "part": "ULIMB"
+          },
+          {
+            "part": "LLIMB"
+          },
+          {
+            "part": "GRIP"
+          },
+          {
+            "part": "STRING"
+          }
+        ]
+      },
+      {
+        "name": "Kompressa",
+        "type": "SECONDARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://www-static.warframe.com/uploads/0750c7a0a9d9b4448e472a5236e00f7f.png",
     "status": "ACTIVE",
     "released": 20250212,
