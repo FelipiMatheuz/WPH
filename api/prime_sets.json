@@ -1,5 +1,55 @@
 [
   {
+    "imgLink": "https://www-static.warframe.com/uploads/0e5c964d4a6ed3ab3849a3778fd29cdb.png",
+    "status": "ACTIVE",
+    "released": 20250826,
+    "setName": "Caliban",
+    "primeItems": [
+      {
+        "name": "Caliban",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Venato",
+        "type": "MELEE",
+        "components": [
+          {
+            "part": "BLADE"
+          },
+          {
+            "part": "HANDLE"
+          }
+        ]
+      },
+      {
+        "name": "Vadarya",
+        "type": "PRIMARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "STOCK"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://www-static.warframe.com/uploads/fa1e1e78aebf1a585e899fd0fb29e2cb.png",
     "status": "ACTIVE",
     "released": 20250521,
