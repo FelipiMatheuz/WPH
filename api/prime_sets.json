@@ -1,5 +1,58 @@
 [
   {
+    "imgLink": "https://www-static.warframe.com/uploads/5e6f076603c8ade4e2b69f875ed3f4cd.png",
+    "status": "ACTIVE",
+    "released": 20251210,
+    "setName": "Gyre",
+    "primeItems": [
+      {
+        "name": "Gyre",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Alternox",
+        "type": "PRIMARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "STOCK"
+          }
+        ]
+      },
+      {
+        "name": "Kestrel",
+        "type": "MELEE",
+        "components": [
+          {
+            "part": "BLADE"
+          },
+          {
+            "part": "BLADE"
+          },
+          {
+            "part": "HANDLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://www-static.warframe.com/uploads/0e5c964d4a6ed3ab3849a3778fd29cdb.png",
     "status": "ACTIVE",
     "released": 20250826,
@@ -425,7 +478,7 @@
   },
   {
     "imgLink": "https://www-static.warframe.com/uploads/81e05bfbd34036ef9c86e86fe70611e3.png",
-    "status": "ACTIVE",
+    "status": "VAULT",
     "released": 20230727,
     "setName": "Wisp",
     "primeItems": [
