@@ -1,5 +1,55 @@
 [
   {
+    "imgLink": "https://www-static.warframe.com/uploads/a979b2d114ccb05a2a7e17f4ee6ceb3f.png",
+    "status": "ACTIVE",
+    "released": 20260407,
+    "setName": "Voruna",
+    "primeItems": [
+      {
+        "name": "Voruna",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Perigale",
+        "type": "PRIMARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "STOCK"
+          }
+        ]
+      },
+      {
+        "name": "Sarofang",
+        "type": "MELEE",
+        "components": [
+          {
+            "part": "BLADE"
+          },
+          {
+            "part": "HANDLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://www-static.warframe.com/uploads/5e6f076603c8ade4e2b69f875ed3f4cd.png",
     "status": "ACTIVE",
     "released": 20251210,
@@ -319,7 +369,7 @@
   },
   {
     "imgLink": "https://www-static.warframe.com/uploads/8213634f493ec5e3f17b926497ae6870.jpg",
-    "status": "ACTIVE",
+    "status": "VAULT",
     "released": 20240501,
     "setName": "Protea",
     "primeItems": [
@@ -372,7 +422,7 @@
   },
   {
     "imgLink": "https://www-static.warframe.com/uploads/22f9399fc8ab62f336674db143f2de96.png",
-    "status": "ACTIVE",
+    "status": "VAULT",
     "released": 20240117,
     "setName": "Gauss",
     "primeItems": [
@@ -431,7 +481,7 @@
   },
   {
     "imgLink": "https://www-static.warframe.com/uploads/fc9e09a4ca79eddd55383762476c71e1.png",
-    "status": "ACTIVE",
+    "status": "VAULT",
     "released": 20231018,
     "setName": "Grendel",
     "primeItems": [
