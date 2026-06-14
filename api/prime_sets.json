@@ -2,6 +2,56 @@
   {
     "imgLink": "https://www-static.warframe.com/uploads/a979b2d114ccb05a2a7e17f4ee6ceb3f.png",
     "status": "ACTIVE",
+    "released": 20260617,
+    "setName": "Styanax",
+    "primeItems": [
+      {
+        "name": "Styanax",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Afentis",
+        "type": "PRIMARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "BLADE"
+          },
+          {
+            "part": "HANDLE"
+          }
+        ]
+      },
+      {
+        "name": "Athodai",
+        "type": "SECONDARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "imgLink": "https://www-static.warframe.com/uploads/a979b2d114ccb05a2a7e17f4ee6ceb3f.png",
+    "status": "ACTIVE",
     "released": 20260407,
     "setName": "Voruna",
     "primeItems": [
@@ -319,7 +369,7 @@
   },
   {
     "imgLink": "https://www-static.warframe.com/uploads/f58dca51d72b5c01957b81bdc04ac452.jpg",
-    "status": "ACTIVE",
+    "status": "VAULT",
     "released": 20240821,
     "setName": "Sevagoth",
     "primeItems": [
