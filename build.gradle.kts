@@ -32,6 +32,36 @@ tasks.test {
     useJUnitPlatform()
 }
 
+tasks.register<JavaExec>("relics") {
+    group = "data generation"
+    description = "Generate relics.json"
+
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("MainKt")
+
+    args("relics")
+}
+
+tasks.register<JavaExec>("manifest") {
+    group = "data generation"
+    description = "Generate manifest.json"
+
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("MainKt")
+
+    args("manifest")
+}
+
+tasks.register<JavaExec>("all") {
+    group = "data generation"
+    description = "Generate all JSONs"
+
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("MainKt")
+
+    args("all")
+}
+
 kotlin {
     jvmToolchain(21)
 }

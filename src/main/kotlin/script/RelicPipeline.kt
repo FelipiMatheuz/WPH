@@ -1,6 +1,6 @@
 package script
 
-import exporter.RelicsExporter
+import exporter.JsonExporter
 import extractor.RelicExtractor
 import extractor.RelicSourceExtractor
 import normalizer.RelicNormalizer
@@ -8,8 +8,8 @@ import remote.DataSources
 import remote.HtmlDownloader
 import validator.RelicValidator
 
-class RelicETL {
-    fun execute() {
+class RelicPipeline : Pipeline {
+    override fun run() {
         val dropTableDocument = HtmlDownloader().download(DataSources.DROP_TABLE)
         val rawRelics = RelicExtractor().extract(dropTableDocument)
 
@@ -21,6 +21,6 @@ class RelicETL {
 
         RelicValidator().validate(relics)
 
-        RelicsExporter().export(relics)
+        JsonExporter().exportRelics(relics)
     }
 }
