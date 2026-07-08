@@ -52,16 +52,6 @@ tasks.register<JavaExec>("manifest") {
     args("manifest")
 }
 
-tasks.register<JavaExec>("all") {
-    group = "data generation"
-    description = "Generate all JSONs"
-
-    classpath = sourceSets["main"].runtimeClasspath
-    mainClass.set("MainKt")
-
-    args("all")
-}
-
 kotlin {
     jvmToolchain(21)
 }

@@ -1,4 +1,4 @@
-package script
+package pipeline
 
 import exporter.JsonExporter
 

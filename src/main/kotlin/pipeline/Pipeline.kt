@@ -1,4 +1,4 @@
-package script
+package pipeline
 
 interface Pipeline {
     fun run()

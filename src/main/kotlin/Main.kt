@@ -1,19 +1,16 @@
-import script.ManifestPipeline
-import script.RelicPipeline
+import pipeline.PipelineRegistry
 
 fun main(args: Array<String>) {
 
-    when (args.firstOrNull()) {
-
-        "relics" -> RelicPipeline().run()
-
-        "manifest" -> ManifestPipeline().run()
-
-        "all" -> {
-            RelicPipeline().run()
-            ManifestPipeline().run()
-        }
-
-        else -> error("Unknown pipeline")
+    require(args.isNotEmpty()) {
+        "Pipeline name is required."
     }
+
+    val pipelineName = args.first()
+
+    val pipeline =
+        PipelineRegistry.find(pipelineName)
+            ?: error("Unknown pipeline '$pipelineName'.")
+
+    pipeline.run()
 }
