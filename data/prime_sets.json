@@ -1,0 +1,3448 @@
+[
+    {
+        "id": "acceltra_prime",
+        "name": "Acceltra Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/AcceltraPrime.png/115px-AcceltraPrime.png?0686c",
+        "components": [
+            {
+                "id": "acceltra_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "acceltra_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "acceltra_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "afentis_prime",
+        "name": "Afentis Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/AfentisPrime.png/115px-AfentisPrime.png?7c419",
+        "components": [
+            {
+                "id": "afentis_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "afentis_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "afentis_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "afuris_prime",
+        "name": "Afuris Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AfurisPrime.png/115px-AfurisPrime.png?06de8",
+        "components": [
+            {
+                "id": "afuris_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "afuris_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "afuris_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "akarius_prime",
+        "name": "Akarius Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AkariusPrime.png/115px-AkariusPrime.png?6acd9",
+        "components": [
+            {
+                "id": "akarius_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "akarius_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "akarius_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "akbolto_prime",
+        "name": "Akbolto Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AkboltoPrime.png/115px-AkboltoPrime.png?df159",
+        "components": [
+            {
+                "id": "akbolto_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "akbolto_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "akbolto_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "akbronco_prime",
+        "name": "Akbronco Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AkbroncoPrime.png/115px-AkbroncoPrime.png?9e11e",
+        "components": [
+            {
+                "id": "bronco_prime",
+                "part": "PRIME_SET",
+                "quantity": 2
+            },
+            {
+                "id": "akbronco_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "akjagara_prime",
+        "name": "Akjagara Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AkjagaraPrime.png/115px-AkjagaraPrime.png?3821b",
+        "components": [
+            {
+                "id": "akjagara_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "akjagara_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "akjagara_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "aklex_prime",
+        "name": "Aklex Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AklexPrime.png/115px-AklexPrime.png?37975",
+        "components": [
+            {
+                "id": "lex_prime",
+                "part": "PRIME_SET",
+                "quantity": 2
+            },
+            {
+                "id": "aklex_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "akmagnus_prime",
+        "name": "Akmagnus Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AkmagnusPrime.png/115px-AkmagnusPrime.png?c2bbb",
+        "components": [
+            {
+                "id": "magnus_prime",
+                "part": "PRIME_SET",
+                "quantity": 2
+            },
+            {
+                "id": "akmagnus_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "aksomati_prime",
+        "name": "Aksomati Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AksomatiPrime.png/115px-AksomatiPrime.png?ce035",
+        "components": [
+            {
+                "id": "aksomati_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "aksomati_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "aksomati_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "akstiletto_prime",
+        "name": "Akstiletto Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AkstilettoPrime.png/115px-AkstilettoPrime.png?b2b01",
+        "components": [
+            {
+                "id": "akstiletto_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "akstiletto_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "akstiletto_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "akvasto_prime",
+        "name": "Akvasto Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AkvastoPrime.png/115px-AkvastoPrime.png?d97f1",
+        "components": [
+            {
+                "id": "vasto_prime",
+                "part": "PRIME_SET",
+                "quantity": 2
+            },
+            {
+                "id": "akvasto_prime_link",
+                "part": "LINK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "alternox_prime",
+        "name": "Alternox Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/AlternoxPrime.png/115px-AlternoxPrime.png?707c8",
+        "components": [
+            {
+                "id": "alternox_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "alternox_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "alternox_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "ankyros_prime",
+        "name": "Ankyros Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/AnkyrosPrime.png/115px-AnkyrosPrime.png?3beee",
+        "components": [
+            {
+                "id": "ankyros_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "ankyros_prime_gauntlet",
+                "part": "GAUNTLET",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "ash_prime",
+        "name": "Ash Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/AshPrimeIcon.png/115px-AshPrimeIcon.png?94af8",
+        "components": [
+            {
+                "id": "ash_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "ash_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "ash_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "astilla_prime",
+        "name": "Astilla Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/AstillaPrime.png/115px-AstillaPrime.png?7a8c1",
+        "components": [
+            {
+                "id": "astilla_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "astilla_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "astilla_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "athodai_prime",
+        "name": "Athodai Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/AthodaiPrime.png/115px-AthodaiPrime.png?7c419",
+        "components": [
+            {
+                "id": "athodai_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "athodai_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "atlas_prime",
+        "name": "Atlas Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/Atlas_PrimeIcon272.png/115px-Atlas_PrimeIcon272.png?f7e81",
+        "components": [
+            {
+                "id": "atlas_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "atlas_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "atlas_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "ballistica_prime",
+        "name": "Ballistica Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/BallisticaPrime.png/115px-BallisticaPrime.png?142e6",
+        "components": [
+            {
+                "id": "ballistica_prime_upper_limb",
+                "part": "UPPER_LIMB",
+                "quantity": 1
+            },
+            {
+                "id": "ballistica_prime_lower_limb",
+                "part": "LOWER_LIMB",
+                "quantity": 1
+            },
+            {
+                "id": "ballistica_prime_string",
+                "part": "STRING",
+                "quantity": 1
+            },
+            {
+                "id": "ballistica_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "banshee_prime",
+        "name": "Banshee Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/BansheePrimeIcon.png/115px-BansheePrimeIcon.png?23810",
+        "components": [
+            {
+                "id": "banshee_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "banshee_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "banshee_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "baruuk_prime",
+        "name": "Baruuk Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/BaruukPrimeIcon272.png/115px-BaruukPrimeIcon272.png?0169d",
+        "components": [
+            {
+                "id": "baruuk_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "baruuk_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "baruuk_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "baza_prime",
+        "name": "Baza Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/BazaPrime.png/115px-BazaPrime.png?c1df2",
+        "components": [
+            {
+                "id": "baza_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "baza_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "baza_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "bo_prime",
+        "name": "Bo Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/BoPrime.png/115px-BoPrime.png?0e231",
+        "components": [
+            {
+                "id": "bo_prime_ornament",
+                "part": "ORNAMENT",
+                "quantity": 1
+            },
+            {
+                "id": "bo_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "boar_prime",
+        "name": "Boar Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/BoarPrime.png/115px-BoarPrime.png?a4f85",
+        "components": [
+            {
+                "id": "boar_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "boar_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "boar_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "boltor_prime",
+        "name": "Boltor Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/BoltorPrime.png/115px-BoltorPrime.png?c7e19",
+        "components": [
+            {
+                "id": "boltor_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "boltor_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "boltor_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "braton_prime",
+        "name": "Braton Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/BratonPrime.png/115px-BratonPrime.png?c49e4",
+        "components": [
+            {
+                "id": "braton_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "braton_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "braton_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "bronco_prime",
+        "name": "Bronco Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/BroncoPrime.png/115px-BroncoPrime.png?a83e3",
+        "components": [
+            {
+                "id": "bronco_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "bronco_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "burston_prime",
+        "name": "Burston Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/BurstonPrime.png/115px-BurstonPrime.png?8fc05",
+        "components": [
+            {
+                "id": "burston_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "burston_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "burston_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "caliban_prime",
+        "name": "Caliban Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/CalibanPrimeIcon272.png/115px-CalibanPrimeIcon272.png?aa00e",
+        "components": [
+            {
+                "id": "caliban_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "caliban_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "caliban_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "carrier_prime",
+        "name": "Carrier Prime",
+        "type": "COMPANION",
+        "image": "https://wiki.warframe.com/images/thumb/CarrierPrime.png/115px-CarrierPrime.png?5bad8",
+        "components": [
+            {
+                "id": "carrier_prime_carapace",
+                "part": "CARAPACE",
+                "quantity": 1
+            },
+            {
+                "id": "carrier_prime_cerebrum",
+                "part": "CEREBRUM",
+                "quantity": 1
+            },
+            {
+                "id": "carrier_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "cedo_prime",
+        "name": "Cedo Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/CedoPrime.png/115px-CedoPrime.png?1d21b",
+        "components": [
+            {
+                "id": "cedo_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "cedo_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "cedo_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "cernos_prime",
+        "name": "Cernos Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/CernosPrime.png/115px-CernosPrime.png?20e5e",
+        "components": [
+            {
+                "id": "cernos_prime_upper_limb",
+                "part": "UPPER_LIMB",
+                "quantity": 1
+            },
+            {
+                "id": "cernos_prime_lower_limb",
+                "part": "LOWER_LIMB",
+                "quantity": 1
+            },
+            {
+                "id": "cernos_prime_grip",
+                "part": "GRIP",
+                "quantity": 1
+            },
+            {
+                "id": "cernos_prime_string",
+                "part": "STRING",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "chroma_prime",
+        "name": "Chroma Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/ChromaPrimeIcon.png/115px-ChromaPrimeIcon.png?27037",
+        "components": [
+            {
+                "id": "chroma_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "chroma_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "chroma_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "cobra_&_crane_prime",
+        "name": "Cobra & Crane Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/Cobra%26CranePrime.png/115px-Cobra%26CranePrime.png?e1c1e",
+        "components": [
+            {
+                "id": "cobra_&_crane_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "cobra_&_crane_prime_hilt",
+                "part": "HILT",
+                "quantity": 1
+            },
+            {
+                "id": "cobra_&_crane_prime_guard",
+                "part": "GUARD",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "corinth_prime",
+        "name": "Corinth Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/CorinthPrime.png/115px-CorinthPrime.png?5c1bb",
+        "components": [
+            {
+                "id": "corinth_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "corinth_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "corinth_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "corvas_prime",
+        "name": "Corvas Prime",
+        "type": "ARCH_GUN",
+        "image": "https://wiki.warframe.com/images/thumb/CorvasPrime.png/115px-CorvasPrime.png?290fd",
+        "components": [
+            {
+                "id": "corvas_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "corvas_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "corvas_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "daikyu_prime",
+        "name": "Daikyu Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/DaikyuPrime.png/115px-DaikyuPrime.png?445ed",
+        "components": [
+            {
+                "id": "daikyu_prime_lower_limb",
+                "part": "LOWER_LIMB",
+                "quantity": 1
+            },
+            {
+                "id": "daikyu_prime_upper_limb",
+                "part": "UPPER_LIMB",
+                "quantity": 1
+            },
+            {
+                "id": "daikyu_prime_grip",
+                "part": "GRIP",
+                "quantity": 1
+            },
+            {
+                "id": "daikyu_prime_string",
+                "part": "STRING",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "dakra_prime",
+        "name": "Dakra Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/DakraPrime.png/115px-DakraPrime.png?2c888",
+        "components": [
+            {
+                "id": "dakra_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "dakra_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "destreza_prime",
+        "name": "Destreza Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/DestrezaPrime.png/115px-DestrezaPrime.png?ad25e",
+        "components": [
+            {
+                "id": "destreza_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "destreza_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "dethcube_prime",
+        "name": "Dethcube Prime",
+        "type": "COMPANION",
+        "image": "https://wiki.warframe.com/images/thumb/DethcubePrime.png/115px-DethcubePrime.png?75332",
+        "components": [
+            {
+                "id": "dethcube_prime_carapace",
+                "part": "CARAPACE",
+                "quantity": 1
+            },
+            {
+                "id": "dethcube_prime_cerebrum",
+                "part": "CEREBRUM",
+                "quantity": 1
+            },
+            {
+                "id": "dethcube_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "dual_kamas_prime",
+        "name": "Dual Kamas Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/DualKamasPrime.png/115px-DualKamasPrime.png?17c92",
+        "components": [
+            {
+                "id": "dual_kamas_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "dual_kamas_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "dual_keres_prime",
+        "name": "Dual Keres Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/DualKeresPrime.png/115px-DualKeresPrime.png?e0ad8",
+        "components": [
+            {
+                "id": "dual_keres_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "dual_keres_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "dual_zoren_prime",
+        "name": "Dual Zoren Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/DualZorenPrime.png/115px-DualZorenPrime.png?1d21b",
+        "components": [
+            {
+                "id": "dual_zoren_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            },
+            {
+                "id": "dual_zoren_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "ember_prime",
+        "name": "Ember Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/PrimeEmber.png/115px-PrimeEmber.png?7984a",
+        "components": [
+            {
+                "id": "ember_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "ember_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "ember_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "epitaph_prime",
+        "name": "Epitaph Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/EpitaphPrime.png/115px-EpitaphPrime.png?21ae3",
+        "components": [
+            {
+                "id": "epitaph_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "epitaph_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "equinox_prime",
+        "name": "Equinox Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/EquinoxPrimeIcon.png/115px-EquinoxPrimeIcon.png?c4389",
+        "components": [
+            {
+                "id": "equinox_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "equinox_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "equinox_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "euphona_prime",
+        "name": "Euphona Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/EuphonaPrime.png/115px-EuphonaPrime.png?08a88",
+        "components": [
+            {
+                "id": "euphona_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "euphona_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "fang_prime",
+        "name": "Fang Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/FangPrime.png/115px-FangPrime.png?73eaa",
+        "components": [
+            {
+                "id": "fang_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "fang_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "fragor_prime",
+        "name": "Fragor Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/FragorPrime.png/115px-FragorPrime.png?e97e2",
+        "components": [
+            {
+                "id": "fragor_prime_head",
+                "part": "HEAD",
+                "quantity": 1
+            },
+            {
+                "id": "fragor_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "frost_prime",
+        "name": "Frost Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/PrimeFrost.png/115px-PrimeFrost.png?2e494",
+        "components": [
+            {
+                "id": "frost_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "frost_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "frost_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "fulmin_prime",
+        "name": "Fulmin Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/FulminPrime.png/115px-FulminPrime.png?00eea",
+        "components": [
+            {
+                "id": "fulmin_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "fulmin_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "fulmin_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "galariak_prime",
+        "name": "Galariak Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/GalariakPrime.png/115px-GalariakPrime.png?af707",
+        "components": [
+            {
+                "id": "galariak_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "galariak_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "galatine_prime",
+        "name": "Galatine Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/GalatinePrime.png/115px-GalatinePrime.png?3dd53",
+        "components": [
+            {
+                "id": "galatine_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "galatine_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "gara_prime",
+        "name": "Gara Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/GaraPrimeIcon.png/115px-GaraPrimeIcon.png?bb01b",
+        "components": [
+            {
+                "id": "gara_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "gara_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "gara_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "garuda_prime",
+        "name": "Garuda Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/GarudaPrimeIcon.png/115px-GarudaPrimeIcon.png?5ad85",
+        "components": [
+            {
+                "id": "garuda_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "garuda_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "garuda_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "gauss_prime",
+        "name": "Gauss Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/GaussPrimeIcon272.png/115px-GaussPrimeIcon272.png?3bc86",
+        "components": [
+            {
+                "id": "gauss_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "gauss_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "gauss_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "glaive_prime",
+        "name": "Glaive Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/GlaivePrime.png/115px-GlaivePrime.png?fd8a2",
+        "components": [
+            {
+                "id": "glaive_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "glaive_prime_disc",
+                "part": "DISC",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "gram_prime",
+        "name": "Gram Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/GramPrime.png/115px-GramPrime.png?89383",
+        "components": [
+            {
+                "id": "gram_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "gram_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "grendel_prime",
+        "name": "Grendel Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/GrendelPrimeIcon272.png/115px-GrendelPrimeIcon272.png?34e22",
+        "components": [
+            {
+                "id": "grendel_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "grendel_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "grendel_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "guandao_prime",
+        "name": "Guandao Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/GuandaoPrime.png/115px-GuandaoPrime.png?2a02e",
+        "components": [
+            {
+                "id": "guandao_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "guandao_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "gunsen_prime",
+        "name": "Gunsen Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/GunsenPrime.png/115px-GunsenPrime.png?3d9f9",
+        "components": [
+            {
+                "id": "gunsen_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            },
+            {
+                "id": "gunsen_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "gyre_prime",
+        "name": "Gyre Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/GyrePrimeIcon272.png/115px-GyrePrimeIcon272.png?63a1f",
+        "components": [
+            {
+                "id": "gyre_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "gyre_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "gyre_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "harrow_prime",
+        "name": "Harrow Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/HarrowPrimeIcon.png/115px-HarrowPrimeIcon.png?6d842",
+        "components": [
+            {
+                "id": "harrow_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "harrow_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "harrow_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "helios_prime",
+        "name": "Helios Prime",
+        "type": "COMPANION",
+        "image": "https://wiki.warframe.com/images/thumb/HeliosPrime.png/115px-HeliosPrime.png?c4d66",
+        "components": [
+            {
+                "id": "helios_prime_carapace",
+                "part": "CARAPACE",
+                "quantity": 1
+            },
+            {
+                "id": "helios_prime_cerebrum",
+                "part": "CEREBRUM",
+                "quantity": 1
+            },
+            {
+                "id": "helios_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "hikou_prime",
+        "name": "Hikou Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/HikouPrime.png/115px-HikouPrime.png?4c978",
+        "components": [
+            {
+                "id": "hikou_prime_pouch",
+                "part": "POUCH",
+                "quantity": 1
+            },
+            {
+                "id": "hikou_prime_stars",
+                "part": "STARS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "hildryn_prime",
+        "name": "Hildryn Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/HildrynPrimeIcon272.png/115px-HildrynPrimeIcon272.png?aeda8",
+        "components": [
+            {
+                "id": "hildryn_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "hildryn_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "hildryn_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "hydroid_prime",
+        "name": "Hydroid Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/HydroidPrimeBust.png/115px-HydroidPrimeBust.png?e1de0",
+        "components": [
+            {
+                "id": "hydroid_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "hydroid_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "hydroid_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "hystrix_prime",
+        "name": "Hystrix Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/HystrixPrime.png/115px-HystrixPrime.png?51199",
+        "components": [
+            {
+                "id": "hystrix_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "hystrix_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "inaros_prime",
+        "name": "Inaros Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/InarosPrimeIcon272.png/115px-InarosPrimeIcon272.png?29b46",
+        "components": [
+            {
+                "id": "inaros_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "inaros_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "inaros_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "ivara_prime",
+        "name": "Ivara Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/Ivara_PrimeIcon272.png/115px-Ivara_PrimeIcon272.png?92fe5",
+        "components": [
+            {
+                "id": "ivara_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "ivara_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "ivara_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "karyst_prime",
+        "name": "Karyst Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/KarystPrime.png/115px-KarystPrime.png?ba1c9",
+        "components": [
+            {
+                "id": "karyst_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "karyst_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "kavasa_prime_collar",
+        "name": "Kavasa Prime Collar",
+        "type": "COMPANION",
+        "image": "https://wiki.warframe.com/images/thumb/KavasaPrimeKubrowCollar.png/115px-KavasaPrimeKubrowCollar.png?bfbaf",
+        "components": [
+            {
+                "id": "kavasa_prime_collar_band",
+                "part": "BAND",
+                "quantity": 1
+            },
+            {
+                "id": "kavasa_prime_collar_buckle",
+                "part": "BUCKLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "kestrel_prime",
+        "name": "Kestrel Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/KestrelPrime.png/115px-KestrelPrime.png?707c8",
+        "components": [
+            {
+                "id": "kestrel_prime_grip",
+                "part": "GRIP",
+                "quantity": 1
+            },
+            {
+                "id": "kestrel_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "khora_prime",
+        "name": "Khora Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/KhoraPrimeIcon272.png/115px-KhoraPrimeIcon272.png?2c124",
+        "components": [
+            {
+                "id": "khora_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "khora_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "khora_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "knell_prime",
+        "name": "Knell Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/KnellPrime.png/115px-KnellPrime.png?08b42",
+        "components": [
+            {
+                "id": "knell_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "knell_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "kogake_prime",
+        "name": "Kogake Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/KogakePrime.png/115px-KogakePrime.png?ad6ea",
+        "components": [
+            {
+                "id": "kogake_prime_gauntlet",
+                "part": "GAUNTLET",
+                "quantity": 1
+            },
+            {
+                "id": "kogake_prime_boot",
+                "part": "BOOT",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "kompressa_prime",
+        "name": "Kompressa Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/KompressaPrime.png/115px-KompressaPrime.png?bba71",
+        "components": [
+            {
+                "id": "kompressa_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "kompressa_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "kronen_prime",
+        "name": "Kronen Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/KronenPrime.png/115px-KronenPrime.png?badf1",
+        "components": [
+            {
+                "id": "kronen_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "kronen_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "larkspur_prime",
+        "name": "Larkspur Prime",
+        "type": "ARCH_GUN",
+        "image": "https://wiki.warframe.com/images/thumb/LarkspurPrime.png/115px-LarkspurPrime.png?fdc3a",
+        "components": [
+            {
+                "id": "larkspur_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "larkspur_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "larkspur_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "latron_prime",
+        "name": "Latron Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/LatronPrime.png/115px-LatronPrime.png?38b80",
+        "components": [
+            {
+                "id": "latron_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "latron_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "latron_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "lavos_prime",
+        "name": "Lavos Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/LavosPrimeIcon272.png/115px-LavosPrimeIcon272.png?2a127",
+        "components": [
+            {
+                "id": "lavos_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "lavos_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "lavos_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "lex_prime",
+        "name": "Lex Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/LexPrime.png/115px-LexPrime.png?422f9",
+        "components": [
+            {
+                "id": "lex_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "lex_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "limbo_prime",
+        "name": "Limbo Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/LimboPrimeIcon.png/115px-LimboPrimeIcon.png?af7c8",
+        "components": [
+            {
+                "id": "limbo_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "limbo_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "limbo_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "loki_prime",
+        "name": "Loki Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/PrimeLoki.png/115px-PrimeLoki.png?71796",
+        "components": [
+            {
+                "id": "loki_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "loki_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "loki_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "mag_prime",
+        "name": "Mag Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/PrimeMag.png/115px-PrimeMag.png?a19c9",
+        "components": [
+            {
+                "id": "mag_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "mag_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "mag_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "magnus_prime",
+        "name": "Magnus Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/MagnusPrime.png/115px-MagnusPrime.png?fe7c8",
+        "components": [
+            {
+                "id": "magnus_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "magnus_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "masseter_prime",
+        "name": "Masseter Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/MasseterPrime.png/115px-MasseterPrime.png?434ac",
+        "components": [
+            {
+                "id": "masseter_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "masseter_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "mesa_prime",
+        "name": "Mesa Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/MesaPrimeIcon272.png/115px-MesaPrimeIcon272.png?22ea2",
+        "components": [
+            {
+                "id": "mesa_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "mesa_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "mesa_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "mirage_prime",
+        "name": "Mirage Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/Mirage_PrimeIcon272.png/115px-Mirage_PrimeIcon272.png?9fbc7",
+        "components": [
+            {
+                "id": "mirage_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "mirage_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "mirage_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "nagantaka_prime",
+        "name": "Nagantaka Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/NagantakaPrime.png/115px-NagantakaPrime.png?8eb34",
+        "components": [
+            {
+                "id": "nagantaka_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "nagantaka_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "nagantaka_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "nami_skyla_prime",
+        "name": "Nami Skyla Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/NamiSkylaPrime.png/115px-NamiSkylaPrime.png?93606",
+        "components": [
+            {
+                "id": "nami_skyla_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "nami_skyla_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "nautilus_prime",
+        "name": "Nautilus Prime",
+        "type": "COMPANION",
+        "image": "https://wiki.warframe.com/images/thumb/NautilusPrime.png/115px-NautilusPrime.png?63a43",
+        "components": [
+            {
+                "id": "nautilus_prime_cerebrum",
+                "part": "CEREBRUM",
+                "quantity": 1
+            },
+            {
+                "id": "nautilus_prime_carapace",
+                "part": "CARAPACE",
+                "quantity": 1
+            },
+            {
+                "id": "nautilus_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "nekros_prime",
+        "name": "Nekros Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/NekrosPrimeProfilePicture.png/115px-NekrosPrimeProfilePicture.png?f6088",
+        "components": [
+            {
+                "id": "nekros_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "nekros_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "nekros_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "nezha_prime",
+        "name": "Nezha Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/NezhaPrimeIcon272.png/115px-NezhaPrimeIcon272.png?70638",
+        "components": [
+            {
+                "id": "nezha_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "nezha_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "nezha_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "nidus_prime",
+        "name": "Nidus Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/NidusPrimeIcon272.png/115px-NidusPrimeIcon272.png?dba88",
+        "components": [
+            {
+                "id": "nidus_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "nidus_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "nidus_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "nikana_prime",
+        "name": "Nikana Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/NikanaPrime.png/115px-NikanaPrime.png?5dadf",
+        "components": [
+            {
+                "id": "nikana_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "nikana_prime_hilt",
+                "part": "HILT",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "ninkondi_prime",
+        "name": "Ninkondi Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/NinkondiPrime.png/115px-NinkondiPrime.png?551b0",
+        "components": [
+            {
+                "id": "ninkondi_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            },
+            {
+                "id": "ninkondi_prime_chain",
+                "part": "CHAIN",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "nova_prime",
+        "name": "Nova Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/PrimeNova.png/115px-PrimeNova.png?6a0d2",
+        "components": [
+            {
+                "id": "nova_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "nova_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "nova_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "nyx_prime",
+        "name": "Nyx Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/PrimeNyx.png/115px-PrimeNyx.png?a6dde",
+        "components": [
+            {
+                "id": "nyx_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "nyx_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "nyx_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "oberon_prime",
+        "name": "Oberon Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/Oberon_PrimeIcon272.png/115px-Oberon_PrimeIcon272.png?2dfad",
+        "components": [
+            {
+                "id": "oberon_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "oberon_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "oberon_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "octavia_prime",
+        "name": "Octavia Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/OctaviaPrimeIcon272a.png/115px-OctaviaPrimeIcon272a.png?c09c1",
+        "components": [
+            {
+                "id": "octavia_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "octavia_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "octavia_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "okina_prime",
+        "name": "Okina Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/OkinaPrime.png/115px-OkinaPrime.png?bf801",
+        "components": [
+            {
+                "id": "okina_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            },
+            {
+                "id": "okina_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "orthos_prime",
+        "name": "Orthos Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/OrthosPrime.png/115px-OrthosPrime.png?c2a65",
+        "components": [
+            {
+                "id": "orthos_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "orthos_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "pandero_prime",
+        "name": "Pandero Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/PanderoPrime.png/115px-PanderoPrime.png?a28a1",
+        "components": [
+            {
+                "id": "pandero_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "pandero_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "pangolin_prime",
+        "name": "Pangolin Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/PangolinPrime.png/115px-PangolinPrime.png?51917",
+        "components": [
+            {
+                "id": "pangolin_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "pangolin_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "panthera_prime",
+        "name": "Panthera Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/PantheraPrime.png/115px-PantheraPrime.png?a55ec",
+        "components": [
+            {
+                "id": "panthera_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "panthera_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "panthera_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "paris_prime",
+        "name": "Paris Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/ParisPrime.png/115px-ParisPrime.png?3163e",
+        "components": [
+            {
+                "id": "paris_prime_upper_limb",
+                "part": "UPPER_LIMB",
+                "quantity": 1
+            },
+            {
+                "id": "paris_prime_lower_limb",
+                "part": "LOWER_LIMB",
+                "quantity": 1
+            },
+            {
+                "id": "paris_prime_grip",
+                "part": "GRIP",
+                "quantity": 1
+            },
+            {
+                "id": "paris_prime_string",
+                "part": "STRING",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "perigale_prime",
+        "name": "Perigale Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/PerigalePrime.png/115px-PerigalePrime.png?f520e",
+        "components": [
+            {
+                "id": "perigale_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "perigale_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "perigale_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "phantasma_prime",
+        "name": "Phantasma Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/PhantasmaPrime.png/115px-PhantasmaPrime.png?1b4e1",
+        "components": [
+            {
+                "id": "phantasma_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "phantasma_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "phantasma_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "protea_prime",
+        "name": "Protea Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/ProteaPrimeIcon272.png/115px-ProteaPrimeIcon272.png?cbc0c",
+        "components": [
+            {
+                "id": "protea_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "protea_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "protea_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "pyrana_prime",
+        "name": "Pyrana Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/PyranaPrime.png/115px-PyranaPrime.png?1404a",
+        "components": [
+            {
+                "id": "pyrana_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "pyrana_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "quassus_prime",
+        "name": "Quassus Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/QuassusPrime.png/115px-QuassusPrime.png?a9584",
+        "components": [
+            {
+                "id": "quassus_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            },
+            {
+                "id": "quassus_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "reaper_prime",
+        "name": "Reaper Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/ReaperPrime.png/115px-ReaperPrime.png?95e53",
+        "components": [
+            {
+                "id": "reaper_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "reaper_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "redeemer_prime",
+        "name": "Redeemer Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/RedeemerPrime.png/115px-RedeemerPrime.png?aa29f",
+        "components": [
+            {
+                "id": "redeemer_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "redeemer_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "revenant_prime",
+        "name": "Revenant Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/RevenantPrimeIcon272.png/115px-RevenantPrimeIcon272.png?23c48",
+        "components": [
+            {
+                "id": "revenant_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "revenant_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "revenant_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "rhino_prime",
+        "name": "Rhino Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/PrimeRhino.png/115px-PrimeRhino.png?5c909",
+        "components": [
+            {
+                "id": "rhino_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "rhino_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "rhino_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "rubico_prime",
+        "name": "Rubico Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/RubicoPrime.png/115px-RubicoPrime.png?d10e7",
+        "components": [
+            {
+                "id": "rubico_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            },
+            {
+                "id": "rubico_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "rubico_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "sagek_prime",
+        "name": "Sagek Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/SagekPrime.png/115px-SagekPrime.png?fafd2",
+        "components": [
+            {
+                "id": "sagek_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "sagek_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "sarofang_prime",
+        "name": "Sarofang Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/SarofangPrime.png/115px-SarofangPrime.png?a466a",
+        "components": [
+            {
+                "id": "sarofang_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "sarofang_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "saryn_prime",
+        "name": "Saryn Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/SarynPrimeIcon.png/115px-SarynPrimeIcon.png?1a0c2",
+        "components": [
+            {
+                "id": "saryn_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "saryn_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "saryn_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "scindo_prime",
+        "name": "Scindo Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/ScindoPrime.png/115px-ScindoPrime.png?fefd2",
+        "components": [
+            {
+                "id": "scindo_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "scindo_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "scourge_prime",
+        "name": "Scourge Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/ScourgePrime.png/115px-ScourgePrime.png?a0ef5",
+        "components": [
+            {
+                "id": "scourge_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "scourge_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "scourge_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "sevagoth_prime",
+        "name": "Sevagoth Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/SevagothPrimeIcon272.png/115px-SevagothPrimeIcon272.png?96707",
+        "components": [
+            {
+                "id": "sevagoth_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "sevagoth_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "sevagoth_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "shade_prime",
+        "name": "Shade Prime",
+        "type": "COMPANION",
+        "image": "https://wiki.warframe.com/images/thumb/ShadePrime.png/115px-ShadePrime.png?31cf5",
+        "components": [
+            {
+                "id": "shade_prime_carapace",
+                "part": "CARAPACE",
+                "quantity": 1
+            },
+            {
+                "id": "shade_prime_cerebrum",
+                "part": "CEREBRUM",
+                "quantity": 1
+            },
+            {
+                "id": "shade_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "sicarus_prime",
+        "name": "Sicarus Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/SicarusPrime.png/115px-SicarusPrime.png?b6255",
+        "components": [
+            {
+                "id": "sicarus_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "sicarus_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "silva_&_aegis_prime",
+        "name": "Silva & Aegis Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/Silva%26AegisPrime.png/115px-Silva%26AegisPrime.png?4f770",
+        "components": [
+            {
+                "id": "silva_&_aegis_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "silva_&_aegis_prime_guard",
+                "part": "GUARD",
+                "quantity": 1
+            },
+            {
+                "id": "silva_&_aegis_prime_hilt",
+                "part": "HILT",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "soma_prime",
+        "name": "Soma Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/SomaPrime.png/115px-SomaPrime.png?4ae3f",
+        "components": [
+            {
+                "id": "soma_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "soma_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "soma_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "spira_prime",
+        "name": "Spira Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/SpiraPrime.png/115px-SpiraPrime.png?82a7f",
+        "components": [
+            {
+                "id": "spira_prime_pouch",
+                "part": "POUCH",
+                "quantity": 1
+            },
+            {
+                "id": "spira_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "stradavar_prime",
+        "name": "Stradavar Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/StradavarPrime.png/115px-StradavarPrime.png?cbb56",
+        "components": [
+            {
+                "id": "stradavar_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "stradavar_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "stradavar_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "strun_prime",
+        "name": "Strun Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/StrunPrime.png/115px-StrunPrime.png?85980",
+        "components": [
+            {
+                "id": "strun_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "strun_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "strun_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "styanax_prime",
+        "name": "Styanax Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/StyanaxPrime_Thumb.png/115px-StyanaxPrime_Thumb.png?f0b23",
+        "components": [
+            {
+                "id": "styanax_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "styanax_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "styanax_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "sybaris_prime",
+        "name": "Sybaris Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/SybarisPrime.png/115px-SybarisPrime.png?369aa",
+        "components": [
+            {
+                "id": "sybaris_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "sybaris_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "sybaris_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "tatsu_prime",
+        "name": "Tatsu Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/TatsuPrime.png/115px-TatsuPrime.png?7a830",
+        "components": [
+            {
+                "id": "tatsu_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "tatsu_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "tekko_prime",
+        "name": "Tekko Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/TekkoPrime.png/115px-TekkoPrime.png?ce007",
+        "components": [
+            {
+                "id": "tekko_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "tekko_prime_gauntlet",
+                "part": "GAUNTLET",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "tenora_prime",
+        "name": "Tenora Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/TenoraPrime.png/115px-TenoraPrime.png?c7070",
+        "components": [
+            {
+                "id": "tenora_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "tenora_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "tenora_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "tiberon_prime",
+        "name": "Tiberon Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/TiberonPrime.png/115px-TiberonPrime.png?68645",
+        "components": [
+            {
+                "id": "tiberon_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "tiberon_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "tiberon_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "tigris_prime",
+        "name": "Tigris Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/TigrisPrime.png/115px-TigrisPrime.png?0f2b3",
+        "components": [
+            {
+                "id": "tigris_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "tigris_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "tigris_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "tipedo_prime",
+        "name": "Tipedo Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/TipedoPrime.png/115px-TipedoPrime.png?57cc6",
+        "components": [
+            {
+                "id": "tipedo_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            },
+            {
+                "id": "tipedo_prime_ornament",
+                "part": "ORNAMENT",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "titania_prime",
+        "name": "Titania Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/Titania_PrimeIcon272.png/115px-Titania_PrimeIcon272.png?12836",
+        "components": [
+            {
+                "id": "titania_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "titania_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "titania_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "trinity_prime",
+        "name": "Trinity Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/TrinityPrimeIcon.png/115px-TrinityPrimeIcon.png?0846c",
+        "components": [
+            {
+                "id": "trinity_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "trinity_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "trinity_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "trumna_prime",
+        "name": "Trumna Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/TrumnaPrime.png/115px-TrumnaPrime.png?e7b4e",
+        "components": [
+            {
+                "id": "trumna_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "trumna_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "trumna_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "vadarya_prime",
+        "name": "Vadarya Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/VadaryaPrime.png/115px-VadaryaPrime.png?40feb",
+        "components": [
+            {
+                "id": "vadarya_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "vadarya_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "vadarya_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "valkyr_prime",
+        "name": "Valkyr Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/ValkyrPrimeProfilePicture.png/115px-ValkyrPrimeProfilePicture.png?a877f",
+        "components": [
+            {
+                "id": "valkyr_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "valkyr_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "valkyr_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "vasto_prime",
+        "name": "Vasto Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/VastoPrime.png/115px-VastoPrime.png?2b77c",
+        "components": [
+            {
+                "id": "vasto_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "vasto_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "vauban_prime",
+        "name": "Vauban Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/Booben.png/115px-Booben.png?852f7",
+        "components": [
+            {
+                "id": "vauban_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "vauban_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "vauban_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "vectis_prime",
+        "name": "Vectis Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/VectisPrime.png/115px-VectisPrime.png?12ec1",
+        "components": [
+            {
+                "id": "vectis_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "vectis_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "vectis_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "velox_prime",
+        "name": "Velox Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/VeloxPrime.png/115px-VeloxPrime.png?261a8",
+        "components": [
+            {
+                "id": "velox_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "velox_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "venato_prime",
+        "name": "Venato Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/VenatoPrime.png/115px-VenatoPrime.png?eb0e1",
+        "components": [
+            {
+                "id": "venato_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "venato_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "venka_prime",
+        "name": "Venka Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/VenkaPrime.png/115px-VenkaPrime.png?7ea5c",
+        "components": [
+            {
+                "id": "venka_prime_blade",
+                "part": "BLADE",
+                "quantity": 1
+            },
+            {
+                "id": "venka_prime_gauntlet",
+                "part": "GAUNTLET",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "volnus_prime",
+        "name": "Volnus Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/VolnusPrime.png/115px-VolnusPrime.png?34775",
+        "components": [
+            {
+                "id": "volnus_prime_head",
+                "part": "HEAD",
+                "quantity": 1
+            },
+            {
+                "id": "volnus_prime_handle",
+                "part": "HANDLE",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "volt_prime",
+        "name": "Volt Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/VoltPrimeIcon.png/115px-VoltPrimeIcon.png?a6e32",
+        "components": [
+            {
+                "id": "volt_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "volt_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "volt_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "voruna_prime",
+        "name": "Voruna Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/VorunaPrime_Thumb.png/115px-VorunaPrime_Thumb.png?5d60b",
+        "components": [
+            {
+                "id": "voruna_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "voruna_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "voruna_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "wisp_prime",
+        "name": "Wisp Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/WispPrimeIcon272.png/115px-WispPrimeIcon272.png?6ed69",
+        "components": [
+            {
+                "id": "wisp_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "wisp_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "wisp_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "wukong_prime",
+        "name": "Wukong Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/WukongPrimeIcon272.png/115px-WukongPrimeIcon272.png?d8d2a",
+        "components": [
+            {
+                "id": "wukong_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "wukong_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "wukong_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "wyrm_prime",
+        "name": "Wyrm Prime",
+        "type": "COMPANION",
+        "image": "https://wiki.warframe.com/images/thumb/WyrmPrime.png/115px-WyrmPrime.png?35ced",
+        "components": [
+            {
+                "id": "wyrm_prime_carapace",
+                "part": "CARAPACE",
+                "quantity": 1
+            },
+            {
+                "id": "wyrm_prime_cerebrum",
+                "part": "CEREBRUM",
+                "quantity": 1
+            },
+            {
+                "id": "wyrm_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "xaku_prime",
+        "name": "Xaku Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/XakuPrimeIcon272.png/115px-XakuPrimeIcon272.png?81384",
+        "components": [
+            {
+                "id": "xaku_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "xaku_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "xaku_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "yareli_prime",
+        "name": "Yareli Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/YareliPrimeIcon272.png/115px-YareliPrimeIcon272.png?6e720",
+        "components": [
+            {
+                "id": "yareli_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "yareli_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "yareli_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "zakti_prime",
+        "name": "Zakti Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/ZaktiPrime.png/115px-ZaktiPrime.png?48c9f",
+        "components": [
+            {
+                "id": "zakti_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "zakti_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "zephyr_prime",
+        "name": "Zephyr Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/ZephyrPrimeIcon.png/115px-ZephyrPrimeIcon.png?38145",
+        "components": [
+            {
+                "id": "zephyr_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "zephyr_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "zephyr_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "zhuge_prime",
+        "name": "Zhuge Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/ZhugePrime.png/115px-ZhugePrime.png?56973",
+        "components": [
+            {
+                "id": "zhuge_prime_grip",
+                "part": "GRIP",
+                "quantity": 1
+            },
+            {
+                "id": "zhuge_prime_string",
+                "part": "STRING",
+                "quantity": 1
+            },
+            {
+                "id": "zhuge_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "zhuge_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "zylok_prime",
+        "name": "Zylok Prime",
+        "type": "SECONDARY",
+        "image": "https://wiki.warframe.com/images/thumb/ZylokPrime.png/115px-ZylokPrime.png?9c426",
+        "components": [
+            {
+                "id": "zylok_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "zylok_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "odonata_prime",
+        "name": "Odonata Prime",
+        "type": "ARCHWING",
+        "image": "https://wiki.warframe.com/images/thumb/OdonataPrime.png/115px-OdonataPrime.png?7b651",
+        "components": [
+            {
+                "id": "odonata_prime_harness",
+                "part": "HARNESS",
+                "quantity": 1
+            },
+            {
+                "id": "odonata_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            },
+            {
+                "id": "odonata_prime_wings",
+                "part": "WINGS",
+                "quantity": 1
+            }
+        ]
+    }
+]

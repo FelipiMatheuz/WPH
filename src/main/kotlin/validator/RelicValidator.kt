@@ -1,6 +1,6 @@
 package validator
 
-import model.domain.Relic
+import model.domain.relic.Relic
 import org.jsoup.helper.ValidationException
 
 class RelicValidator {

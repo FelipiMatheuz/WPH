@@ -2,12 +2,14 @@ package exporter
 
 import kotlinx.serialization.json.Json
 import model.domain.FileSource
-import model.domain.Relic
+import model.domain.prime.PrimeSet
+import model.domain.relic.Relic
 import model.raw.Manifest
 import model.raw.ManifestFile
-import normalizer.sha256
+import misc.sha256
 import java.io.File
 import java.time.Instant
+import kotlin.collections.sortedBy
 
 class JsonExporter {
     private val json = Json {
@@ -28,6 +30,13 @@ class JsonExporter {
             )
         )
         writeJson(sortedData, FileSource.RELICS.path)
+    }
+
+    fun exportPrimeSets(data: List<PrimeSet>) {
+
+        println("Exporting prime_sets.json...")
+        val sortedData = data.sortedBy { it.name }
+        writeJson(sortedData, FileSource.PRIME_SETS.path)
     }
 
     fun exportManifest() {

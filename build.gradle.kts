@@ -42,6 +42,16 @@ tasks.register<JavaExec>("relics") {
     args("relics")
 }
 
+tasks.register<JavaExec>("prime_sets") {
+    group = "data generation"
+    description = "Generate prime_sets.json"
+
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("MainKt")
+
+    args("prime_sets")
+}
+
 tasks.register<JavaExec>("manifest") {
     group = "data generation"
     description = "Generate manifest.json"

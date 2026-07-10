@@ -1,4 +1,4 @@
-package normalizer
+package misc
 
 object IdGenerator {
     fun generateId(

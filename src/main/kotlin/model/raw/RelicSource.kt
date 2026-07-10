@@ -1,6 +1,6 @@
 package model.raw
 
-import model.domain.AcquisitionSource
+import model.domain.relic.AcquisitionSource
 
 data class RelicSource(
     val relicId: String,

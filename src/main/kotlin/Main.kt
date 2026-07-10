@@ -1,4 +1,4 @@
-import pipeline.PipelineRegistry
+import misc.PipelineRegistry
 
 fun main(args: Array<String>) {
 

@@ -1,4 +1,4 @@
-package model.domain
+package model.domain.relic
 
 enum class AcquisitionSource {
     MISSION,

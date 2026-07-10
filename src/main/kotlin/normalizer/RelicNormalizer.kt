@@ -1,8 +1,9 @@
 package normalizer
 
-import model.domain.AcquisitionSource
-import model.domain.Drop
-import model.domain.Relic
+import misc.IdGenerator
+import model.domain.relic.AcquisitionSource
+import model.domain.relic.Drop
+import model.domain.relic.Relic
 import model.raw.RawRelic
 import model.raw.RelicSource
 

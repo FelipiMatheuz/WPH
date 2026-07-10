@@ -1,8 +1,8 @@
 package extractor
 
-import model.domain.AcquisitionSource
+import model.domain.relic.AcquisitionSource
 import model.raw.RelicSource
-import normalizer.IdGenerator
+import misc.IdGenerator
 import org.jsoup.nodes.Document
 
 class RelicSourceExtractor {
