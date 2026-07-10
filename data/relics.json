@@ -1763,7 +1763,7 @@
         "id": "axi_c8",
         "name": "C8",
         "era": "Axi",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "corinth_prime_stock",
@@ -7395,7 +7395,7 @@
         "id": "axi_t9",
         "name": "T9",
         "era": "Axi",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "tipedo_prime_handle",
@@ -7527,7 +7527,7 @@
         "id": "axi_v11",
         "name": "V11",
         "era": "Axi",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "volnus_prime_handle",
@@ -10695,7 +10695,7 @@
         "id": "lith_g11",
         "name": "G11",
         "era": "Lith",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "gara_prime_blueprint",
@@ -13159,7 +13159,7 @@
         "id": "lith_n13",
         "name": "N13",
         "era": "Lith",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "ninkondi_prime_handle",
@@ -14919,7 +14919,7 @@
         "id": "lith_s13",
         "name": "S13",
         "era": "Lith",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "stradavar_prime_blueprint",
@@ -15623,7 +15623,7 @@
         "id": "lith_t11",
         "name": "T11",
         "era": "Lith",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "titania_prime_systems",
@@ -17427,7 +17427,7 @@
         "id": "meso_a6",
         "name": "A6",
         "era": "Meso",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "astilla_prime_barrel",
@@ -18087,7 +18087,7 @@
         "id": "meso_c10",
         "name": "C10",
         "era": "Meso",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "corinth_prime_barrel",
@@ -24775,7 +24775,7 @@
         "id": "meso_w2",
         "name": "W2",
         "era": "Meso",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "wukong_prime_blueprint",
@@ -27371,7 +27371,7 @@
         "id": "neo_e3",
         "name": "E3",
         "era": "Neo",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "equinox_prime_systems",
@@ -30583,7 +30583,7 @@
         "id": "neo_p5",
         "name": "P5",
         "era": "Neo",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "pangolin_prime_blueprint",
