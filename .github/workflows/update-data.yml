@@ -39,6 +39,9 @@ jobs:
       - name: Update Prime Sets
         run: ./gradlew prime_sets
 
+      - name: Update Prime Collections
+        run: ./gradlew prime_collections
+
       - name: Update Manifest
         run: ./gradlew manifest
 
