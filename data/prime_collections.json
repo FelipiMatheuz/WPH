@@ -1,0 +1,551 @@
+[
+    {
+        "id": "styanax_collection",
+        "name": "Styanax",
+        "promoImage": "https://www-static.warframe.com/uploads/48421377826cf2022df220e9bca363b8.png",
+        "released": 20260617,
+        "primeSets": [
+            "styanax_prime",
+            "afentis_prime",
+            "athodai_prime"
+        ]
+    },
+    {
+        "id": "voruna_collection",
+        "name": "Voruna",
+        "promoImage": "https://www-static.warframe.com/uploads/a979b2d114ccb05a2a7e17f4ee6ceb3f.png",
+        "released": 20260407,
+        "primeSets": [
+            "voruna_prime",
+            "perigale_prime",
+            "sarofang_prime"
+        ]
+    },
+    {
+        "id": "gyre_collection",
+        "name": "Gyre",
+        "promoImage": "https://www-static.warframe.com/uploads/5e6f076603c8ade4e2b69f875ed3f4cd.png",
+        "released": 20251210,
+        "primeSets": [
+            "gyre_prime",
+            "alternox_prime",
+            "kestrel_prime"
+        ]
+    },
+    {
+        "id": "caliban_collection",
+        "name": "Caliban",
+        "promoImage": "https://www-static.warframe.com/uploads/0e5c964d4a6ed3ab3849a3778fd29cdb.png",
+        "released": 20250826,
+        "primeSets": [
+            "caliban_prime",
+            "venato_prime",
+            "vadarya_prime"
+        ]
+    },
+    {
+        "id": "yareli_collection",
+        "name": "Yareli",
+        "promoImage": "https://www-static.warframe.com/uploads/fa1e1e78aebf1a585e899fd0fb29e2cb.png",
+        "released": 20250521,
+        "primeSets": [
+            "yareli_prime",
+            "daikyu_prime",
+            "kompressa_prime"
+        ]
+    },
+    {
+        "id": "lavos_collection",
+        "name": "Lavos",
+        "promoImage": "https://www-static.warframe.com/uploads/0750c7a0a9d9b4448e472a5236e00f7f.png",
+        "released": 20250212,
+        "primeSets": [
+            "lavos_prime",
+            "cedo_prime",
+            "dual_zoren_prime"
+        ]
+    },
+    {
+        "id": "xaku_collection",
+        "name": "Xaku",
+        "promoImage": "https://www-static.warframe.com/uploads/98149d24274b4e55f0d992713c99b102.png",
+        "released": 20241113,
+        "primeSets": [
+            "xaku_prime",
+            "trumna_prime",
+            "quassus_prime"
+        ]
+    },
+    {
+        "id": "sevagoth_collection",
+        "name": "Sevagoth",
+        "promoImage": "https://www-static.warframe.com/uploads/f58dca51d72b5c01957b81bdc04ac452.jpg",
+        "released": 20240821,
+        "primeSets": [
+            "sevagoth_prime",
+            "epitaph_prime",
+            "nautilus_prime"
+        ]
+    },
+    {
+        "id": "protea_collection",
+        "name": "Protea",
+        "promoImage": "https://www-static.warframe.com/uploads/8213634f493ec5e3f17b926497ae6870.jpg",
+        "released": 20240501,
+        "primeSets": [
+            "protea_prime",
+            "velox_prime",
+            "okina_prime"
+        ]
+    },
+    {
+        "id": "gauss_collection",
+        "name": "Gauss",
+        "promoImage": "https://www-static.warframe.com/uploads/22f9399fc8ab62f336674db143f2de96.png",
+        "released": 20240117,
+        "primeSets": [
+            "gauss_prime",
+            "acceltra_prime",
+            "akarius_prime"
+        ]
+    },
+    {
+        "id": "grendel_collection",
+        "name": "Grendel",
+        "promoImage": "https://www-static.warframe.com/uploads/fc9e09a4ca79eddd55383762476c71e1.png",
+        "released": 20231018,
+        "primeSets": [
+            "grendel_prime",
+            "zylok_prime",
+            "masseter_prime"
+        ]
+    },
+    {
+        "id": "wisp_collection",
+        "name": "Wisp",
+        "promoImage": "https://www-static.warframe.com/uploads/81e05bfbd34036ef9c86e86fe70611e3.png",
+        "released": 20230727,
+        "primeSets": [
+            "wisp_prime",
+            "fulmin_prime",
+            "gunsen_prime"
+        ]
+    },
+    {
+        "id": "hildryn_collection",
+        "name": "Hildryn",
+        "promoImage": "https://www-static.warframe.com/uploads/8260dab07e051d35bcef1a2a82c22965.png",
+        "released": 20230315,
+        "primeSets": [
+            "hildryn_prime",
+            "larkspur_prime",
+            "shade_prime"
+        ]
+    },
+    {
+        "id": "baruuk_collection",
+        "name": "Baruuk",
+        "promoImage": "https://www-static.warframe.com/uploads/17806948a87f33e6e6f93f81ab6dc125.png",
+        "released": 20221214,
+        "primeSets": [
+            "baruuk_prime",
+            "afuris_prime",
+            "cobra_and_crane_prime"
+        ]
+    },
+    {
+        "id": "revenant_collection",
+        "name": "Revenant",
+        "promoImage": "https://www-static.warframe.com/uploads/eb94e8216684486f2d8254fac05cbac9.png",
+        "released": 20221005,
+        "primeSets": [
+            "revenant_prime",
+            "phantasma_prime",
+            "tatsu_prime"
+        ]
+    },
+    {
+        "id": "khora_collection",
+        "name": "Khora",
+        "promoImage": "https://www-static.warframe.com/uploads/4647358c56474d627593ad56ab2d2d38.png",
+        "released": 20220716,
+        "primeSets": [
+            "khora_prime",
+            "hystrix_prime",
+            "dual_keres_prime"
+        ]
+    },
+    {
+        "id": "garuda_collection",
+        "name": "Garuda",
+        "promoImage": "https://www-static.warframe.com/uploads/d60c5791a323aaeafba03714603474b3.jpg",
+        "released": 20220328,
+        "primeSets": [
+            "garuda_prime",
+            "nagantaka_prime",
+            "corvas_prime"
+        ]
+    },
+    {
+        "id": "harrow_collection",
+        "name": "Harrow",
+        "promoImage": "https://www-static.warframe.com/uploads/thumbnails/d029937e5890727ea8d17f0956223005_1600x900.jpg",
+        "released": 20211215,
+        "primeSets": [
+            "harrow_prime",
+            "scourge_prime",
+            "knell_prime"
+        ]
+    },
+    {
+        "id": "nidus_collection",
+        "name": "Nidus",
+        "promoImage": "https://www-static.warframe.com/uploads/38d4625182cf8d130e05481ede5b507d.png",
+        "released": 20210908,
+        "primeSets": [
+            "nidus_prime",
+            "strun_prime",
+            "magnus_prime"
+        ]
+    },
+    {
+        "id": "gara_collection",
+        "name": "Gara",
+        "promoImage": "https://www-static.warframe.com/uploads/bbe88a08b1c65966b5b023709ee62ec5.jpg",
+        "released": 20210525,
+        "primeSets": [
+            "gara_prime",
+            "astilla_prime",
+            "volnus_prime"
+        ]
+    },
+    {
+        "id": "octavia_collection",
+        "name": "Octavia",
+        "promoImage": "https://www-static.warframe.com/uploads/f11fbecd9eb92f869d185b710cbd79fd.png",
+        "released": 20210223,
+        "primeSets": [
+            "octavia_prime",
+            "tenora_prime",
+            "pandero_prime"
+        ]
+    },
+    {
+        "id": "nezha_collection",
+        "name": "Nezha",
+        "promoImage": "https://www-static.warframe.com/uploads/07dd31bb3e96d47b2c5a6b00a0356f08.jpg",
+        "released": 20201027,
+        "primeSets": [
+            "nezha_prime",
+            "zakti_prime",
+            "guandao_prime"
+        ]
+    },
+    {
+        "id": "inaros_collection",
+        "name": "Inaros",
+        "promoImage": "https://www-static.warframe.com/uploads/eb8fe484fbeb4f4aeecf1a6fec6a6cc2.png",
+        "released": 20200707,
+        "primeSets": [
+            "inaros_prime",
+            "panthera_prime",
+            "karyst_prime"
+        ]
+    },
+    {
+        "id": "titania_collection",
+        "name": "Titania",
+        "promoImage": "https://www-static.warframe.com/uploads/a9d97f57fabeb09a06ed208ab8e0b1ee.jpg",
+        "released": 20200331,
+        "primeSets": [
+            "titania_prime",
+            "corinth_prime",
+            "pangolin_prime"
+        ]
+    },
+    {
+        "id": "ivara_collection",
+        "name": "Ivara",
+        "promoImage": "https://www-static.warframe.com/uploads/b5edcc1223c5ad95d87145e102a2afa2.png",
+        "released": 20191217,
+        "primeSets": [
+            "ivara_prime",
+            "baza_prime",
+            "aksomati_prime"
+        ]
+    },
+    {
+        "id": "atlas_collection",
+        "name": "Atlas",
+        "promoImage": "https://www-static.warframe.com/uploads/98df2f886efd1e479c87649a65cbdfe1.jpg",
+        "released": 20191001,
+        "primeSets": [
+            "atlas_prime",
+            "tekko_prime",
+            "dethcube_prime"
+        ]
+    },
+    {
+        "id": "wukong_collection",
+        "name": "Wukong",
+        "promoImage": "https://wiki.warframe.com/images/Wukong_prime.jpg?395c5",
+        "released": 20190706,
+        "primeSets": [
+            "wukong_prime",
+            "zhuge_prime",
+            "ninkondi_prime"
+        ]
+    },
+    {
+        "id": "equinox_collection",
+        "name": "Equinox",
+        "promoImage": "https://clan.steamstatic.com/images/4437469/5c5a139e63a0571c5043efea59a5dfca67c5d900.jpg",
+        "released": 20190402,
+        "primeSets": [
+            "equinox_prime",
+            "stradavar_prime",
+            "tipedo_prime"
+        ]
+    },
+    {
+        "id": "mesa_collection",
+        "name": "Mesa",
+        "promoImage": "https://www-static.warframe.com/uploads/e66edbe6644f874025ceaebf65c6cf36.jpg",
+        "released": 20181218,
+        "primeSets": [
+            "mesa_prime",
+            "akjagara_prime",
+            "redeemer_prime"
+        ]
+    },
+    {
+        "id": "chroma_collection",
+        "name": "Chroma",
+        "promoImage": "https://www-static.warframe.com/uploads/15f6ae2f16b9a8141591d42210fcf86e.jpeg",
+        "released": 20180925,
+        "primeSets": [
+            "chroma_prime",
+            "rubico_prime",
+            "gram_prime"
+        ]
+    },
+    {
+        "id": "limbo_collection",
+        "name": "Limbo",
+        "promoImage": "https://www-static.warframe.com/uploads/16bafe11f0a19c9619e96e3a890728ec.jpg",
+        "released": 20180619,
+        "primeSets": [
+            "limbo_prime",
+            "pyrana_prime",
+            "destreza_prime"
+        ]
+    },
+    {
+        "id": "zephyr_collection",
+        "name": "Zephyr",
+        "promoImage": "https://www-static.warframe.com/uploads/3ecd12cdc3ddfa048e8a9a702648b4f2.jpeg",
+        "released": 20180320,
+        "primeSets": [
+            "zephyr_prime",
+            "tiberon_prime",
+            "kronen_prime"
+        ]
+    },
+    {
+        "id": "mirage_collection",
+        "name": "Mirage",
+        "promoImage": "https://www-static.warframe.com/uploads/e31fa7d33d696489ab9e9c548ba553e1.png",
+        "released": 20171212,
+        "primeSets": [
+            "mirage_prime",
+            "akbolto_prime",
+            "kogake_prime"
+        ]
+    },
+    {
+        "id": "hydroid_collection",
+        "name": "Hydroid",
+        "promoImage": "https://wiki.warframe.com/images/HydroidPrime_1080p.jpg",
+        "released": 20170829,
+        "primeSets": [
+            "hydroid_prime",
+            "ballistica_prime",
+            "nami_skyla_prime"
+        ]
+    },
+    {
+        "id": "oberon_collection",
+        "name": "Oberon",
+        "promoImage": "https://www-static.warframe.com/uploads/a3383c407d485c30d724267f374a3438.jpg",
+        "released": 20170530,
+        "primeSets": [
+            "oberon_prime",
+            "sybaris_prime",
+            "silva_and_aegis_prime"
+        ]
+    },
+    {
+        "id": "banshee_collection",
+        "name": "Banshee",
+        "promoImage": "https://www-static.warframe.com/uploads/1d7084c14e3ed054951b685a59961248.png",
+        "released": 20170228,
+        "primeSets": [
+            "banshee_prime",
+            "euphona_prime",
+            "helios_prime"
+        ]
+    },
+    {
+        "id": "valkyr_collection",
+        "name": "Valkyr",
+        "promoImage": "https://www-static.warframe.com/uploads/305a39a05e4abe141e82cba89534520b.jpg",
+        "released": 20161122,
+        "primeSets": [
+            "valkyr_prime",
+            "cernos_prime",
+            "venka_prime"
+        ]
+    },
+    {
+        "id": "nekros_collection",
+        "name": "Nekros",
+        "promoImage": "https://www-static.warframe.com/uploads/b3c8bf8903b3b56257a858174bc4a718.jpg",
+        "released": 20160823,
+        "primeSets": [
+            "nekros_prime",
+            "tigris_prime",
+            "galatine_prime"
+        ]
+    },
+    {
+        "id": "vauban_collection",
+        "name": "Vauban",
+        "promoImage": "https://www-static.warframe.com/uploads/7d7b8ccfd4c63792249711adfb8a0665.jpg",
+        "released": 20160517,
+        "primeSets": [
+            "vauban_prime",
+            "fragor_prime",
+            "akstiletto_prime"
+        ]
+    },
+    {
+        "id": "saryn_collection",
+        "name": "Saryn",
+        "promoImage": "https://www-static.warframe.com/uploads/40e4c8a4d27711c44ad0c11ef853857f.jpg",
+        "released": 20160216,
+        "primeSets": [
+            "saryn_prime",
+            "nikana_prime",
+            "spira_prime"
+        ]
+    },
+    {
+        "id": "trinity_collection",
+        "name": "Trinity",
+        "promoImage": "https://www-static.warframe.com/uploads/671f4275d86e6d3de79d7b85e1aefda9.jpg",
+        "released": 20151006,
+        "primeSets": [
+            "trinity_prime",
+            "dual_kamas_prime",
+            "kavasa_prime"
+        ]
+    },
+    {
+        "id": "ash_collection",
+        "name": "Ash",
+        "promoImage": "https://www-static.warframe.com/uploads/471fc4cbafe6d6b96db4fd29c0fa585d.jpg",
+        "released": 20150707,
+        "primeSets": [
+            "ash_prime",
+            "vectis_prime",
+            "carrier_prime"
+        ]
+    },
+    {
+        "id": "volt_collection",
+        "name": "Volt",
+        "promoImage": "https://wiki.warframe.com/images/Volt_Prime_Resurgence.png",
+        "released": 20150324,
+        "primeSets": [
+            "volt_prime",
+            "odonata_prime"
+        ]
+    },
+    {
+        "id": "nova_collection",
+        "name": "Nova",
+        "promoImage": "https://www-static.warframe.com/uploads/948320a981506008ceb01777e0133fef.jpg",
+        "released": 20141216,
+        "primeSets": [
+            "nova_prime",
+            "soma_prime",
+            "vasto_prime"
+        ]
+    },
+    {
+        "id": "nyx_collection",
+        "name": "Nyx",
+        "promoImage": "https://www-static.warframe.com/uploads/082f4873c201c1448760704a388778f8.jpg",
+        "released": 20140923,
+        "primeSets": [
+            "nyx_prime",
+            "hikou_prime",
+            "scindo_prime"
+        ]
+    },
+    {
+        "id": "loki_collection",
+        "name": "Loki",
+        "promoImage": "https://wiki.warframe.com/images/Loki_Prime_Resurgence.png",
+        "released": 20140611,
+        "primeSets": [
+            "loki_prime",
+            "bo_prime",
+            "wyrm_prime"
+        ]
+    },
+    {
+        "id": "rhino_collection",
+        "name": "Rhino",
+        "promoImage": "https://www-static.warframe.com/uploads/7e617e2dc78d1e587353d05d69178fc2.jpg",
+        "released": 20140305,
+        "primeSets": [
+            "rhino_prime",
+            "boltor_prime",
+            "ankyros_prime"
+        ]
+    },
+    {
+        "id": "ember_collection",
+        "name": "Ember",
+        "promoImage": "https://www-static.warframe.com/uploads/ca60f023d8977cdf8fe496bb104865c8.jpg",
+        "released": 20131120,
+        "primeSets": [
+            "ember_prime",
+            "sicarus_prime",
+            "glaive_prime"
+        ]
+    },
+    {
+        "id": "mag_collection",
+        "name": "Mag",
+        "promoImage": "https://www-static.warframe.com/uploads/51adfdf2aae9f169cd05686f2759b52d.jpg",
+        "released": 20130913,
+        "primeSets": [
+            "mag_prime",
+            "boar_prime",
+            "dakra_prime"
+        ]
+    },
+    {
+        "id": "frost_collection",
+        "name": "Frost",
+        "promoImage": "https://www-static.warframe.com/uploads/96871ec2d48ac795a0c690e94a672e9b.jpg",
+        "released": 20130503,
+        "primeSets": [
+            "frost_prime",
+            "latron_prime",
+            "reaper_prime"
+        ]
+    }
+]

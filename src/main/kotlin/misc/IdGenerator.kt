@@ -5,13 +5,15 @@ object IdGenerator {
         s1: String,
         s2: String? = null
     ): String {
-
         return if (s2 != null) {
             "${s1}_${s2}"
         } else {
             s1
         }.lowercase()
+            .replace("&", "and")
             .replace(" ", "_")
 
     }
+
+    fun generateCollection(name: String) = "${name.lowercase()}_collection"
 }

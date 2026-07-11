@@ -52,6 +52,16 @@ tasks.register<JavaExec>("prime_sets") {
     args("prime_sets")
 }
 
+tasks.register<JavaExec>("prime_collections") {
+    group = "data generation"
+    description = "Generate prime_collections.json"
+
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("MainKt")
+
+    args("prime_collections")
+}
+
 tasks.register<JavaExec>("manifest") {
     group = "data generation"
     description = "Generate manifest.json"

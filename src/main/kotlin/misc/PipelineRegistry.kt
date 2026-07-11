@@ -1,9 +1,6 @@
 package misc
 
-import pipeline.ManifestPipeline
-import pipeline.Pipeline
-import pipeline.PrimeSetPipeline
-import pipeline.RelicPipeline
+import pipeline.*
 
 object PipelineRegistry {
 
@@ -12,6 +9,8 @@ object PipelineRegistry {
         "relics" to RelicPipeline(),
 
         "prime_sets" to PrimeSetPipeline(),
+
+        "prime_collections" to PrimeCollectionPipeline(),
 
         "manifest" to ManifestPipeline()
 

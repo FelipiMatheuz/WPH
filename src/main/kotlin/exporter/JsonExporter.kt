@@ -7,6 +7,7 @@ import model.domain.relic.Relic
 import model.raw.Manifest
 import model.raw.ManifestFile
 import misc.sha256
+import model.domain.prime.PrimeCollection
 import java.io.File
 import java.time.Instant
 import kotlin.collections.sortedBy
@@ -39,6 +40,12 @@ class JsonExporter {
         writeJson(sortedData, FileSource.PRIME_SETS.path)
     }
 
+    fun exportPrimeCollections(data: List<PrimeCollection>) {
+
+        println("Exporting prime_collections.json...")
+        writeJson(data, FileSource.PRIME_COLLECTIONS.path)
+    }
+
     fun exportManifest() {
 
         println("Exporting manifest.json...")
@@ -67,7 +74,7 @@ class JsonExporter {
     private inline fun <reified T> writeJson(encoded: T, path: String) {
         val text = json.encodeToString(encoded)
 
-        val file = File(dataDirectory.path +"/"+ path)
+        val file = File(dataDirectory.path + "/" + path)
         file.parentFile.mkdirs()
         file.writeText(text)
         println("$path exported successfully")
