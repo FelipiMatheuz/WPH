@@ -72,6 +72,16 @@ tasks.register<JavaExec>("manifest") {
     args("manifest")
 }
 
+tasks.register<JavaExec>("consistency") {
+    group = "data generation"
+    description = "Check database consistency"
+
+    classpath = sourceSets["main"].runtimeClasspath
+    mainClass.set("MainKt")
+
+    args("consistency")
+}
+
 kotlin {
     jvmToolchain(21)
 }

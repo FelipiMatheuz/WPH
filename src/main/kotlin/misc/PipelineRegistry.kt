@@ -1,5 +1,6 @@
 package misc
 
+import consistency.ConsistencyPipeline
 import pipeline.*
 
 object PipelineRegistry {
@@ -12,8 +13,9 @@ object PipelineRegistry {
 
         "prime_collections" to PrimeCollectionPipeline(),
 
-        "manifest" to ManifestPipeline()
+        "manifest" to ManifestPipeline(),
 
+        "consistency" to ConsistencyPipeline()
     )
 
     fun find(name: String): Pipeline? =

@@ -1103,24 +1103,6 @@
         ]
     },
     {
-        "id": "galariak_prime",
-        "name": "Galariak Prime",
-        "type": "MELEE",
-        "image": "https://wiki.warframe.com/images/thumb/GalariakPrime.png/115px-GalariakPrime.png?af707",
-        "components": [
-            {
-                "id": "galariak_prime_blade",
-                "part": "BLADE",
-                "quantity": 1
-            },
-            {
-                "id": "galariak_prime_handle",
-                "part": "HANDLE",
-                "quantity": 1
-            }
-        ]
-    },
-    {
         "id": "galatine_prime",
         "name": "Galatine Prime",
         "type": "MELEE",
@@ -1518,18 +1500,18 @@
         ]
     },
     {
-        "id": "kavasa_prime_collar",
+        "id": "kavasa_prime",
         "name": "Kavasa Prime Collar",
         "type": "COMPANION",
         "image": "https://wiki.warframe.com/images/thumb/KavasaPrimeKubrowCollar.png/115px-KavasaPrimeKubrowCollar.png?bfbaf",
         "components": [
             {
-                "id": "kavasa_prime_collar_band",
+                "id": "kavasa_prime_band",
                 "part": "BAND",
                 "quantity": 1
             },
             {
-                "id": "kavasa_prime_collar_buckle",
+                "id": "kavasa_prime_buckle",
                 "part": "BUCKLE",
                 "quantity": 1
             }
@@ -2476,24 +2458,6 @@
             {
                 "id": "rubico_prime_barrel",
                 "part": "BARREL",
-                "quantity": 1
-            }
-        ]
-    },
-    {
-        "id": "sagek_prime",
-        "name": "Sagek Prime",
-        "type": "SECONDARY",
-        "image": "https://wiki.warframe.com/images/thumb/SagekPrime.png/115px-SagekPrime.png?fafd2",
-        "components": [
-            {
-                "id": "sagek_prime_barrel",
-                "part": "BARREL",
-                "quantity": 1
-            },
-            {
-                "id": "sagek_prime_receiver",
-                "part": "RECEIVER",
                 "quantity": 1
             }
         ]
