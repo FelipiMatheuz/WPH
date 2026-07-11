@@ -729,23 +729,23 @@
         ]
     },
     {
-        "id": "cobra_&_crane_prime",
+        "id": "cobra_and_crane_prime",
         "name": "Cobra & Crane Prime",
         "type": "MELEE",
         "image": "https://wiki.warframe.com/images/thumb/Cobra%26CranePrime.png/115px-Cobra%26CranePrime.png?e1c1e",
         "components": [
             {
-                "id": "cobra_&_crane_prime_blade",
+                "id": "cobra_and_crane_prime_blade",
                 "part": "BLADE",
                 "quantity": 1
             },
             {
-                "id": "cobra_&_crane_prime_hilt",
+                "id": "cobra_and_crane_prime_hilt",
                 "part": "HILT",
                 "quantity": 1
             },
             {
-                "id": "cobra_&_crane_prime_guard",
+                "id": "cobra_and_crane_prime_guard",
                 "part": "GUARD",
                 "quantity": 1
             }
@@ -2609,23 +2609,23 @@
         ]
     },
     {
-        "id": "silva_&_aegis_prime",
+        "id": "silva_and_aegis_prime",
         "name": "Silva & Aegis Prime",
         "type": "MELEE",
         "image": "https://wiki.warframe.com/images/thumb/Silva%26AegisPrime.png/115px-Silva%26AegisPrime.png?4f770",
         "components": [
             {
-                "id": "silva_&_aegis_prime_blade",
+                "id": "silva_and_aegis_prime_blade",
                 "part": "BLADE",
                 "quantity": 1
             },
             {
-                "id": "silva_&_aegis_prime_guard",
+                "id": "silva_and_aegis_prime_guard",
                 "part": "GUARD",
                 "quantity": 1
             },
             {
-                "id": "silva_&_aegis_prime_hilt",
+                "id": "silva_and_aegis_prime_hilt",
                 "part": "HILT",
                 "quantity": 1
             }
