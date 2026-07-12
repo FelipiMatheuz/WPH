@@ -3,12 +3,12 @@
     "generatorVersion": "1.0.0",
     "files": [
         {
-            "name": "prime_collections.json",
+            "name": "prime-collections.json",
             "size": 16037,
             "sha256": "54e7ee92b221a4ff542425ab253c6113a1599b7df3684f8f74ce30fc22ff28ca"
         },
         {
-            "name": "prime_sets.json",
+            "name": "prime-sets.json",
             "size": 98516,
             "sha256": "155e57011089e42fdbd79b974a8c54eabf96803bbc0d6da1aeceb9b86111dbb3"
         },
