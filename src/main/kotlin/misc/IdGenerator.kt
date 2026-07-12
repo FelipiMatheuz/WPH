@@ -1,18 +1,11 @@
 package misc
 
 object IdGenerator {
-    fun generateId(
-        s1: String,
-        s2: String? = null
-    ): String {
-        return if (s2 != null) {
-            "${s1}_${s2}"
-        } else {
-            s1
-        }.lowercase()
+    fun generateId(name: String): String {
+        return name.lowercase()
             .replace("&", "and")
             .replace(" ", "_")
-
+            .replace("", "")
     }
 
     fun generateCollection(name: String) = "${name.lowercase()}_collection"

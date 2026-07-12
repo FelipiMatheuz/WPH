@@ -42,14 +42,13 @@ class RelicValidator {
             "Common",
             "Uncommon",
             "Rare"
-
         )
 
         relics.forEach { relic ->
 
             relic.drops.forEach { drop ->
 
-                if (drop.id.isBlank() || drop.itemName.isBlank()) {
+                if (drop.id.isBlank()) {
 
                     errors.add("Relic '${relic.id}' contains an empty drop.")
 

@@ -3109,8 +3109,8 @@
         "image": "https://wiki.warframe.com/images/thumb/VenkaPrime.png/115px-VenkaPrime.png?7ea5c",
         "components": [
             {
-                "id": "venka_prime_blade",
-                "part": "BLADE",
+                "id": "venka_prime_blades",
+                "part": "BLADES",
                 "quantity": 1
             },
             {

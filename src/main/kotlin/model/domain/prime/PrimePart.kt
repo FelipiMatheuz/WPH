@@ -1,6 +1,7 @@
 package model.domain.prime
 
 enum class PrimePart {
+    BLUEPRINT,
     NEUROPTICS,
     CHASSIS,
     SYSTEMS,
@@ -11,6 +12,7 @@ enum class PrimePart {
     CARAPACE,
     CEREBRUM,
     BLADE,
+    BLADES,
     DISC,
     ORNAMENT,
     HANDLE,

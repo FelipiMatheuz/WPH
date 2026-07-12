@@ -28,7 +28,7 @@ class RelicExtractor {
                         }
 
                         currentRelic =
-                            if (header.endsWith("(Intact)")) {
+                            if (header.endsWith("(Intact)") && !header.contains("Requiem")) {
                                 parseHeader(row)
                             } else {
                                 null
@@ -101,33 +101,13 @@ class RelicExtractor {
             .text()
             .substringBefore(" (")
 
-        val itemName: String
-        val component: String
-
-        if (fullName.endsWith(" Prime Blueprint") || fullName.contains("Forma")) {
-
-            itemName = fullName.removeSuffix(" Blueprint")
-            component = "Blueprint"
-
-        } else {
-
-            val primeIndex = fullName.indexOf(" Prime")
-
-            itemName = fullName.substring(
-                0,
-                primeIndex + " Prime".length
-            )
-
-            component = fullName
-                .substring(primeIndex + " Prime".length)
-                .removeSuffix(" Blueprint")
-                .trim()
-
-        }
+        val itemName = fullName
+            .replace("Blueprint", "")
+            .replace("Kubrow Collar", "")
+            .trim()
 
         return RawDrop(
             itemName = itemName,
-            component = component,
             rarity = rarity
         )
     }

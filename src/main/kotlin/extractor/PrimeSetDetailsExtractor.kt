@@ -10,7 +10,6 @@ class PrimeSetDetailsExtractor(private val primeName: String) {
         val table = document.selectFirst("table.foundrytable")
             ?: return null
 
-        // Primeira linha após o cabeçalho da tabela
         val firstRequirementRow = table.select("tr")[1]
 
         return firstRequirementRow
@@ -29,7 +28,6 @@ class PrimeSetDetailsExtractor(private val primeName: String) {
             ?.trim()
             ?: return null
 
-        // Ignore common resources
         if (!name.contains("Prime"))
             return null
 

@@ -19,7 +19,7 @@ class RelicNormalizer {
 
         return relics.map { raw ->
 
-            val id = IdGenerator.generateId(raw.era, raw.name)
+            val id = IdGenerator.generateId("${raw.era} ${raw.name}")
             val source = sourceMap[id]?.source ?: AcquisitionSource.VAULT
 
             Relic(
@@ -33,22 +33,10 @@ class RelicNormalizer {
                 source = source,
 
                 drops = raw.drops.map {
-
                     Drop(
-
-                        id = IdGenerator.generateId(
-                            it.itemName,
-                            it.component
-                        ),
-
-                        itemName = it.itemName,
-
-                        component = it.component,
-
+                        id = IdGenerator.generateId(it.itemName),
                         rarity = it.rarity
-
                     )
-
                 }
 
             )

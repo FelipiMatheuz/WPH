@@ -23,7 +23,9 @@ class FarmabilityRule : ConsistencyRule {
 
         context.primeSets.forEach {
 
-            validatePrimeSet(
+            validatePrimeSet(it.id, relicDrops, errors)
+
+            validatePrimeSetComponents(
                 primeSet = it,
                 primeSets = primeSets,
                 relicDrops = relicDrops,
@@ -37,7 +39,20 @@ class FarmabilityRule : ConsistencyRule {
         return errors
     }
 
-    private fun validatePrimeSet(
+    fun validatePrimeSet(
+        primeSetId: String,
+        relicDrops: Set<String>,
+        errors: MutableList<ValidationError>
+    ) {
+        if (primeSetId !in relicDrops) {
+            errors += ValidationError(
+                source = "Relics",
+                message = "PrimeSet '${primeSetId}' blueprint cannot be obtained from any relic."
+            )
+        }
+    }
+
+    private fun validatePrimeSetComponents(
         primeSet: PrimeSet,
         primeSets: Map<String, PrimeSet>,
         relicDrops: Set<String>,
@@ -76,7 +91,7 @@ class FarmabilityRule : ConsistencyRule {
 
                     } else {
 
-                        validatePrimeSet(
+                        validatePrimeSetComponents(
                             dependency,
                             primeSets,
                             relicDrops,
@@ -109,5 +124,4 @@ class FarmabilityRule : ConsistencyRule {
         visiting.remove(primeSet.id)
         validated.add(primeSet.id)
     }
-
 }

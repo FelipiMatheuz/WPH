@@ -10,12 +10,9 @@ class ManifestRule : ConsistencyRule {
     ): List<ValidationError> {
 
         val expected = setOf(
-
-            "manifest.json",
             "relics.json",
             "prime_sets.json",
             "prime_collection.json"
-
         )
 
         val files = context.manifest.files
