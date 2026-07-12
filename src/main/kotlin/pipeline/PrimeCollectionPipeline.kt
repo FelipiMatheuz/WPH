@@ -1,6 +1,6 @@
 package pipeline
 
-import json.JsonManager
+import manager.FileManager
 import extractor.PrimeCollectionExtractor
 import extractor.PrimeCollectionImageExtractor
 import misc.PrimeCollectionSyncService
@@ -29,6 +29,6 @@ class PrimeCollectionPipeline(
 
         val primeCollections = normalizer.normalize(currentCollection)
 
-        JsonManager.exportPrimeCollections(primeCollections)
+        FileManager.exportPrimeCollections(primeCollections)
     }
 }

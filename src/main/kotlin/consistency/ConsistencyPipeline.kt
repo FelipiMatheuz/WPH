@@ -1,7 +1,7 @@
 package consistency
 
 import consistency.model.ConsistencyContext
-import json.JsonManager
+import manager.FileManager
 import model.domain.FileSource
 import pipeline.Pipeline
 
@@ -22,10 +22,10 @@ class ConsistencyPipeline : Pipeline {
     private fun loadContext(): ConsistencyContext {
 
         return ConsistencyContext(
-            relics = JsonManager.load(FileSource.RELICS),
-            primeSets = JsonManager.load(FileSource.PRIME_SETS),
-            primeCollections = JsonManager.load(FileSource.PRIME_COLLECTIONS),
-            manifest = JsonManager.load(FileSource.MANIFEST)
+            relics = FileManager.load(FileSource.RELICS),
+            primeSets = FileManager.load(FileSource.PRIME_SETS),
+            primeCollections = FileManager.load(FileSource.PRIME_COLLECTIONS),
+            manifest = FileManager.load(FileSource.MANIFEST)
         )
     }
 }

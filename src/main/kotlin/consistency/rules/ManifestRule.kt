@@ -11,7 +11,7 @@ class ManifestRule : ConsistencyRule {
     ): List<ValidationError> {
 
         val expected = FileSource.entries.map { it.path }
-            .filter { it != FileSource.MANIFEST.path }
+            .filter { it != FileSource.MANIFEST.path && it.contains(".json") }
             .toSet()
 
         val files = context.manifest.files

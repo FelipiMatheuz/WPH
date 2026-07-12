@@ -1,16 +1,16 @@
 package misc
 
+import manager.FileManager
 import kotlinx.serialization.json.Json
 import model.domain.FileSource
 import model.domain.prime.PrimeCollection
 import model.raw.RawPrimeCollection
-import java.io.File
 
 class PrimeCollectionSyncService {
 
     fun collectionExists(extracted: RawPrimeCollection): Boolean {
 
-        val output = File("data/${FileSource.PRIME_COLLECTIONS.path}")
+        val output = FileManager.dataFile(FileSource.PRIME_COLLECTIONS)
 
         if (!output.exists()) {
             println("prime_collections.json file does not exists.")

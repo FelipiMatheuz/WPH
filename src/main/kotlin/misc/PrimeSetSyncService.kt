@@ -1,49 +1,46 @@
 package misc
 
 import extractor.PrimeSetDetailsExtractor
+import manager.FileManager
 import kotlinx.serialization.json.Json
 import model.domain.FileSource
 import model.domain.prime.PrimeSet
 import model.raw.PrimeSetSyncResult
 import model.raw.RawPrimeSet
+import model.raw.RawPrimeSetWithComponents
 import remote.HtmlDownloader
-import java.io.File
 
 class PrimeSetSyncService {
 
     fun sync(extracted: List<RawPrimeSet>): PrimeSetSyncResult {
 
-        val ignored = IgnoredPrimeSets.load()
+        val output = FileManager.dataFile(FileSource.PRIME_SETS)
 
-        val output = File("data/${FileSource.PRIME_SETS.path}")
-
-        if (!output.exists()) {
-            println("Downloading all Prime Sets")
-            return PrimeSetSyncResult(listOf(), extracted.filterNot { it.name in ignored })
+        val existing = if (!output.exists()) {
+            listOf()
+        } else {
+            Json.decodeFromString<List<PrimeSet>>(output.readText())
         }
 
-        val existing = Json.decodeFromString<List<PrimeSet>>(
-            output.readText()
-        )
+        val ignored = IgnoredPrimeSets.load()
+        val existingIds = existing.map { it.id }.toSet()
 
-        val existingIds =
-            existing
-                .map { it.id }
-                .toSet()
-
-        val filteredPrimeSet = extracted
+        val extractedWithDetails = extracted
             .filterNot { it.name in ignored }
             .filterNot { IdGenerator.generateId(it.name) in existingIds }
+            .map { raw -> fetchDetails(raw) }
 
-        filteredPrimeSet.forEach {
-            val detailsDocument =
-                HtmlDownloader().download(it.pageUrl)
+        val newPrimeSets = IgnoredPrimeSets.update(extractedWithDetails)
 
-            val components = PrimeSetDetailsExtractor(it.name).extract(document = detailsDocument)
-            it.components = components
-        }
+        return PrimeSetSyncResult(existing, newPrimeSets)
+    }
 
+    private fun fetchDetails(raw: RawPrimeSet): RawPrimeSetWithComponents {
+        val detailsDocument =
+            HtmlDownloader().download(raw.pageUrl)
 
-        return PrimeSetSyncResult(existing, filteredPrimeSet)
+        val components = PrimeSetDetailsExtractor(raw.name).extract(document = detailsDocument)
+
+        return RawPrimeSetWithComponents(raw, components)
     }
 }

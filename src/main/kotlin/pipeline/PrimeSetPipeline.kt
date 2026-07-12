@@ -1,8 +1,7 @@
 package pipeline
 
-import json.JsonManager
+import manager.FileManager
 import extractor.PrimeSetExtractor
-import misc.IgnoredPrimeSets
 import misc.PrimeSetSyncService
 import normalizer.PrimeSetNormalizer
 import remote.DataSources
@@ -16,22 +15,15 @@ class PrimeSetPipeline(
     override fun run() {
         val primeDocument = downloader.download(DataSources.PRIME_SETS)
         val rawPrimeSets = extractor.extract(primeDocument)
-        val sync = PrimeSetSyncService().sync(rawPrimeSets)
+        val syncResult = PrimeSetSyncService().sync(rawPrimeSets)
 
-        if (sync.newPrimeSets.isEmpty()) {
+        if (syncResult.newPrimeSets.isEmpty()) {
             println("Prime Sets are already up to date.")
             return
         }
 
-        val newPrimeSets = IgnoredPrimeSets.update(sync.newPrimeSets)
+        val normalizedPrimeSets = normalizer.normalize(syncResult.newPrimeSets)
 
-        if (newPrimeSets.isEmpty()){
-            println("No new valid prime sets found.")
-            return
-        }
-
-        val normalizedPrimeSets = normalizer.normalize(newPrimeSets)
-
-        JsonManager.exportPrimeSets(sync.existing + normalizedPrimeSets)
+        FileManager.exportPrimeSets(syncResult.existing + normalizedPrimeSets)
     }
 }

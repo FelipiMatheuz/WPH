@@ -76,8 +76,7 @@ class PrimeSetExtractor {
                         name = name,
                         type = type,
                         imageUrl = imageUrl,
-                        pageUrl = pagePath,
-                        components = null
+                        pageUrl = pagePath
                     )
                 }
         }

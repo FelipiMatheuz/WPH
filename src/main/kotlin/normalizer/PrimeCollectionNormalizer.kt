@@ -1,16 +1,17 @@
 package normalizer
 
+import manager.FileManager
 import kotlinx.serialization.json.Json
 import misc.IdGenerator
 import model.domain.FileSource
 import model.domain.prime.PrimeCollection
 import model.raw.RawPrimeCollection
-import java.io.File
 
 class PrimeCollectionNormalizer {
 
     fun normalize(raw: RawPrimeCollection): List<PrimeCollection> {
-        val output = File("data/${FileSource.PRIME_COLLECTIONS.path}")
+
+        val output = FileManager.dataFile(FileSource.PRIME_COLLECTIONS)
         val collections =
             if (output.exists()) {
                 Json.decodeFromString<MutableList<PrimeCollection>>(

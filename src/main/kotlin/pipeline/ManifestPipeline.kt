@@ -1,9 +1,9 @@
 package pipeline
 
-import json.JsonManager
+import manager.FileManager
 
 class ManifestPipeline: Pipeline {
     override fun run() {
-        JsonManager.exportManifest()
+        FileManager.exportManifest()
     }
 }

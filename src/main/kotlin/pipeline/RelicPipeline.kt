@@ -1,6 +1,6 @@
 package pipeline
 
-import json.JsonManager
+import manager.FileManager
 import extractor.RelicExtractor
 import extractor.RelicSourceExtractor
 import normalizer.RelicNormalizer
@@ -23,6 +23,6 @@ class RelicPipeline(
 
         val relics = normalizer.normalize(rawRelics, rawRelicSource)
 
-        JsonManager.exportRelics(relics)
+        FileManager.exportRelics(relics)
     }
 }
