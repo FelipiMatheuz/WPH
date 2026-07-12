@@ -1,26 +1,28 @@
 package pipeline
 
-import exporter.JsonExporter
+import json.JsonManager
 import extractor.RelicExtractor
 import extractor.RelicSourceExtractor
 import normalizer.RelicNormalizer
 import remote.DataSources
 import remote.HtmlDownloader
-import validator.RelicValidator
 
-class RelicPipeline : Pipeline {
+class RelicPipeline(
+    private val downloader: HtmlDownloader = HtmlDownloader(),
+    private val extractor: RelicExtractor = RelicExtractor(),
+    private val sourceExtractor: RelicSourceExtractor = RelicSourceExtractor(),
+    private val normalizer: RelicNormalizer = RelicNormalizer()
+) : Pipeline {
     override fun run() {
-        val dropTableDocument = HtmlDownloader().download(DataSources.DROP_TABLE)
-        val rawRelics = RelicExtractor().extract(dropTableDocument)
+        val dropTableDocument = downloader.download(DataSources.DROP_TABLE)
+        val rawRelics = extractor.extract(dropTableDocument)
 
-        val voidDocument = HtmlDownloader().download(DataSources.VOID_RELIC)
-        val resurgenceDocument = HtmlDownloader().download(DataSources.PRIME_RESURGENCE)
-        val rawRelicSource = RelicSourceExtractor().extract(voidDocument, resurgenceDocument)
+        val voidDocument = downloader.download(DataSources.VOID_RELIC)
+        val resurgenceDocument = downloader.download(DataSources.PRIME_RESURGENCE)
+        val rawRelicSource = sourceExtractor.extract(voidDocument, resurgenceDocument)
 
-        val relics = RelicNormalizer().normalize(rawRelics, rawRelicSource)
+        val relics = normalizer.normalize(rawRelics, rawRelicSource)
 
-        RelicValidator().validate(relics)
-
-        JsonExporter().exportRelics(relics)
+        JsonManager.exportRelics(relics)
     }
 }

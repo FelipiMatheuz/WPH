@@ -17,12 +17,15 @@ class DuplicateIdRule : ConsistencyRule {
             ).also(::addAll)
 
             validateDuplicates(
-                "Collection",
+                "PrimeCollections",
                 context.primeCollections.map { it.id }
             ).also(::addAll)
 
+            validateDuplicates(
+                "Relics",
+                context.relics.map { it.id }
+            ).also(::addAll)
         }
-
     }
 
     private fun validateDuplicates(
@@ -35,12 +38,10 @@ class DuplicateIdRule : ConsistencyRule {
             .filterValues { it > 1 }
             .keys
             .map {
-
                 ValidationError(
                     source,
                     "Duplicated id '$it'"
                 )
-
             }
 
     }

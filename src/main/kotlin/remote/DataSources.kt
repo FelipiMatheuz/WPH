@@ -2,15 +2,19 @@ package remote
 
 object DataSources {
 
-    const val DROP_TABLE = "https://www.warframe.com/droptables"
+    private const val WARFRAME_CMS = "https://www.warframe.com"
 
-    const val VOID_RELIC = "https://wiki.warframe.com/w/Void_Relic"
+    const val DROP_TABLE = "$WARFRAME_CMS/droptables"
 
-    const val PRIME_RESURGENCE = "https://wiki.warframe.com/w/Prime_Resurgence"
+    const val WARFRAME_WIKI = "https://wiki.warframe.com"
 
-    const val PRIME_SETS = "https://wiki.warframe.com/w/Prime"
+    const val VOID_RELIC = "$WARFRAME_WIKI/w/Void_Relic"
 
-    const val PRIME_COLLECTION = "https://wiki.warframe.com/w/Prime_Access"
+    const val PRIME_RESURGENCE = "$WARFRAME_WIKI/w/Prime_Resurgence"
 
-    const val PRIME_ACCESS = "https://www.warframe.com/en/prime-access"
+    const val PRIME_SETS = "$WARFRAME_WIKI/w/Prime"
+
+    const val PRIME_COLLECTION = "$WARFRAME_WIKI/w/Prime_Access"
+
+    const val PRIME_ACCESS = "$WARFRAME_CMS/en/prime-access"
 }

@@ -1,25 +1,34 @@
-package exporter
+package json
 
 import kotlinx.serialization.json.Json
+import misc.sha256
 import model.domain.FileSource
+import model.domain.prime.PrimeCollection
 import model.domain.prime.PrimeSet
 import model.domain.relic.Relic
 import model.raw.Manifest
 import model.raw.ManifestFile
-import misc.sha256
-import model.domain.prime.PrimeCollection
 import java.io.File
 import java.time.Instant
-import kotlin.collections.sortedBy
 
-class JsonExporter {
-    private val json = Json {
-        prettyPrint = true
-        encodeDefaults = true
-        ignoreUnknownKeys = true
+object JsonManager {
+    val json = Json { prettyPrint = true; encodeDefaults = true; ignoreUnknownKeys = true }
+    val dataDir = File("data")
+
+    inline fun <reified T> load(source: FileSource): T {
+        val file = File("data/${source.path}")
+        if (!file.exists()) error("${file.absolutePath} file is missing")
+        return Json.decodeFromString(file.readText())
     }
 
-    private val dataDirectory = File("data")
+    private inline fun <reified T> save(source: FileSource, data: T) {
+        val text = json.encodeToString(data)
+
+        val file = File(dataDir.path + "/" + source.path)
+        file.parentFile.mkdirs()
+        file.writeText(text)
+        println("${source.path} exported successfully")
+    }
 
     fun exportRelics(data: List<Relic>) {
 
@@ -30,26 +39,25 @@ class JsonExporter {
                 Relic::name
             )
         )
-        writeJson(sortedData, FileSource.RELICS.path)
+        save(FileSource.RELICS, sortedData)
     }
 
     fun exportPrimeSets(data: List<PrimeSet>) {
 
         println("Exporting prime_sets.json...")
         val sortedData = data.sortedBy { it.name }
-        writeJson(sortedData, FileSource.PRIME_SETS.path)
+        save(FileSource.PRIME_SETS, sortedData)
     }
 
     fun exportPrimeCollections(data: List<PrimeCollection>) {
-
         println("Exporting prime_collections.json...")
-        writeJson(data, FileSource.PRIME_COLLECTIONS.path)
+        save(FileSource.PRIME_COLLECTIONS, data)
     }
 
     fun exportManifest() {
 
         println("Exporting manifest.json...")
-        val files = dataDirectory
+        val files = dataDir
             .listFiles()
             ?.filter { it.extension == "json" && it.name != FileSource.MANIFEST.path }
             ?.sortedBy { it.name }
@@ -68,15 +76,6 @@ class JsonExporter {
             files = files
         )
 
-        writeJson(manifest, FileSource.MANIFEST.path)
-    }
-
-    private inline fun <reified T> writeJson(encoded: T, path: String) {
-        val text = json.encodeToString(encoded)
-
-        val file = File(dataDirectory.path + "/" + path)
-        file.parentFile.mkdirs()
-        file.writeText(text)
-        println("$path exported successfully")
+        save(FileSource.MANIFEST, manifest)
     }
 }

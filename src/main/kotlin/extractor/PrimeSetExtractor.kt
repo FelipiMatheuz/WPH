@@ -3,8 +3,10 @@ package extractor
 import model.domain.prime.PrimeType
 import model.raw.RawPrimeSet
 import org.jsoup.nodes.Document
+import remote.DataSources
 
 class PrimeSetExtractor {
+
     fun extract(document: Document): List<RawPrimeSet> {
 
         val result = mutableListOf<RawPrimeSet>()
@@ -54,7 +56,7 @@ class PrimeSetExtractor {
                         if (it.startsWith("http"))
                             it
                         else
-                            "https://wiki.warframe.com$it"
+                            "${DataSources.WARFRAME_WIKI}$it"
                     }
 
                     val imageUrl = item
@@ -64,7 +66,7 @@ class PrimeSetExtractor {
                             if (it.startsWith("http"))
                                 it
                             else
-                                "https://wiki.warframe.com$it"
+                                "${DataSources.WARFRAME_WIKI}$it"
                         }
                         ?: ""
 

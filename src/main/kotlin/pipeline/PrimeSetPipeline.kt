@@ -1,18 +1,21 @@
 package pipeline
 
-import exporter.JsonExporter
+import json.JsonManager
 import extractor.PrimeSetExtractor
 import misc.IgnoredPrimeSets
 import misc.PrimeSetSyncService
 import normalizer.PrimeSetNormalizer
 import remote.DataSources
 import remote.HtmlDownloader
-import validator.PrimeSetValidator
 
-class PrimeSetPipeline : Pipeline {
+class PrimeSetPipeline(
+    private val downloader: HtmlDownloader = HtmlDownloader(),
+    private val extractor: PrimeSetExtractor = PrimeSetExtractor(),
+    private val normalizer: PrimeSetNormalizer = PrimeSetNormalizer()
+) : Pipeline {
     override fun run() {
-        val primeDocument = HtmlDownloader().download(DataSources.PRIME_SETS)
-        val rawPrimeSets = PrimeSetExtractor().extract(primeDocument)
+        val primeDocument = downloader.download(DataSources.PRIME_SETS)
+        val rawPrimeSets = extractor.extract(primeDocument)
         val sync = PrimeSetSyncService().sync(rawPrimeSets)
 
         if (sync.newPrimeSets.isEmpty()) {
@@ -27,9 +30,8 @@ class PrimeSetPipeline : Pipeline {
             return
         }
 
-        val normalizedPrimeSets = PrimeSetNormalizer().normalize(newPrimeSets)
+        val normalizedPrimeSets = normalizer.normalize(newPrimeSets)
 
-        PrimeSetValidator().validate(normalizedPrimeSets)
-        JsonExporter().exportPrimeSets(sync.existing + normalizedPrimeSets)
+        JsonManager.exportPrimeSets(sync.existing + normalizedPrimeSets)
     }
 }
