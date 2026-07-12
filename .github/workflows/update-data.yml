@@ -45,6 +45,9 @@ jobs:
       - name: Update Manifest
         run: ./gradlew manifest
 
+      - name: Check database consistency
+        run: ./gradlew consistency
+
       - name: Commit updated JSONs
         run: |
           git config user.name "github-actions[bot]"
