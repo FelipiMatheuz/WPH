@@ -1,16 +1,21 @@
 {
-    "generatedAt": "2026-07-11T03:14:39.161077077Z",
+    "generatedAt": "2026-07-12T16:19:40.250664Z",
     "generatorVersion": "1.0.0",
     "files": [
         {
+            "name": "prime_collections.json",
+            "size": 16037,
+            "sha256": "54e7ee92b221a4ff542425ab253c6113a1599b7df3684f8f74ce30fc22ff28ca"
+        },
+        {
             "name": "prime_sets.json",
-            "size": 99555,
-            "sha256": "07b81dc33d1fa39ff0c6b531d94fd39eac345618a27cd90f569b8c85b303b878"
+            "size": 98516,
+            "sha256": "155e57011089e42fdbd79b974a8c54eabf96803bbc0d6da1aeceb9b86111dbb3"
         },
         {
             "name": "relics.json",
-            "size": 913182,
-            "sha256": "65bb4c50c7b385f13ae41f5cc1b80f6629c0652efe5b429b5eabd30dc0c7b71c"
+            "size": 601290,
+            "sha256": "4af91df8b1560eb2fde78008b8b2332507ed9c49e60141ccc1ddb1ea7b30e3e2"
         }
     ]
 }
