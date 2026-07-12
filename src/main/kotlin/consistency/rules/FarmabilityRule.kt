@@ -2,6 +2,7 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
+import consistency.model.ValidationSource
 import model.domain.prime.PrimePart
 import model.domain.prime.PrimeSet
 
@@ -46,7 +47,7 @@ class FarmabilityRule : ConsistencyRule {
     ) {
         if (primeSetId !in relicDrops) {
             errors += ValidationError(
-                source = "Relics",
+                source = ValidationSource.RELICS,
                 message = "PrimeSet '${primeSetId}' blueprint cannot be obtained from any relic."
             )
         }
@@ -67,7 +68,7 @@ class FarmabilityRule : ConsistencyRule {
         if (!visiting.add(primeSet.id)) {
 
             errors += ValidationError(
-                source = "PrimeSets",
+                source = ValidationSource.PRIME_SETS,
                 message = "Circular dependency detected involving '${primeSet.id}'."
             )
 
@@ -85,7 +86,7 @@ class FarmabilityRule : ConsistencyRule {
                     if (dependency == null) {
 
                         errors += ValidationError(
-                            source = "PrimeSets",
+                            source = ValidationSource.PRIME_SETS,
                             message = "'${primeSet.id}' references missing PrimeSet '${component.id}'."
                         )
 
@@ -109,7 +110,7 @@ class FarmabilityRule : ConsistencyRule {
                     if (component.id !in relicDrops) {
 
                         errors += ValidationError(
-                            source = "Relics",
+                            source = ValidationSource.RELICS,
                             message = "Component '${component.id}' required by '${primeSet.id}' cannot be obtained from any relic."
                         )
 

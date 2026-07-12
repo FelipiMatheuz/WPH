@@ -2,30 +2,31 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
+import consistency.model.ValidationSource
 
 class EmptyRule : ConsistencyRule {
     override fun validate(context: ConsistencyContext): List<ValidationError> {
 
         return buildList {
             validateEmpty(
-                "PrimeSet",
+                ValidationSource.PRIME_SETS,
                 context.primeSets
             )?.also(::add)
 
             validateEmpty(
-                "PrimeCollections",
+                ValidationSource.PRIME_COLLECTIONS,
                 context.primeCollections
             )?.also(::add)
 
             validateEmpty(
-                "Relics",
+                ValidationSource.RELICS,
                 context.relics
             )?.also(::add)
         }
     }
 
     private inline fun <reified T> validateEmpty(
-        source: String,
+        source: ValidationSource,
         list: List<T>
     ): ValidationError? {
         return if (list.isEmpty()) {

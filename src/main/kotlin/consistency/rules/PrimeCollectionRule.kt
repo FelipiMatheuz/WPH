@@ -2,6 +2,7 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
+import consistency.model.ValidationSource
 import model.domain.prime.PrimeCollection
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
@@ -35,7 +36,7 @@ class PrimeCollectionRule : ConsistencyRule {
             } catch (_: DateTimeParseException) {
                 listErrors.add(
                     ValidationError(
-                        "PrimeCollections",
+                        ValidationSource.PRIME_COLLECTIONS,
                         "Invalid release date '${collection.released}' for collection '${collection.id}'."
                     )
                 )
@@ -53,14 +54,14 @@ class PrimeCollectionRule : ConsistencyRule {
             if (collection.primeSets.isEmpty()) {
                 listErrors.add(
                     ValidationError(
-                        "PrimeCollections",
+                        ValidationSource.PRIME_COLLECTIONS,
                         "${collection.id} has no Prime Sets."
                     )
                 )
             } else if (collection.primeSets.count { it.contains(collection.name, true) } == 0) {
                 listErrors.add(
                     ValidationError(
-                        "PrimeCollections",
+                        ValidationSource.PRIME_COLLECTIONS,
                         "${collection.id} must contain the owner Warframe in collection."
                     )
                 )
@@ -77,7 +78,7 @@ class PrimeCollectionRule : ConsistencyRule {
 
         return if (ordered != collections) {
             ValidationError(
-                "PrimeCollections",
+                ValidationSource.PRIME_COLLECTIONS,
                 "Prime Collections must be ordered by release date (newest first)."
             )
         } else {

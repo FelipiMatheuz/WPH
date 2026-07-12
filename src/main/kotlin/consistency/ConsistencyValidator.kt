@@ -37,11 +37,9 @@ class ConsistencyValidator {
         if (errors.isNotEmpty()) {
 
             errors.forEach {
-                println("[ERROR] ${it.source}: ${it.message}")
+                println("[ERROR] ${it.source.logName}: ${it.message}")
             }
-
-            error("${errors.size} consistency errors found.")
-
+            error("${errors.size} consistency error(s) found.")
         }
 
     }

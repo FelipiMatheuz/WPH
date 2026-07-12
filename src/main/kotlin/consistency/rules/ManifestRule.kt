@@ -2,6 +2,7 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
+import consistency.model.ValidationSource
 import model.domain.FileSource
 
 class ManifestRule : ConsistencyRule {
@@ -23,7 +24,7 @@ class ManifestRule : ConsistencyRule {
             .map {
 
                 ValidationError(
-                    "Manifest",
+                    ValidationSource.MANIFEST,
                     "$it missing from manifest."
                 )
 

@@ -2,6 +2,7 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
+import consistency.model.ValidationSource
 
 class CollectionPrimeSetRule : ConsistencyRule {
 
@@ -23,7 +24,7 @@ class CollectionPrimeSetRule : ConsistencyRule {
 
                         add(
                             ValidationError(
-                                "PrimeCollection",
+                                ValidationSource.PRIME_COLLECTIONS,
                                 "${collection.id} references unknown PrimeSet '$setId'"
                             )
                         )

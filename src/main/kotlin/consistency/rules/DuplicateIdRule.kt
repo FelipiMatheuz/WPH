@@ -2,6 +2,7 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
+import consistency.model.ValidationSource
 
 class DuplicateIdRule : ConsistencyRule {
 
@@ -12,24 +13,24 @@ class DuplicateIdRule : ConsistencyRule {
         return buildList {
 
             validateDuplicates(
-                "PrimeSet",
+                ValidationSource.PRIME_SETS,
                 context.primeSets.map { it.id }
             ).also(::addAll)
 
             validateDuplicates(
-                "PrimeCollections",
+                ValidationSource.PRIME_COLLECTIONS,
                 context.primeCollections.map { it.id }
             ).also(::addAll)
 
             validateDuplicates(
-                "Relics",
+                ValidationSource.RELICS,
                 context.relics.map { it.id }
             ).also(::addAll)
         }
     }
 
     private fun validateDuplicates(
-        source: String,
+        source: ValidationSource,
         ids: List<String>
     ): List<ValidationError> {
 

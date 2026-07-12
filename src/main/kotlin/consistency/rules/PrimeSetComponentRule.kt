@@ -2,6 +2,7 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
+import consistency.model.ValidationSource
 import model.domain.prime.PrimePart
 
 class PrimeSetComponentRule : ConsistencyRule {
@@ -26,7 +27,7 @@ class PrimeSetComponentRule : ConsistencyRule {
 
                             add(
                                 ValidationError(
-                                    "PrimeSet",
+                                    ValidationSource.PRIME_SETS,
                                     "${set.id} references missing PrimeSet '${it.id}'"
                                 )
                             )
