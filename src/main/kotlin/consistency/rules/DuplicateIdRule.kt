@@ -2,7 +2,8 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
-import consistency.model.ValidationSource
+import logging.Logger
+import model.domain.FileSource
 
 class DuplicateIdRule : ConsistencyRule {
 
@@ -10,27 +11,29 @@ class DuplicateIdRule : ConsistencyRule {
         context: ConsistencyContext
     ): List<ValidationError> {
 
+        Logger.info("CONSISTENCY", "Validating duplicated ids...")
+
         return buildList {
 
             validateDuplicates(
-                ValidationSource.PRIME_SETS,
+                FileSource.PRIME_SETS,
                 context.primeSets.map { it.id }
             ).also(::addAll)
 
             validateDuplicates(
-                ValidationSource.PRIME_COLLECTIONS,
+                FileSource.PRIME_COLLECTIONS,
                 context.primeCollections.map { it.id }
             ).also(::addAll)
 
             validateDuplicates(
-                ValidationSource.RELICS,
+                FileSource.RELICS,
                 context.relics.map { it.id }
             ).also(::addAll)
         }
     }
 
     private fun validateDuplicates(
-        source: ValidationSource,
+        source: FileSource,
         ids: List<String>
     ): List<ValidationError> {
 

@@ -1,24 +1,32 @@
 package extractor
 
+import logging.Logger
+import model.domain.FileSource
 import org.jsoup.nodes.Document
 
 class PrimeCollectionImageExtractor {
 
     fun extract(document: Document): String {
+        Logger.info(
+            FileSource.PRIME_COLLECTIONS.logName,
+            "Extracting URL image for new prime collection..."
+        )
+
         val style = document
             .selectFirst("div.SectionBackground--masthead")
             ?.attr("style")
-            ?: error("Prime Access masthead not found")
 
         val prefix = "url("
-        val start = style.indexOf(prefix)
-        require(start != -1) { "Poster URL not found" }
+        val start = style?.indexOf(prefix) ?: 0
+        val end = style?.indexOf(')', start) ?: 0
 
-        val end = style.indexOf(')', start)
-        require(end != -1) { "Poster URL not found" }
+        val urlImage = style?.substring(start + prefix.length, end)?.trim('\'', '"')
 
-        return style
-            .substring(start + prefix.length, end)
-            .trim('\'', '"')
+        return if (urlImage != null) {
+            urlImage
+        } else {
+            Logger.warn(FileSource.PRIME_COLLECTIONS.logName, "Prime Access background not found")
+            ""
+        }
     }
 }

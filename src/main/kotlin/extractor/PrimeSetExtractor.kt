@@ -1,5 +1,7 @@
 package extractor
 
+import logging.Logger
+import model.domain.FileSource
 import model.domain.prime.PrimeType
 import model.raw.RawPrimeSet
 import org.jsoup.nodes.Document
@@ -9,9 +11,11 @@ class PrimeSetExtractor {
 
     fun extract(document: Document): List<RawPrimeSet> {
 
+        Logger.info(FileSource.PRIME_SETS.logName, "Extracting prime set catalog...")
+
         val result = mutableListOf<RawPrimeSet>()
 
-        println("========== Prime Catalog ==========")
+        Logger.info(FileSource.PRIME_SETS.logName, "========== Prime Catalog ==========")
 
         document.select("div.mw-heading3").forEach { heading ->
 
@@ -24,17 +28,15 @@ class PrimeSetExtractor {
             val type = PrimeType.fromWiki(title)
 
             if (type == null) {
-                println("Skipping unsupported category: $title")
+                Logger.info(FileSource.PRIME_SETS.logName, "Skipping unsupported category: $title")
                 return@forEach
             }
-
-            println()
-            println("Category: $type")
+            Logger.info(FileSource.PRIME_SETS.logName, "Category: $type")
 
             val gallery = heading.nextElementSibling()
 
             if (gallery == null || !gallery.hasClass("gallery")) {
-                println("Gallery not found for $title")
+                Logger.warn(FileSource.PRIME_SETS.logName, "Gallery not found for $title")
                 return@forEach
             }
 
@@ -70,7 +72,7 @@ class PrimeSetExtractor {
                         }
                         ?: ""
 
-                    println(" -> $name")
+                    Logger.info(FileSource.PRIME_SETS.logName, " -> $name")
 
                     result += RawPrimeSet(
                         name = name,
@@ -81,9 +83,7 @@ class PrimeSetExtractor {
                 }
         }
 
-        println()
-        println("Prime Sets extracted: ${result.size}")
-
+        Logger.info(FileSource.PRIME_SETS.logName, "Prime Sets extracted: ${result.size}")
         return result
     }
 }

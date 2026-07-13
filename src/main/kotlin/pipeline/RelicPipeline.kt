@@ -3,6 +3,7 @@ package pipeline
 import manager.FileManager
 import extractor.RelicExtractor
 import extractor.RelicSourceExtractor
+import logging.Logger
 import normalizer.RelicNormalizer
 import remote.DataSources
 import remote.HtmlDownloader
@@ -14,6 +15,7 @@ class RelicPipeline(
     private val normalizer: RelicNormalizer = RelicNormalizer()
 ) : Pipeline {
     override fun run() {
+        Logger.warn("PIPELINE", "===== Relics Pipeline =====")
         val dropTableDocument = downloader.download(DataSources.DROP_TABLE)
         val rawRelics = extractor.extract(dropTableDocument)
 
@@ -24,5 +26,6 @@ class RelicPipeline(
         val relics = normalizer.normalize(rawRelics, rawRelicSource)
 
         FileManager.exportRelics(relics)
+        Logger.warn("PIPELINE", "Pipeline finished successfully.")
     }
 }

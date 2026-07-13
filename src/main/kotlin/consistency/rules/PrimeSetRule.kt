@@ -2,7 +2,8 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
-import consistency.model.ValidationSource
+import logging.Logger
+import model.domain.FileSource
 import model.domain.prime.PrimePart
 import model.domain.prime.PrimeSet
 import kotlin.collections.forEach
@@ -10,6 +11,9 @@ import kotlin.collections.forEach
 class PrimeSetRule : ConsistencyRule {
 
     override fun validate(context: ConsistencyContext): List<ValidationError> {
+
+        Logger.info("CONSISTENCY", "Validating prime sets...")
+
         return buildList {
             val primeSets = context.primeSets
             validateNames(primeSets).also(::addAll)
@@ -25,7 +29,7 @@ class PrimeSetRule : ConsistencyRule {
             if (it.name.isBlank()) {
                 listErrors.add(
                     ValidationError(
-                        ValidationSource.PRIME_SETS,
+                        FileSource.PRIME_SETS,
                         "PrimeSet '${it.id}' has empty name."
                     )
                 )
@@ -33,7 +37,7 @@ class PrimeSetRule : ConsistencyRule {
             if (it.components.isEmpty()) {
                 listErrors.add(
                     ValidationError(
-                        ValidationSource.PRIME_SETS,
+                        FileSource.PRIME_SETS,
                         "PrimeSet '${it.id}' has no components."
                     )
                 )
@@ -51,7 +55,7 @@ class PrimeSetRule : ConsistencyRule {
                 if (component.quantity <= 0) {
                     listErrors.add(
                         ValidationError(
-                            ValidationSource.PRIME_SETS,
+                            FileSource.PRIME_SETS,
                             "Component '${component.id}' of '${set.name}' has invalid quantity."
                         )
                     )
@@ -60,7 +64,7 @@ class PrimeSetRule : ConsistencyRule {
                 if (component.id.isBlank()) {
                     listErrors.add(
                         ValidationError(
-                            ValidationSource.PRIME_SETS,
+                            FileSource.PRIME_SETS,
                             "PrimeSet '${set.name}' contains empty component id."
                         )
                     )
@@ -82,7 +86,7 @@ class PrimeSetRule : ConsistencyRule {
                     if (it.id !in ids) {
                         listErrors.add(
                             ValidationError(
-                                ValidationSource.PRIME_SETS,
+                                FileSource.PRIME_SETS,
                                 "PrimeSet '${set.name}' references unknown PrimeSet '${it.id}'."
                             )
                         )

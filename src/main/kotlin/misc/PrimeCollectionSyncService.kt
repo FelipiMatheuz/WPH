@@ -2,6 +2,7 @@ package misc
 
 import manager.FileManager
 import kotlinx.serialization.json.Json
+import logging.Logger
 import model.domain.FileSource
 import model.domain.prime.PrimeCollection
 import model.raw.RawPrimeCollection
@@ -13,7 +14,10 @@ class PrimeCollectionSyncService {
         val output = FileManager.dataFile(FileSource.PRIME_COLLECTIONS)
 
         if (!output.exists()) {
-            println("prime_collections.json file does not exists.")
+            Logger.warn(
+                FileSource.PRIME_COLLECTIONS.logName,
+                "prime_collections.json file does not exists."
+            )
             return false
         }
 

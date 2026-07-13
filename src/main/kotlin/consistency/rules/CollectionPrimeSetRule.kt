@@ -2,7 +2,8 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
-import consistency.model.ValidationSource
+import logging.Logger
+import model.domain.FileSource
 
 class CollectionPrimeSetRule : ConsistencyRule {
 
@@ -10,6 +11,7 @@ class CollectionPrimeSetRule : ConsistencyRule {
         context: ConsistencyContext
     ): List<ValidationError> {
 
+        Logger.info("CONSISTENCY", "Validating collection prime set ids...")
         val ids = context.primeSets
             .map { it.id }
             .toHashSet()
@@ -24,7 +26,7 @@ class CollectionPrimeSetRule : ConsistencyRule {
 
                         add(
                             ValidationError(
-                                ValidationSource.PRIME_COLLECTIONS,
+                                FileSource.PRIME_COLLECTIONS,
                                 "${collection.id} references unknown PrimeSet '$setId'"
                             )
                         )

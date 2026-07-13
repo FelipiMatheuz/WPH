@@ -1,6 +1,8 @@
 package consistency.model
 
+import model.domain.FileSource
+
 data class ValidationError(
-    val source: ValidationSource,
+    val source: FileSource,
     val message: String
 )

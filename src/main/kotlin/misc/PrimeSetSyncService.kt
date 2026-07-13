@@ -3,6 +3,7 @@ package misc
 import extractor.PrimeSetDetailsExtractor
 import manager.FileManager
 import kotlinx.serialization.json.Json
+import logging.Logger
 import model.domain.FileSource
 import model.domain.prime.PrimeSet
 import model.raw.PrimeSetSyncResult
@@ -14,9 +15,11 @@ class PrimeSetSyncService {
 
     fun sync(extracted: List<RawPrimeSet>): PrimeSetSyncResult {
 
+        Logger.info(FileSource.PRIME_SETS.logName, "Checking new prime sets...")
         val output = FileManager.dataFile(FileSource.PRIME_SETS)
 
         val existing = if (!output.exists()) {
+            Logger.warn(FileSource.PRIME_SETS.logName, "No JSON file found.")
             listOf()
         } else {
             Json.decodeFromString<List<PrimeSet>>(output.readText())

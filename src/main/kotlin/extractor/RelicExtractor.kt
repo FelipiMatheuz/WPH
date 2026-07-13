@@ -1,5 +1,7 @@
 package extractor
 
+import logging.Logger
+import model.domain.FileSource
 import model.raw.RawDrop
 import model.raw.RawRelic
 import org.jsoup.nodes.Document
@@ -9,7 +11,7 @@ class RelicExtractor {
 
     fun extract(document: Document): List<RawRelic> {
 
-        println("Extracting Info...")
+        Logger.info(FileSource.RELICS.logName,"Extracting relics info...")
         val relics = mutableListOf<RawRelic>()
 
         var currentRelic: RawRelic? = null
@@ -49,7 +51,7 @@ class RelicExtractor {
         currentRelic?.let {
             relics.add(it)
         }
-
+        Logger.info(FileSource.RELICS.logName, "Relics found: ${relics.size}")
         return relics
 
     }

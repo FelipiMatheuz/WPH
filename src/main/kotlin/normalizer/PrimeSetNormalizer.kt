@@ -1,6 +1,8 @@
 package normalizer
 
+import logging.Logger
 import misc.IdGenerator
+import model.domain.FileSource
 import model.domain.prime.PrimeSet
 import model.raw.RawPrimeSetWithComponents
 
@@ -9,6 +11,8 @@ class PrimeSetNormalizer {
     fun normalize(
         rawPrimeSets: List<RawPrimeSetWithComponents>
     ): List<PrimeSet> {
+        Logger.info(FileSource.PRIME_SETS.logName, "Normalizing collected data...")
+        Logger.info(FileSource.PRIME_SETS.logName, "Added ${rawPrimeSets.size} prime set(s)")
         return rawPrimeSets.map(::normalize)
     }
 

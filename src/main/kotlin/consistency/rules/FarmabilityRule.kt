@@ -2,7 +2,8 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
-import consistency.model.ValidationSource
+import logging.Logger
+import model.domain.FileSource
 import model.domain.prime.PrimePart
 import model.domain.prime.PrimeSet
 
@@ -11,6 +12,8 @@ class FarmabilityRule : ConsistencyRule {
     override fun validate(
         context: ConsistencyContext
     ): List<ValidationError> {
+
+        Logger.info("CONSISTENCY", "Validating farm tracking for items...")
 
         val relicDrops = context.relics
             .flatMap { relic -> relic.drops }
@@ -47,7 +50,7 @@ class FarmabilityRule : ConsistencyRule {
     ) {
         if (primeSetId !in relicDrops) {
             errors += ValidationError(
-                source = ValidationSource.RELICS,
+                source = FileSource.RELICS,
                 message = "PrimeSet '${primeSetId}' blueprint cannot be obtained from any relic."
             )
         }
@@ -68,7 +71,7 @@ class FarmabilityRule : ConsistencyRule {
         if (!visiting.add(primeSet.id)) {
 
             errors += ValidationError(
-                source = ValidationSource.PRIME_SETS,
+                source = FileSource.PRIME_SETS,
                 message = "Circular dependency detected involving '${primeSet.id}'."
             )
 
@@ -86,7 +89,7 @@ class FarmabilityRule : ConsistencyRule {
                     if (dependency == null) {
 
                         errors += ValidationError(
-                            source = ValidationSource.PRIME_SETS,
+                            source = FileSource.PRIME_SETS,
                             message = "'${primeSet.id}' references missing PrimeSet '${component.id}'."
                         )
 
@@ -110,7 +113,7 @@ class FarmabilityRule : ConsistencyRule {
                     if (component.id !in relicDrops) {
 
                         errors += ValidationError(
-                            source = ValidationSource.RELICS,
+                            source = FileSource.RELICS,
                             message = "Component '${component.id}' required by '${primeSet.id}' cannot be obtained from any relic."
                         )
 

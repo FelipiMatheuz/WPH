@@ -2,10 +2,14 @@ package consistency.rules
 
 import consistency.model.ConsistencyContext
 import consistency.model.ValidationError
-import consistency.model.ValidationSource
+import logging.Logger
+import model.domain.FileSource
 
 class RelicRule : ConsistencyRule {
     override fun validate(context: ConsistencyContext): List<ValidationError> {
+
+        Logger.info("CONSISTENCY", "Validating relic list...")
+
         val validRarities = setOf(
             "Common",
             "Uncommon",
@@ -21,7 +25,7 @@ class RelicRule : ConsistencyRule {
                 if (drop.id.isBlank()) {
                     errors.add(
                         ValidationError(
-                            ValidationSource.RELICS,
+                            FileSource.RELICS,
                             "Relic '${relic.id}' contains an empty drop."
                         )
                     )
@@ -30,7 +34,7 @@ class RelicRule : ConsistencyRule {
                 if (drop.rarity !in validRarities) {
                     errors.add(
                         ValidationError(
-                            ValidationSource.RELICS,
+                            FileSource.RELICS,
                             "Invalid rarity '${drop.rarity}' in relic '${relic.id}'."
                         )
                     )

@@ -1,5 +1,7 @@
 package extractor
 
+import logging.Logger
+import model.domain.FileSource
 import model.raw.RawPrimeCollection
 import org.jsoup.nodes.Document
 import java.time.LocalDate
@@ -12,31 +14,42 @@ class PrimeCollectionExtractor {
         private val DATE_FORMAT =
             DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH)
     }
+
     fun extract(document: Document): RawPrimeCollection {
 
+        Logger.info(FileSource.PRIME_COLLECTIONS.logName, "Extracting relics info...")
         val currentPrimeAccessHeading = document
             .selectFirst("h1#Current_Prime_Access")
-            ?: error("Current Prime Access section not found.")
+            ?: Logger.error(
+                FileSource.PRIME_COLLECTIONS.logName,
+                "Current Prime Access section not found."
+            )
 
         val currentPrimeHeading = currentPrimeAccessHeading
             .parent()
             ?.nextElementSibling()
-            ?: error("Current Prime heading not found.")
+            ?: Logger.error(
+                FileSource.PRIME_COLLECTIONS.logName,
+                "Current Prime heading not found."
+            )
 
         val content = currentPrimeHeading
             .nextElementSibling()?.child(0)
-            ?: error("Current Prime content not found.")
+            ?: Logger.error(
+                FileSource.PRIME_COLLECTIONS.logName,
+                "Current Prime content not found."
+            )
 
         val releaseText = content.children()
             .firstOrNull { it.tagName() == "p" }
             ?.text()
-            ?: error("Release date not found")
+            ?: Logger.error(FileSource.PRIME_COLLECTIONS.logName, "Release date not found")
 
         val released = parseReleaseDate(releaseText)
 
         val table = content
             .selectFirst("table.article-table")
-            ?: error("Prime Access table not found.")
+            ?: Logger.error(FileSource.PRIME_COLLECTIONS.logName, "Prime Access table not found.")
 
         val items = mutableListOf<String>()
 
@@ -66,9 +79,11 @@ class PrimeCollectionExtractor {
 
         return RawPrimeCollection(
             name = warframeName
-                ?: error("Current Prime Warframe not found."),
+                ?: Logger.error(
+                    FileSource.PRIME_COLLECTIONS.logName,
+                    "Current Prime Warframe not found."
+                ),
             released = released,
-            promoUrl = "",
             items = items
         )
     }
@@ -79,7 +94,10 @@ class PrimeCollectionExtractor {
             .find(text)
             ?.groupValues
             ?.get(1)
-            ?: error("Unable to parse release date: $text")
+            ?: Logger.error(
+                FileSource.PRIME_COLLECTIONS.logName,
+                "Unable to parse release date: $text"
+            )
 
         val date = LocalDate.parse(dateString, DATE_FORMAT)
 

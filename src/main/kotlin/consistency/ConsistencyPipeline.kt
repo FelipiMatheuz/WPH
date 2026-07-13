@@ -1,6 +1,7 @@
 package consistency
 
 import consistency.model.ConsistencyContext
+import logging.Logger
 import manager.FileManager
 import model.domain.FileSource
 import pipeline.Pipeline
@@ -9,13 +10,13 @@ class ConsistencyPipeline : Pipeline {
 
     override fun run() {
 
-        println("=== Consistency Pipeline ===")
+        Logger.warn("PIPELINE", "===== Consistency Pipeline =====")
 
         val context = loadContext()
 
         ConsistencyValidator().validate(context)
 
-        println("Consistency validation completed.")
+        Logger.warn("PIPELINE", "Consistency validation completed.")
 
     }
 

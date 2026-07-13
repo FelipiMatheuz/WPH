@@ -1,12 +1,15 @@
 package extractor
 
+import logging.Logger
 import model.domain.relic.AcquisitionSource
 import model.raw.RelicSource
 import misc.IdGenerator
+import model.domain.FileSource
 import org.jsoup.nodes.Document
 
 class RelicSourceExtractor {
     fun extract(voidDocument: Document, resurgenceDocument: Document): List<RelicSource> {
+        Logger.info(FileSource.RELICS.logName, "Extracting list of relics sources...")
         return buildList {
 
             addAll(
@@ -45,13 +48,17 @@ class RelicSourceExtractor {
                 it.selectFirst("caption")
                     ?.text()
                     ?.startsWith(caption) == true
-            } ?: error("No ${source.name.lowercase()} table found")
+            } ?: Logger.error(
+            FileSource.RELICS.logName,
+            "No ${source.name.lowercase()} table found"
+        )
 
         val relicRegex = Regex("^(Lith|Meso|Neo|Axi)\\s+[A-Z][0-9]+$")
 
         val relicList = table.select("a")
             .map { it.text() }
             .filter { relicRegex.matches(it) }
+        Logger.info(FileSource.RELICS.logName, "$caption: ${relicList.size}")
         return relicList.map { RelicSource(IdGenerator.generateId(it), source) }
     }
 
@@ -60,12 +67,12 @@ class RelicSourceExtractor {
             .select("tr")
             .firstOrNull {
                 it.selectFirst("div.posTextIcon") != null
-            } ?: error("No active Resurgence found")
+            } ?: Logger.error(FileSource.RELICS.logName, "No active Resurgence found")
 
         val table = activeRow.selectFirst("table[data-tableid=CollectedRelics]")
-            ?: error("CollectedRelics table not found")
+            ?: Logger.error(FileSource.RELICS.logName, "CollectedRelics table not found")
 
-        return table
+        val relicList = table
             .select("tr[data-rowid]")
             .map { row ->
 
@@ -79,5 +86,7 @@ class RelicSourceExtractor {
                     source = AcquisitionSource.RESURGENCE
                 )
             }
+        Logger.info(FileSource.RELICS.logName, "Varzia Resurgence Relics: ${relicList.size}")
+        return relicList
     }
 }

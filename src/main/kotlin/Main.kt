@@ -1,4 +1,5 @@
 import misc.PipelineRegistry
+import logging.Logger
 
 fun main(args: Array<String>) {
 
@@ -10,7 +11,7 @@ fun main(args: Array<String>) {
 
     val pipeline =
         PipelineRegistry.find(pipelineName)
-            ?: error("Unknown pipeline '$pipelineName'.")
+            ?: Logger.error("PIPELINE", "Unknown pipeline '$pipelineName'.")
 
     pipeline.run()
 }

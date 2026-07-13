@@ -11,6 +11,7 @@ import consistency.rules.PrimeCollectionRule
 import consistency.rules.PrimeSetComponentRule
 import consistency.rules.PrimeSetRule
 import consistency.rules.RelicRule
+import logging.Logger
 
 class ConsistencyValidator {
 
@@ -36,12 +37,13 @@ class ConsistencyValidator {
 
         if (errors.isNotEmpty()) {
 
+            val metadata = mutableMapOf<String, String>()
             errors.forEach {
-                println("[ERROR] ${it.source.logName}: ${it.message}")
+                metadata[it.source.logName] = it.message
             }
-            error("${errors.size} consistency error(s) found.")
-        }
 
+            Logger.error("CONSISTENCY", "${errors.size} consistency error(s) found.", metadata)
+        }
     }
 
 }
