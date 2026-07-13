@@ -17,7 +17,7 @@ class PrimeCollectionExtractor {
 
     fun extract(document: Document): RawPrimeCollection {
 
-        Logger.info(FileSource.PRIME_COLLECTIONS.logName, "Extracting relics info...")
+        Logger.info(FileSource.PRIME_COLLECTIONS.logName, "Extracting prime access info...")
         val currentPrimeAccessHeading = document
             .selectFirst("h1#Current_Prime_Access")
             ?: Logger.error(

@@ -31,7 +31,7 @@ class PrimeSetExtractor {
                 Logger.info(FileSource.PRIME_SETS.logName, "Skipping unsupported category: $title")
                 return@forEach
             }
-            Logger.info(FileSource.PRIME_SETS.logName, "Category: $type")
+            Logger.info(FileSource.PRIME_SETS.logName, "\nCategory: $type")
 
             val gallery = heading.nextElementSibling()
 
@@ -52,7 +52,7 @@ class PrimeSetExtractor {
                         .first()
                         ?: return@forEach
 
-                    val name = link.attr("title").replace("/", " ").trim()
+                    val name = link.attr("title").replace("/", " ").replace("Collar", "").trim()
 
                     val pagePath = link.attr("href").let {
                         if (it.startsWith("http"))
