@@ -14,19 +14,17 @@ object Logger {
 
             append(event.message)
 
-            event.metadata.forEach { (key, value) ->
+            event.metadata.forEach { message ->
                 append("\n")
-                append("└──> ")
-                append(key)
-                append(": ")
-                append(value)
+                append("    ► ")
+                append(message)
             }
         }
 
     fun info(
         pipeline: String,
         message: String,
-        metadata: Map<String, String> = emptyMap()
+        metadata: List<String> = listOf()
     ) =
         println(
             log(
@@ -42,7 +40,7 @@ object Logger {
     fun warn(
         pipeline: String,
         message: String,
-        metadata: Map<String, String> = emptyMap()
+        metadata: List<String> = listOf()
     ) =
         println(
             log(
@@ -58,7 +56,7 @@ object Logger {
     fun error(
         pipeline: String,
         message: String,
-        metadata: Map<String, String> = emptyMap()
+        metadata: List<String> = listOf()
     ): Nothing =
         throw PipelineException(
             log(

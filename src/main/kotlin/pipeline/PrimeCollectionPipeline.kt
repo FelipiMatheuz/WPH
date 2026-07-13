@@ -14,6 +14,7 @@ class PrimeCollectionPipeline(
     private val downloader: HtmlDownloader = HtmlDownloader(),
     private val extractor: PrimeCollectionExtractor = PrimeCollectionExtractor(),
     private val imageExtractor: PrimeCollectionImageExtractor = PrimeCollectionImageExtractor(),
+    private val syncer: PrimeCollectionSyncService = PrimeCollectionSyncService(),
     private val normalizer: PrimeCollectionNormalizer = PrimeCollectionNormalizer()
 ) : Pipeline {
     override fun run() {
@@ -21,7 +22,7 @@ class PrimeCollectionPipeline(
         val collectionDocument = downloader.download(DataSources.PRIME_COLLECTION)
         val currentCollection = extractor.extract(collectionDocument)
 
-        if (PrimeCollectionSyncService().collectionExists(currentCollection)) {
+        if (syncer.collectionExists(currentCollection)) {
             Logger.info(
                 FileSource.PRIME_COLLECTIONS.logName,
                 "Prime Collections are already up to date."

@@ -7,5 +7,5 @@ data class LogEvent(
     val level: LogLevel,
     val pipeline: String,
     val message: String,
-    val metadata: Map<String, String> = emptyMap()
+    val metadata: List<String>
 )

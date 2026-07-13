@@ -30,6 +30,6 @@ class PrimeCollectionSyncService {
                 .map { it.id }
                 .toSet()
 
-        return IdGenerator.generateCollection(extracted.name) in existingIds
+        return IdGenerator.generateCollectionId(extracted.name) in existingIds
     }
 }

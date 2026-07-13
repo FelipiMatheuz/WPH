@@ -1,19 +1,19 @@
 package normalizer
 
+import logging.Logger
 import misc.IdGenerator
+import model.domain.FileSource
 import model.domain.relic.AcquisitionSource
 import model.domain.relic.Drop
 import model.domain.relic.Relic
 import model.raw.RawRelic
-import model.raw.RelicSource
-import logging.Logger
-import model.domain.FileSource
+import model.raw.RawRelicSource
 
 class RelicNormalizer {
 
     fun normalize(
         relics: List<RawRelic>,
-        rawRelicSource: List<RelicSource>
+        rawRelicSource: List<RawRelicSource>
     ): List<Relic> {
 
         Logger.info(FileSource.RELICS.logName, "Normalizing collected data...")

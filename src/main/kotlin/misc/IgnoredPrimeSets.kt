@@ -4,6 +4,7 @@ import logging.Logger
 import manager.FileManager
 import model.domain.FileSource
 import model.raw.RawPrimeSetWithComponents
+import model.raw.ValidatedPrimeSet
 
 object IgnoredPrimeSets {
 
@@ -23,7 +24,7 @@ object IgnoredPrimeSets {
             .toSet()
     }
 
-    fun update(rawPrimeSets: List<RawPrimeSetWithComponents>): List<RawPrimeSetWithComponents> {
+    fun update(rawPrimeSets: List<RawPrimeSetWithComponents>): List<ValidatedPrimeSet> {
         val ignoredItems =
             rawPrimeSets.filter { it.components.isNullOrEmpty() }.map { it.rawSet.name }
         val existingIgnored = load()
@@ -41,6 +42,13 @@ object IgnoredPrimeSets {
             Logger.info(FileSource.IGNORED.logName, "New set(s) ignored:\n$newIgnoredLog")
         }
 
-        return rawPrimeSets.filter { !it.components.isNullOrEmpty() }
+        return rawPrimeSets.mapNotNull { item ->
+            item.components?.let { components ->
+                ValidatedPrimeSet(
+                    rawSet = item.rawSet,
+                    components = components
+                )
+            }
+        }
     }
 }

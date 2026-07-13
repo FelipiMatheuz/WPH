@@ -32,7 +32,7 @@ class PrimeCollectionNormalizer {
 
     private fun normalizeCollection(raw: RawPrimeCollection, imageUrl: String): PrimeCollection =
         PrimeCollection(
-            id = IdGenerator.generateCollection(raw.name),
+            id = IdGenerator.generateCollectionId(raw.name),
             name = raw.name.trim(),
             released = raw.released,
             promoImage = imageUrl.trim(),

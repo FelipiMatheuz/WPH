@@ -11,49 +11,41 @@ class RelicExtractor {
 
     fun extract(document: Document): List<RawRelic> {
 
-        Logger.info(FileSource.RELICS.logName,"Extracting relics info...")
+        Logger.info(FileSource.RELICS.logName, "Extracting relics info...")
         val relics = mutableListOf<RawRelic>()
 
-        var currentRelic: RawRelic? = null
+        var pendingHeader: Pair<String, String>? = null
+        val dropsBuffer = mutableListOf<RawDrop>()
 
-        relicTable(document)
-            ?.select("tr")
-            ?.forEach { row ->
-
-                when {
-
-                    isRelicHeader(row) -> {
-
-                        val header = row.selectFirst("th")!!.text()
-                        currentRelic?.let {
-                            relics.add(it)
-                        }
-
-                        currentRelic =
-                            if (header.endsWith("(Intact)") && !header.contains("Requiem")) {
-                                parseHeader(row)
-                            } else {
-                                null
-                            }
-
+        relicTable(document)?.select("tr")?.forEach { row ->
+            when {
+                isRelicHeader(row) -> {
+                    pendingHeader?.let { (era, name) ->
+                        relics.add(RawRelic(name, era, dropsBuffer.toList()))
                     }
 
-                    isDropRow(row) -> {
-
-                        currentRelic?.drops?.add(parseDrop(row))
-
-                    }
-
+                    dropsBuffer.clear()
+                    val header = row.selectFirst("th")!!.text()
+                    pendingHeader =
+                        if (header.endsWith("(Intact)") && !header.contains("Requiem")) {
+                            val raw = parseHeader(row)
+                            raw.era to raw.name
+                        } else null
                 }
 
+                isDropRow(row) -> {
+                    pendingHeader?.let {
+                        dropsBuffer.add(parseDrop(row))
+                    }
+                }
             }
-
-        currentRelic?.let {
-            relics.add(it)
         }
+        pendingHeader?.let { (era, name) ->
+            relics.add(RawRelic(name, era, dropsBuffer.toList()))
+        }
+
         Logger.info(FileSource.RELICS.logName, "Relics found: ${relics.size}")
         return relics
-
     }
 
     private fun relicTable(document: Document): Element? = document
@@ -89,7 +81,8 @@ class RelicExtractor {
 
         return RawRelic(
             name = parts[1],
-            era = parts[0]
+            era = parts[0],
+            drops = listOf()
         )
     }
 

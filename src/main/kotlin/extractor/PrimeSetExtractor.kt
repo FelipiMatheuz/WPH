@@ -15,7 +15,7 @@ class PrimeSetExtractor {
 
         val result = mutableListOf<RawPrimeSet>()
 
-        Logger.info(FileSource.PRIME_SETS.logName, "========== Prime Catalog ==========")
+        Logger.info(FileSource.PRIME_SETS.logName, "    PRIME CATALOG   ")
 
         document.select("div.mw-heading3").forEach { heading ->
 
@@ -72,7 +72,7 @@ class PrimeSetExtractor {
                         }
                         ?: ""
 
-                    Logger.info(FileSource.PRIME_SETS.logName, " -> $name")
+                    Logger.info(FileSource.PRIME_SETS.logName, "    └──> $name")
 
                     result += RawPrimeSet(
                         name = name,

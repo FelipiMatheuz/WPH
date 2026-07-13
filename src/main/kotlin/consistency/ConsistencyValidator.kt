@@ -36,12 +36,7 @@ class ConsistencyValidator {
         }
 
         if (errors.isNotEmpty()) {
-
-            val metadata = mutableMapOf<String, String>()
-            errors.forEach {
-                metadata[it.source.logName] = it.message
-            }
-
+            val metadata = errors.map { it.source.logName + ": " + it.message }
             Logger.error("CONSISTENCY", "${errors.size} consistency error(s) found.", metadata)
         }
     }

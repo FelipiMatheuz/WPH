@@ -12,13 +12,14 @@ import remote.HtmlDownloader
 class PrimeSetPipeline(
     private val downloader: HtmlDownloader = HtmlDownloader(),
     private val extractor: PrimeSetExtractor = PrimeSetExtractor(),
+    private val syncer: PrimeSetSyncService = PrimeSetSyncService(),
     private val normalizer: PrimeSetNormalizer = PrimeSetNormalizer()
 ) : Pipeline {
     override fun run() {
         Logger.warn("PIPELINE", "===== Prime Sets Pipeline =====")
         val primeDocument = downloader.download(DataSources.PRIME_SETS)
         val rawPrimeSets = extractor.extract(primeDocument)
-        val syncResult = PrimeSetSyncService().sync(rawPrimeSets)
+        val syncResult = syncer.sync(rawPrimeSets)
 
         if (syncResult.newPrimeSets.isEmpty()) {
             Logger.info(FileSource.PRIME_SETS.logName, "Prime Sets are already up to date.")

@@ -19,7 +19,7 @@ class PrimeSetSyncService {
         val output = FileManager.dataFile(FileSource.PRIME_SETS)
 
         val existing = if (!output.exists()) {
-            Logger.warn(FileSource.PRIME_SETS.logName, "No JSON file found.")
+            Logger.warn(FileSource.PRIME_SETS.logName, "No prime_sets.json file found.")
             listOf()
         } else {
             Json.decodeFromString<List<PrimeSet>>(output.readText())

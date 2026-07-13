@@ -2,13 +2,13 @@ package extractor
 
 import logging.Logger
 import model.domain.relic.AcquisitionSource
-import model.raw.RelicSource
+import model.raw.RawRelicSource
 import misc.IdGenerator
 import model.domain.FileSource
 import org.jsoup.nodes.Document
 
 class RelicSourceExtractor {
-    fun extract(voidDocument: Document, resurgenceDocument: Document): List<RelicSource> {
+    fun extract(voidDocument: Document, resurgenceDocument: Document): List<RawRelicSource> {
         Logger.info(FileSource.RELICS.logName, "Extracting list of relics sources...")
         return buildList {
 
@@ -41,10 +41,10 @@ class RelicSourceExtractor {
         document: Document,
         caption: String,
         source: AcquisitionSource
-    ): List<RelicSource> {
+    ): List<RawRelicSource> {
         val table = document
             .select("table")
-            .first {
+            .firstOrNull {
                 it.selectFirst("caption")
                     ?.text()
                     ?.startsWith(caption) == true
@@ -59,10 +59,10 @@ class RelicSourceExtractor {
             .map { it.text() }
             .filter { relicRegex.matches(it) }
         Logger.info(FileSource.RELICS.logName, "$caption: ${relicList.size}")
-        return relicList.map { RelicSource(IdGenerator.generateId(it), source) }
+        return relicList.map { RawRelicSource(IdGenerator.generateId(it), source) }
     }
 
-    private fun extractResurgenceTable(document: Document): List<RelicSource> {
+    private fun extractResurgenceTable(document: Document): List<RawRelicSource> {
         val activeRow = document
             .select("tr")
             .firstOrNull {
@@ -81,7 +81,7 @@ class RelicSourceExtractor {
                     .last()!!
                     .text()
 
-                RelicSource(
+                RawRelicSource(
                     relicId = IdGenerator.generateId(name),
                     source = AcquisitionSource.RESURGENCE
                 )
