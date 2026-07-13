@@ -3,17 +3,18 @@ name: Prime Hunt Data Pipeline
 on:
   schedule:
     - cron: "0 0 * * *"
-    
+
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
 
-  update:
+  setup:
 
+    name: Setup
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
 
     steps:
 
@@ -33,29 +34,215 @@ jobs:
       - name: Build project
         run: ./gradlew build
 
-      - name: Update Relics
-        run: ./gradlew relics
+      - name: Upload Bot
+        uses: actions/upload-artifact@v4
+        with:
+          name: bot
+          path: build/libs/*.jar
 
-      - name: Update Prime Sets
-        run: ./gradlew prime_sets
+  relics:
 
-      - name: Update Prime Collections
-        run: ./gradlew prime_collections
+    name: Update Relics
+    needs: setup
+    runs-on: ubuntu-latest
 
-      - name: Update Manifest
-        run: ./gradlew manifest
+    steps:
 
-      - name: Check database consistency
-        run: ./gradlew consistency
+      - uses: actions/checkout@v4
 
-      - name: Commit updated JSONs
+      - uses: actions/download-artifact@v4
+        with:
+          name: bot
+
+      - name: Execute Relics Pipeline
+        run: java -jar build/libs/*.jar relics
+
+      - name: Upload Pipeline State
+        uses: actions/upload-artifact@v4
+        with:
+          name: relics
+          path: |
+            data/
+
+  prime_sets:
+
+    name: Update Prime Sets
+    needs: setup
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: bot
+
+      - name: Execute Prime Sets Pipeline
+        run: java -jar build/libs/*.jar prime_sets
+
+      - name: Upload Pipeline State
+        uses: actions/upload-artifact@v4
+        with:
+          name: prime_sets
+          path: |
+            data/
+            config/
+
+  prime_collections:
+
+    name: Update Prime Collections
+    needs: setup
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: bot
+
+      - name: Execute Prime Collections Pipeline
+        run: java -jar build/libs/*.jar prime_collections
+
+      - name: Upload Pipeline State
+        uses: actions/upload-artifact@v4
+        with:
+          name: prime_collections
+          path: |
+            data/
+
+  manifest:
+
+    name: Update Manifest
+
+    needs:
+      - relics
+      - prime_sets
+      - prime_collections
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: bot
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: relics
+          path: .
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: prime_sets
+          path: .
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: prime_collections
+          path: .
+
+      - name: Execute Manifest Pipeline
+        run: java -jar build/libs/*.jar manifest
+
+      - name: Upload Pipeline State
+        uses: actions/upload-artifact@v4
+        with:
+          name: manifest
+          path: |
+            data/
+            config/
+
+  consistency:
+
+    name: Validate Database
+
+    needs:
+      - relics
+      - prime_sets
+      - prime_collections
+      - manifest
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: bot
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: relics
+          path: .
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: prime_sets
+          path: .
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: prime_collections
+          path: .
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: manifest
+          path: .
+
+      - name: Execute Consistency Pipeline
+        run: java -jar build/libs/*.jar consistency
+
+      - name: Upload Validated State
+        uses: actions/upload-artifact@v4
+        with:
+          name: validated
+          path: |
+            data/
+            config/
+
+  commit:
+
+    name: Commit Changes
+
+    needs: consistency
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: validated
+          path: .
+
+      - name: Commit database
         run: |
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          git add data/
+          git add config/
+
           if git diff --cached --quiet; then
-            echo "No changes"
-          else
-            git commit -m "chore(data): update generated database"
-            git push
+            echo "No changes."
+            exit 0
           fi
+
+          git commit -m "chore(data): update generated database"
+
+          git push
