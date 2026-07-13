@@ -11,18 +11,16 @@ permissions:
 
 jobs:
 
-  setup:
+  relics:
 
-    name: Setup
+    name: Update Relics
     runs-on: ubuntu-latest
 
     steps:
 
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Java
-        uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 21
@@ -31,33 +29,10 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x gradlew
 
-      - name: Build project
-        run: ./gradlew build
-
-      - name: Upload Bot
-        uses: actions/upload-artifact@v4
-        with:
-          name: bot
-          path: build/libs/*.jar
-
-  relics:
-
-    name: Update Relics
-    needs: setup
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - uses: actions/checkout@v4
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: bot
-
       - name: Execute Relics Pipeline
-        run: java -jar build/libs/*.jar relics
+        run: ./gradlew relics
 
-      - name: Upload Pipeline State
+      - name: Upload Workspace
         uses: actions/upload-artifact@v4
         with:
           name: relics
@@ -67,21 +42,25 @@ jobs:
   prime_sets:
 
     name: Update Prime Sets
-    needs: setup
     runs-on: ubuntu-latest
 
     steps:
 
       - uses: actions/checkout@v4
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/setup-java@v4
         with:
-          name: bot
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - name: Make Gradle executable
+        run: chmod +x gradlew
 
       - name: Execute Prime Sets Pipeline
-        run: java -jar build/libs/*.jar prime_sets
+        run: ./gradlew prime_sets
 
-      - name: Upload Pipeline State
+      - name: Upload Workspace
         uses: actions/upload-artifact@v4
         with:
           name: prime_sets
@@ -92,21 +71,25 @@ jobs:
   prime_collections:
 
     name: Update Prime Collections
-    needs: setup
     runs-on: ubuntu-latest
 
     steps:
 
       - uses: actions/checkout@v4
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/setup-java@v4
         with:
-          name: bot
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - name: Make Gradle executable
+        run: chmod +x gradlew
 
       - name: Execute Prime Collections Pipeline
-        run: java -jar build/libs/*.jar prime_collections
+        run: ./gradlew prime_collections
 
-      - name: Upload Pipeline State
+      - name: Upload Workspace
         uses: actions/upload-artifact@v4
         with:
           name: prime_collections
@@ -128,9 +111,14 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/setup-java@v4
         with:
-          name: bot
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - name: Make Gradle executable
+        run: chmod +x gradlew
 
       - uses: actions/download-artifact@v4
         with:
@@ -148,9 +136,9 @@ jobs:
           path: .
 
       - name: Execute Manifest Pipeline
-        run: java -jar build/libs/*.jar manifest
+        run: ./gradlew manifest
 
-      - name: Upload Pipeline State
+      - name: Upload Workspace
         uses: actions/upload-artifact@v4
         with:
           name: manifest
@@ -163,9 +151,6 @@ jobs:
     name: Validate Database
 
     needs:
-      - relics
-      - prime_sets
-      - prime_collections
       - manifest
 
     runs-on: ubuntu-latest
@@ -174,24 +159,14 @@ jobs:
 
       - uses: actions/checkout@v4
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/setup-java@v4
         with:
-          name: bot
+          distribution: temurin
+          java-version: 21
+          cache: gradle
 
-      - uses: actions/download-artifact@v4
-        with:
-          name: relics
-          path: .
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: prime_sets
-          path: .
-
-      - uses: actions/download-artifact@v4
-        with:
-          name: prime_collections
-          path: .
+      - name: Make Gradle executable
+        run: chmod +x gradlew
 
       - uses: actions/download-artifact@v4
         with:
@@ -199,9 +174,9 @@ jobs:
           path: .
 
       - name: Execute Consistency Pipeline
-        run: java -jar build/libs/*.jar consistency
+        run: ./gradlew consistency
 
-      - name: Upload Validated State
+      - name: Upload Workspace
         uses: actions/upload-artifact@v4
         with:
           name: validated
@@ -211,9 +186,10 @@ jobs:
 
   commit:
 
-    name: Commit Changes
+    name: Commit Database
 
-    needs: consistency
+    needs:
+      - consistency
 
     runs-on: ubuntu-latest
 
@@ -229,7 +205,7 @@ jobs:
           name: validated
           path: .
 
-      - name: Commit database
+      - name: Commit Changes
         run: |
 
           git config user.name "github-actions[bot]"
@@ -244,5 +220,4 @@ jobs:
           fi
 
           git commit -m "chore(data): update generated database"
-
           git push
