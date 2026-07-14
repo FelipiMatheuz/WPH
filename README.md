@@ -5,9 +5,6 @@
   <img src="https://img.shields.io/badge/Gradle-8.x-blue?logo=gradle" alt="Gradle">
   <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
   <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
-  <a href="https://github.com/felipimatheuz/prime-hunt-data/actions/workflows/update-data.yml">
-    <img src="https://github.com/felipimatheuz/prime-hunt-data/actions/workflows/update-data.yml/badge.svg" alt="Prime Hunt Data Pipeline Status">
-  </a>
 </p>
 
 ## 🚀 Overview
