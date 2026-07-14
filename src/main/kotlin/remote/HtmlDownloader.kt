@@ -19,7 +19,7 @@ class HtmlDownloader {
 
         return Jsoup
             .connect(url)
-            .userAgent("prime-hunt-data")
+            .userAgent("prime-tracker-data")
             .timeout(60_000)
             .maxBodySize(0)
             .get()
