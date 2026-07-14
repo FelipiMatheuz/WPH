@@ -11,13 +11,13 @@ import model.raw.RawRelicSource
 class RelicNormalizer {
 
     fun normalize(
-        relics: List<RawRelic>,
+        rawRelics: List<RawRelic>,
         rawRelicSource: List<RawRelicSource>
     ): List<Relic> {
 
         Logger.info("Normalizing collected data...")
         val sourceMap = rawRelicSource.associateBy { it.relicId }
-        val normalizedRelics = relics.map { raw ->
+        val normalizedRelics = rawRelics.map { raw ->
 
             val id = IdGenerator.generateId("${raw.era} ${raw.name}")
             val source = sourceMap[id]?.source ?: AcquisitionSource.VAULT

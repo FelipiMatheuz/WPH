@@ -11,7 +11,7 @@ import model.raw.RawPrimeCollection
 
 class PrimeCollectionNormalizer {
 
-    fun normalize(raw: RawPrimeCollection, imageUrl: String): List<PrimeCollection> {
+    fun normalize(rawCollection: RawPrimeCollection, imageUrl: String): List<PrimeCollection> {
 
         Logger.info("Normalizing collected data...")
         val output = FileManager.dataFile(FileSource.PRIME_COLLECTIONS)
@@ -23,7 +23,7 @@ class PrimeCollectionNormalizer {
             } else {
                 mutableListOf()
             }
-        collections.add(normalizeCollection(raw, imageUrl))
+        collections.add(normalizeCollection(rawCollection, imageUrl))
         Logger.info(
             "Added a new collection!", null,
             listOf(
