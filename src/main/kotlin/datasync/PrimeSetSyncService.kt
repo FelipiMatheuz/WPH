@@ -56,7 +56,7 @@ class PrimeSetSyncService {
         val detailsDocument =
             HtmlDownloader().download(raw.pageUrl)
 
-        val components = PrimeSetDetailsExtractor(raw.name).extract(document = detailsDocument)
+        val components = PrimeSetDetailsExtractor(raw.name).extract(detailsDocument)
 
         return RawPrimeSetWithComponents(raw, components)
     }
