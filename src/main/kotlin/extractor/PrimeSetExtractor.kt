@@ -5,6 +5,7 @@ import logging.Logger
 import model.domain.prime.PrimeType
 import model.raw.RawPrimeSet
 import org.jsoup.nodes.Document
+import org.jsoup.nodes.Element
 import remote.DataSources
 
 class PrimeSetExtractor {
@@ -14,6 +15,7 @@ class PrimeSetExtractor {
         Logger.info("Extracting prime set catalog...")
 
         val result = mutableListOf<RawPrimeSet>()
+        var skippedCount = 0
 
         Logger.info("===PRIME CATALOG===")
 
@@ -31,6 +33,7 @@ class PrimeSetExtractor {
                 Logger.info("Skipping unsupported category: $title")
                 return@forEach
             }
+
             Logger.info("Category: $type")
 
             val gallery = heading.nextElementSibling()
@@ -47,6 +50,18 @@ class PrimeSetExtractor {
                     val galleryText = item.selectFirst(".gallerytext")
                         ?: return@forEach
 
+                    if (shouldSkipPrimeSet(galleryText)) {
+
+                        val skippedName =
+                            galleryText.selectFirst("a")?.attr("title")?.replace("/", " ")
+                                ?.replace("Collar", "")?.trim() ?: "Unknown"
+
+                        Logger.info("    └──> Skipping non-relic Prime: $skippedName")
+                        skippedCount++
+
+                        return@forEach
+                    }
+
                     val link = galleryText
                         .select("a")
                         .first()
@@ -54,7 +69,7 @@ class PrimeSetExtractor {
 
                     val name = link.attr("title").replace("/", " ").replace("Collar", "").trim()
 
-                    val pagePath = link.attr("href").let {
+                    val pageUrl = link.attr("href").let {
                         if (it.startsWith("http"))
                             it
                         else
@@ -78,19 +93,37 @@ class PrimeSetExtractor {
                         name = name,
                         type = type,
                         imageUrl = imageUrl,
-                        pageUrl = pagePath
+                        pageUrl = pageUrl
                     )
                 }
         }
 
         Logger.info(
-            "Prime sets extracted", null, listOf(
-                LogMetadata(
-                    "Count",
-                    result.size.toString()
-                )
+            "Prime sets extracted", null,
+            listOf(
+                LogMetadata("Count", result.size.toString()),
+                LogMetadata("Skipped", skippedCount.toString())
             )
         )
+
         return result
+    }
+
+    private fun shouldSkipPrimeSet(
+        galleryText: Element
+    ): Boolean {
+
+        return galleryText
+            .select(".hover-over")
+            .any { it.attr("title") in NON_RELIC_MARKERS }
+
+    }
+
+    private companion object {
+
+        val NON_RELIC_MARKERS = setOf(
+            "Founder-exclusive Prime",
+            "Primes with a special source of acquisition"
+        )
     }
 }

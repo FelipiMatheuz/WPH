@@ -1,12 +1,11 @@
 package datasync
 
 import extractor.PrimeSetDetailsExtractor
-import manager.FileManager
 import kotlinx.serialization.json.Json
 import logging.LogMetadata
 import logging.Logger
+import manager.FileManager
 import misc.IdGenerator
-import misc.IgnoredPrimeSets
 import model.domain.FileSource
 import model.domain.prime.PrimeSet
 import model.raw.PrimeSetSyncResult
@@ -31,33 +30,31 @@ class PrimeSetSyncService {
             Json.decodeFromString<List<PrimeSet>>(output.readText())
         }
 
-        val ignored = IgnoredPrimeSets.load()
         val existingIds = existing.map { it.id }.toSet()
 
         val extractedWithDetails = extracted
-            .filterNot { it.name in ignored }
             .filterNot { IdGenerator.generateId(it.name) in existingIds }
             .map { raw -> fetchDetails(raw) }
-
-        val newPrimeSets = IgnoredPrimeSets.update(extractedWithDetails)
 
         Logger.info(
             "Synchronization finished", "Sync Service",
             listOf(
-                LogMetadata("New", newPrimeSets.size.toString()),
                 LogMetadata("Existing", existing.size.toString()),
-                LogMetadata("Ignored", IgnoredPrimeSets.load().toString())
+                LogMetadata("New", extractedWithDetails.size.toString())
             )
         )
-        return PrimeSetSyncResult(existing, newPrimeSets)
+        return PrimeSetSyncResult(existing, extractedWithDetails)
     }
 
-    private fun fetchDetails(raw: RawPrimeSet): RawPrimeSetWithComponents {
+    private fun fetchDetails(rawPrimeSet: RawPrimeSet): RawPrimeSetWithComponents {
         val detailsDocument =
-            HtmlDownloader().download(raw.pageUrl)
+            HtmlDownloader().download(rawPrimeSet.pageUrl)
 
-        val components = PrimeSetDetailsExtractor(raw.name).extract(detailsDocument)
+        val components = PrimeSetDetailsExtractor(rawPrimeSet.name).extract(detailsDocument)
 
-        return RawPrimeSetWithComponents(raw, components)
+        return components?.let { RawPrimeSetWithComponents(rawPrimeSet, it) } ?: Logger.error(
+            rawPrimeSet.name,
+            "No components found for the prime set"
+        )
     }
 }

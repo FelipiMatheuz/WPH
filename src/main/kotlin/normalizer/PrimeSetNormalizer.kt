@@ -4,12 +4,12 @@ import logging.LogMetadata
 import logging.Logger
 import misc.IdGenerator
 import model.domain.prime.PrimeSet
-import model.raw.ValidatedPrimeSet
+import model.raw.RawPrimeSetWithComponents
 
 class PrimeSetNormalizer {
 
     fun normalize(
-        rawPrimeSets: List<ValidatedPrimeSet>
+        rawPrimeSets: List<RawPrimeSetWithComponents>
     ): List<PrimeSet> {
         Logger.info("Normalizing collected data...")
         val normalizedPrimeSets = rawPrimeSets.map(::normalize)
@@ -20,7 +20,7 @@ class PrimeSetNormalizer {
         return normalizedPrimeSets
     }
 
-    private fun normalize(raw: ValidatedPrimeSet): PrimeSet {
+    private fun normalize(raw: RawPrimeSetWithComponents): PrimeSet {
         return PrimeSet(
             id = IdGenerator.generateId(raw.rawSet.name),
             name = raw.rawSet.name,

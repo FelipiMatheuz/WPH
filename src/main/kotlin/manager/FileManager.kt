@@ -16,9 +16,7 @@ import java.time.Instant
 object FileManager {
     private val json = Json { prettyPrint = true; encodeDefaults = true; ignoreUnknownKeys = true }
     private val dataDir = File("data")
-    private val configDir = File("config")
     fun dataFile(source: FileSource) = File(dataDir, source.path)
-    fun configFile(source: FileSource) = File(configDir, source.path)
 
     inline fun <reified T> load(source: FileSource): T {
         Logger.info("Loading ${source.path}...")
