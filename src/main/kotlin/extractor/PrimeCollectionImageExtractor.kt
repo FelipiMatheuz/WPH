@@ -5,10 +5,10 @@ import org.jsoup.nodes.Document
 
 class PrimeCollectionImageExtractor {
 
-    fun extract(document: Document): String {
+    fun extract(promoImageDocument: Document): String {
         Logger.info("Getting URL image for new prime collection...")
 
-        val style = document
+        val style = promoImageDocument
             .selectFirst("div.SectionBackground--masthead")
             ?.attr("style")
 

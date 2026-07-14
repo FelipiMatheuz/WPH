@@ -9,7 +9,7 @@ import org.jsoup.nodes.Element
 
 class RelicExtractor {
 
-    fun extract(document: Document): List<RawRelic> {
+    fun extract(dropTableDocument: Document): List<RawRelic> {
 
         Logger.info("Extracting relics info...")
         val relics = mutableListOf<RawRelic>()
@@ -17,7 +17,7 @@ class RelicExtractor {
         var pendingHeader: Pair<String, String>? = null
         val dropsBuffer = mutableListOf<RawDrop>()
 
-        relicTable(document)?.select("tr")?.forEach { row ->
+        relicTable(dropTableDocument)?.select("tr")?.forEach { row ->
             when {
                 isRelicHeader(row) -> {
                     pendingHeader?.let { (era, name) ->

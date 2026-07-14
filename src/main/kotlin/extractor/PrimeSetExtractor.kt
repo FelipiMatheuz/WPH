@@ -9,7 +9,7 @@ import remote.DataSources
 
 class PrimeSetExtractor {
 
-    fun extract(document: Document): List<RawPrimeSet> {
+    fun extract(primeDocument: Document): List<RawPrimeSet> {
 
         Logger.info("Extracting prime set catalog...")
 
@@ -17,7 +17,7 @@ class PrimeSetExtractor {
 
         Logger.info("===PRIME CATALOG===")
 
-        document.select("div.mw-heading3").forEach { heading ->
+        primeDocument.select("div.mw-heading3").forEach { heading ->
 
             val title = heading
                 .selectFirst("h3")

@@ -7,9 +7,9 @@ import org.jsoup.nodes.Document
 import org.jsoup.nodes.Element
 
 class PrimeSetDetailsExtractor(private val primeName: String) {
-    fun extract(document: Document): List<PrimeComponent>? {
+    fun extract(primeDetailsDocument: Document): List<PrimeComponent>? {
         Logger.info("Getting more details for $primeName...")
-        val table = document.selectFirst("table.foundrytable")
+        val table = primeDetailsDocument.selectFirst("table.foundrytable")
             ?: return null
 
         val firstRequirementRow = table.select("tr")[1]

@@ -15,10 +15,10 @@ class PrimeCollectionExtractor {
             DateTimeFormatter.ofPattern("MMMM d, yyyy", Locale.ENGLISH)
     }
 
-    fun extract(document: Document): RawPrimeCollection {
+    fun extract(setCollectionDocument: Document): RawPrimeCollection {
 
         Logger.info("Extracting prime access info...")
-        val currentPrimeAccessHeading = document
+        val currentPrimeAccessHeading = setCollectionDocument
             .selectFirst("h1#Current_Prime_Access")
             ?: Logger.error("Current Prime Access section not found.")
 
