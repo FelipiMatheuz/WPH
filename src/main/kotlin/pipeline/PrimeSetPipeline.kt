@@ -3,8 +3,7 @@ package pipeline
 import manager.FileManager
 import extractor.PrimeSetExtractor
 import logging.Logger
-import misc.PrimeSetSyncService
-import model.domain.FileSource
+import datasync.PrimeSetSyncService
 import normalizer.PrimeSetNormalizer
 import remote.DataSources
 import remote.HtmlDownloader
@@ -16,20 +15,20 @@ class PrimeSetPipeline(
     private val normalizer: PrimeSetNormalizer = PrimeSetNormalizer()
 ) : Pipeline {
     override fun run() {
-        Logger.warn("PIPELINE", "===== Prime Sets Pipeline =====")
+        Logger.pipelineSection("Prime sets")
         val primeDocument = downloader.download(DataSources.PRIME_SETS)
         val rawPrimeSets = extractor.extract(primeDocument)
         val syncResult = syncer.sync(rawPrimeSets)
 
         if (syncResult.newPrimeSets.isEmpty()) {
-            Logger.info(FileSource.PRIME_SETS.logName, "Prime Sets are already up to date.")
-            Logger.warn("PIPELINE", "Pipeline finished successfully.")
+            Logger.info("Prime Sets are already up to date.")
+            Logger.pipelineSuccess()
             return
         }
 
         val normalizedPrimeSets = normalizer.normalize(syncResult.newPrimeSets)
 
         FileManager.exportPrimeSets(syncResult.existing + normalizedPrimeSets)
-        Logger.warn("PIPELINE", "Pipeline finished successfully.")
+        Logger.pipelineSuccess()
     }
 }

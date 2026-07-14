@@ -1,7 +1,7 @@
 package consistency.rules
 
 import consistency.model.ConsistencyContext
-import consistency.model.ValidationError
+import logging.LogMetadata
 import logging.Logger
 import model.domain.FileSource
 
@@ -9,9 +9,9 @@ class DuplicateIdRule : ConsistencyRule {
 
     override fun validate(
         context: ConsistencyContext
-    ): List<ValidationError> {
+    ): List<LogMetadata> {
 
-        Logger.info("CONSISTENCY", "Validating duplicated ids...")
+        Logger.info("Validating duplicated ids...")
 
         return buildList {
 
@@ -35,15 +35,15 @@ class DuplicateIdRule : ConsistencyRule {
     private fun validateDuplicates(
         source: FileSource,
         ids: List<String>
-    ): List<ValidationError> {
+    ): List<LogMetadata> {
 
         return ids.groupingBy { it }
             .eachCount()
             .filterValues { it > 1 }
             .keys
             .map {
-                ValidationError(
-                    source,
+                LogMetadata(
+                    source.logName,
                     "Duplicated id '$it'"
                 )
             }

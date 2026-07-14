@@ -1,7 +1,7 @@
 package consistency.rules
 
 import consistency.model.ConsistencyContext
-import consistency.model.ValidationError
+import logging.LogMetadata
 import logging.Logger
 import model.domain.FileSource
 import model.domain.prime.PrimeCollection
@@ -12,9 +12,9 @@ import kotlin.collections.forEach
 
 class PrimeCollectionRule : ConsistencyRule {
 
-    override fun validate(context: ConsistencyContext): List<ValidationError> {
+    override fun validate(context: ConsistencyContext): List<LogMetadata> {
 
-        Logger.info("CONSISTENCY", "Validating prime collections...")
+        Logger.info("Validating prime collections...")
 
         return buildList {
             val collections = context.primeCollections
@@ -26,9 +26,9 @@ class PrimeCollectionRule : ConsistencyRule {
 
     private fun validateReleaseDates(
         collections: List<PrimeCollection>
-    ): List<ValidationError> {
+    ): List<LogMetadata> {
         val formatter = DateTimeFormatter.BASIC_ISO_DATE
-        val listErrors: MutableList<ValidationError> = mutableListOf()
+        val listErrors: MutableList<LogMetadata> = mutableListOf()
 
         collections.forEach { collection ->
             try {
@@ -38,8 +38,8 @@ class PrimeCollectionRule : ConsistencyRule {
                 )
             } catch (_: DateTimeParseException) {
                 listErrors.add(
-                    ValidationError(
-                        FileSource.PRIME_COLLECTIONS,
+                    LogMetadata(
+                        FileSource.PRIME_COLLECTIONS.logName,
                         "Invalid release date '${collection.released}' for collection '${collection.id}'."
                     )
                 )
@@ -50,21 +50,21 @@ class PrimeCollectionRule : ConsistencyRule {
 
     private fun validateCollection(
         collections: List<PrimeCollection>
-    ): List<ValidationError> {
+    ): List<LogMetadata> {
 
-        val listErrors: MutableList<ValidationError> = mutableListOf()
+        val listErrors: MutableList<LogMetadata> = mutableListOf()
         collections.forEach { collection ->
             if (collection.primeSets.isEmpty()) {
                 listErrors.add(
-                    ValidationError(
-                        FileSource.PRIME_COLLECTIONS,
+                    LogMetadata(
+                        FileSource.PRIME_COLLECTIONS.logName,
                         "${collection.id} has no Prime Sets."
                     )
                 )
             } else if (collection.primeSets.count { it.contains(collection.name, true) } == 0) {
                 listErrors.add(
-                    ValidationError(
-                        FileSource.PRIME_COLLECTIONS,
+                    LogMetadata(
+                        FileSource.PRIME_COLLECTIONS.logName,
                         "${collection.id} must contain the owner Warframe in collection."
                     )
                 )
@@ -75,13 +75,13 @@ class PrimeCollectionRule : ConsistencyRule {
 
     private fun validateOrdering(
         collections: List<PrimeCollection>
-    ): ValidationError? {
+    ): LogMetadata? {
         val ordered = collections
             .sortedByDescending { it.released }
 
         return if (ordered != collections) {
-            ValidationError(
-                FileSource.PRIME_COLLECTIONS,
+            LogMetadata(
+                FileSource.PRIME_COLLECTIONS.logName,
                 "Prime Collections must be ordered by release date (newest first)."
             )
         } else {

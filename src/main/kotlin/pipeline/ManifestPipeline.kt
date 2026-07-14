@@ -5,8 +5,8 @@ import manager.FileManager
 
 class ManifestPipeline: Pipeline {
     override fun run() {
-        Logger.warn("PIPELINE", "===== Manifest Pipeline =====")
+        Logger.pipelineSection("Manifest")
         FileManager.exportManifest()
-        Logger.warn("PIPELINE", "Pipeline finished successfully.")
+        Logger.pipelineSuccess()
     }
 }

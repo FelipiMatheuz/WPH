@@ -36,8 +36,7 @@ class ConsistencyValidator {
         }
 
         if (errors.isNotEmpty()) {
-            val metadata = errors.map { it.source.logName + ": " + it.message }
-            Logger.error("CONSISTENCY", "${errors.size} consistency error(s) found.", metadata)
+            Logger.error("${errors.size} consistency error(s) found.", null, errors)
         }
     }
 

@@ -1,8 +1,8 @@
 package normalizer
 
+import logging.LogMetadata
 import logging.Logger
 import misc.IdGenerator
-import model.domain.FileSource
 import model.domain.prime.PrimeSet
 import model.raw.ValidatedPrimeSet
 
@@ -11,9 +11,13 @@ class PrimeSetNormalizer {
     fun normalize(
         rawPrimeSets: List<ValidatedPrimeSet>
     ): List<PrimeSet> {
-        Logger.info(FileSource.PRIME_SETS.logName, "Normalizing collected data...")
-        Logger.info(FileSource.PRIME_SETS.logName, "Added ${rawPrimeSets.size} prime set(s)")
-        return rawPrimeSets.map(::normalize)
+        Logger.info("Normalizing collected data...")
+        val normalizedPrimeSets = rawPrimeSets.map(::normalize)
+        Logger.info(
+            "Added ${normalizedPrimeSets.size} prime set(s)!", null,
+            normalizedPrimeSets.map { LogMetadata("New ${it.type}", it.name) }
+        )
+        return normalizedPrimeSets
     }
 
     private fun normalize(raw: ValidatedPrimeSet): PrimeSet {

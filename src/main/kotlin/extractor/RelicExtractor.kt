@@ -1,7 +1,7 @@
 package extractor
 
+import logging.LogMetadata
 import logging.Logger
-import model.domain.FileSource
 import model.raw.RawDrop
 import model.raw.RawRelic
 import org.jsoup.nodes.Document
@@ -11,7 +11,7 @@ class RelicExtractor {
 
     fun extract(document: Document): List<RawRelic> {
 
-        Logger.info(FileSource.RELICS.logName, "Extracting relics info...")
+        Logger.info("Extracting relics info...")
         val relics = mutableListOf<RawRelic>()
 
         var pendingHeader: Pair<String, String>? = null
@@ -44,7 +44,14 @@ class RelicExtractor {
             relics.add(RawRelic(name, era, dropsBuffer.toList()))
         }
 
-        Logger.info(FileSource.RELICS.logName, "Relics found: ${relics.size}")
+        Logger.info(
+            "Extraction completed", null, listOf(
+                LogMetadata(
+                    "Count",
+                    relics.size.toString()
+                )
+            )
+        )
         return relics
     }
 

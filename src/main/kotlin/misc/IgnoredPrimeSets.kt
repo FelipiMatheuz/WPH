@@ -1,5 +1,6 @@
 package misc
 
+import logging.LogMetadata
 import logging.Logger
 import manager.FileManager
 import model.domain.FileSource
@@ -10,10 +11,13 @@ object IgnoredPrimeSets {
 
     private val file = FileManager.configFile(FileSource.IGNORED)
     fun load(): Set<String> {
-        Logger.info(FileSource.IGNORED.logName, "Loading ignored prime sets list...")
+        Logger.info("Loading ignored prime sets list...", FileSource.IGNORED.logName)
         if (!file.exists()) {
             file.parentFile.mkdirs()
-            Logger.warn(FileSource.IGNORED.logName, "No JSON file found.")
+            Logger.warn(
+                "File ${FileSource.IGNORED.path} not found.",
+                listOf(LogMetadata("Path", file.path))
+            )
             return emptySet()
         }
 
@@ -39,7 +43,9 @@ object IgnoredPrimeSets {
         }
 
         if (newIgnoredLog.isNotEmpty()) {
-            Logger.info(FileSource.IGNORED.logName, "New set(s) ignored:\n$newIgnoredLog")
+            Logger.info(
+                "New set(s) ignored", FileSource.IGNORED.logName,
+                newIgnoredLog.map { LogMetadata("", it) })
         }
 
         return rawPrimeSets.mapNotNull { item ->

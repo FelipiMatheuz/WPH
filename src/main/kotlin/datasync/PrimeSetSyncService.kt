@@ -1,9 +1,12 @@
-package misc
+package datasync
 
 import extractor.PrimeSetDetailsExtractor
 import manager.FileManager
 import kotlinx.serialization.json.Json
+import logging.LogMetadata
 import logging.Logger
+import misc.IdGenerator
+import misc.IgnoredPrimeSets
 import model.domain.FileSource
 import model.domain.prime.PrimeSet
 import model.raw.PrimeSetSyncResult
@@ -15,11 +18,14 @@ class PrimeSetSyncService {
 
     fun sync(extracted: List<RawPrimeSet>): PrimeSetSyncResult {
 
-        Logger.info(FileSource.PRIME_SETS.logName, "Checking new prime sets...")
+        Logger.info("Checking new prime sets...")
         val output = FileManager.dataFile(FileSource.PRIME_SETS)
 
         val existing = if (!output.exists()) {
-            Logger.warn(FileSource.PRIME_SETS.logName, "No prime_sets.json file found.")
+            Logger.warn(
+                "File ${FileSource.PRIME_SETS.path} not found.",
+                listOf(LogMetadata("Path", output.path))
+            )
             listOf()
         } else {
             Json.decodeFromString<List<PrimeSet>>(output.readText())
@@ -35,6 +41,14 @@ class PrimeSetSyncService {
 
         val newPrimeSets = IgnoredPrimeSets.update(extractedWithDetails)
 
+        Logger.info(
+            "Synchronization finished", "Sync Service",
+            listOf(
+                LogMetadata("New", newPrimeSets.size.toString()),
+                LogMetadata("Existing", existing.size.toString()),
+                LogMetadata("Ignored", IgnoredPrimeSets.load().toString())
+            )
+        )
         return PrimeSetSyncResult(existing, newPrimeSets)
     }
 

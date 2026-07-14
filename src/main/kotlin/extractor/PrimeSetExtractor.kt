@@ -1,7 +1,7 @@
 package extractor
 
+import logging.LogMetadata
 import logging.Logger
-import model.domain.FileSource
 import model.domain.prime.PrimeType
 import model.raw.RawPrimeSet
 import org.jsoup.nodes.Document
@@ -11,11 +11,11 @@ class PrimeSetExtractor {
 
     fun extract(document: Document): List<RawPrimeSet> {
 
-        Logger.info(FileSource.PRIME_SETS.logName, "Extracting prime set catalog...")
+        Logger.info("Extracting prime set catalog...")
 
         val result = mutableListOf<RawPrimeSet>()
 
-        Logger.info(FileSource.PRIME_SETS.logName, "    PRIME CATALOG   ")
+        Logger.info("===PRIME CATALOG===")
 
         document.select("div.mw-heading3").forEach { heading ->
 
@@ -28,15 +28,15 @@ class PrimeSetExtractor {
             val type = PrimeType.fromWiki(title)
 
             if (type == null) {
-                Logger.info(FileSource.PRIME_SETS.logName, "Skipping unsupported category: $title")
+                Logger.info("Skipping unsupported category: $title")
                 return@forEach
             }
-            Logger.info(FileSource.PRIME_SETS.logName, "\nCategory: $type")
+            Logger.info("Category: $type")
 
             val gallery = heading.nextElementSibling()
 
             if (gallery == null || !gallery.hasClass("gallery")) {
-                Logger.warn(FileSource.PRIME_SETS.logName, "Gallery not found for $title")
+                Logger.warn("Gallery not found for $title")
                 return@forEach
             }
 
@@ -72,7 +72,7 @@ class PrimeSetExtractor {
                         }
                         ?: ""
 
-                    Logger.info(FileSource.PRIME_SETS.logName, "    └──> $name")
+                    Logger.info("    └──> $name")
 
                     result += RawPrimeSet(
                         name = name,
@@ -83,7 +83,14 @@ class PrimeSetExtractor {
                 }
         }
 
-        Logger.info(FileSource.PRIME_SETS.logName, "Prime Sets extracted: ${result.size}")
+        Logger.info(
+            "Prime sets extracted", null, listOf(
+                LogMetadata(
+                    "Count",
+                    result.size.toString()
+                )
+            )
+        )
         return result
     }
 }

@@ -1,5 +1,6 @@
 package remote
 
+import logging.LogMetadata
 import logging.Logger
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
@@ -11,7 +12,11 @@ class HtmlDownloader {
             .takeLastWhile { it != '/' }
             .replace("w ", "")
 
-        Logger.info("Downloader","Downloading HTML page \"$pageName\"...")
+        Logger.info(
+            "Downloading HTML page \"$pageName\"...", null,
+            listOf(LogMetadata("URL", url))
+        )
+
         return Jsoup
             .connect(url)
             .userAgent("prime-hunt-data")

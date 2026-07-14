@@ -1,7 +1,7 @@
 package consistency.rules
 
 import consistency.model.ConsistencyContext
-import consistency.model.ValidationError
+import logging.LogMetadata
 import logging.Logger
 import model.domain.FileSource
 import model.domain.prime.PrimePart
@@ -11,9 +11,9 @@ class FarmabilityRule : ConsistencyRule {
 
     override fun validate(
         context: ConsistencyContext
-    ): List<ValidationError> {
+    ): List<LogMetadata> {
 
-        Logger.info("CONSISTENCY", "Validating farm tracking for items...")
+        Logger.info("Validating farm tracking for items...")
 
         val relicDrops = context.relics
             .flatMap { relic -> relic.drops }
@@ -23,7 +23,7 @@ class FarmabilityRule : ConsistencyRule {
         val primeSets = context.primeSets
             .associateBy { it.id }
 
-        val errors = mutableListOf<ValidationError>()
+        val errors = mutableListOf<LogMetadata>()
 
         context.primeSets.forEach {
 
@@ -46,11 +46,11 @@ class FarmabilityRule : ConsistencyRule {
     fun validatePrimeSet(
         primeSetId: String,
         relicDrops: Set<String>,
-        errors: MutableList<ValidationError>
+        errors: MutableList<LogMetadata>
     ) {
         if (primeSetId !in relicDrops) {
-            errors += ValidationError(
-                source = FileSource.RELICS,
+            errors += LogMetadata(
+                key = FileSource.RELICS.logName,
                 message = "PrimeSet '${primeSetId}' blueprint cannot be obtained from any relic."
             )
         }
@@ -62,7 +62,7 @@ class FarmabilityRule : ConsistencyRule {
         relicDrops: Set<String>,
         visiting: MutableSet<String>,
         validated: MutableSet<String>,
-        errors: MutableList<ValidationError>
+        errors: MutableList<LogMetadata>
     ) {
 
         if (primeSet.id in validated)
@@ -70,8 +70,8 @@ class FarmabilityRule : ConsistencyRule {
 
         if (!visiting.add(primeSet.id)) {
 
-            errors += ValidationError(
-                source = FileSource.PRIME_SETS,
+            errors += LogMetadata(
+                key = FileSource.PRIME_SETS.logName,
                 message = "Circular dependency detected involving '${primeSet.id}'."
             )
 
@@ -88,8 +88,8 @@ class FarmabilityRule : ConsistencyRule {
 
                     if (dependency == null) {
 
-                        errors += ValidationError(
-                            source = FileSource.PRIME_SETS,
+                        errors += LogMetadata(
+                            key = FileSource.PRIME_SETS.logName,
                             message = "'${primeSet.id}' references missing PrimeSet '${component.id}'."
                         )
 
@@ -112,8 +112,8 @@ class FarmabilityRule : ConsistencyRule {
 
                     if (component.id !in relicDrops) {
 
-                        errors += ValidationError(
-                            source = FileSource.RELICS,
+                        errors += LogMetadata(
+                            key = FileSource.RELICS.logName,
                             message = "Component '${component.id}' required by '${primeSet.id}' cannot be obtained from any relic."
                         )
 

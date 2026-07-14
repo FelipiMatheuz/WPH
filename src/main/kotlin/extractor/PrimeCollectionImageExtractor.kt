@@ -1,16 +1,12 @@
 package extractor
 
 import logging.Logger
-import model.domain.FileSource
 import org.jsoup.nodes.Document
 
 class PrimeCollectionImageExtractor {
 
     fun extract(document: Document): String {
-        Logger.info(
-            FileSource.PRIME_COLLECTIONS.logName,
-            "Extracting URL image for new prime collection..."
-        )
+        Logger.info("Getting URL image for new prime collection...")
 
         val style = document
             .selectFirst("div.SectionBackground--masthead")
@@ -25,7 +21,7 @@ class PrimeCollectionImageExtractor {
         return if (urlImage != null) {
             urlImage
         } else {
-            Logger.warn(FileSource.PRIME_COLLECTIONS.logName, "Prime Access background not found")
+            Logger.warn("Prime Access background not found")
             ""
         }
     }

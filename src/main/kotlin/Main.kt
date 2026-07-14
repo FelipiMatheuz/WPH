@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
 
     val pipeline =
         PipelineRegistry.find(pipelineName)
-            ?: Logger.error("PIPELINE", "Unknown pipeline '$pipelineName'.")
+            ?: Logger.error("Unknown pipeline '$pipelineName'.")
 
     pipeline.run()
 }

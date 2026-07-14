@@ -1,7 +1,7 @@
 package consistency.rules
 
 import consistency.model.ConsistencyContext
-import consistency.model.ValidationError
+import logging.LogMetadata
 import logging.Logger
 import model.domain.FileSource
 import model.domain.prime.PrimePart
@@ -10,9 +10,9 @@ class PrimeSetComponentRule : ConsistencyRule {
 
     override fun validate(
         context: ConsistencyContext
-    ): List<ValidationError> {
+    ): List<LogMetadata> {
 
-        Logger.info("CONSISTENCY", "Validating prime set components...")
+        Logger.info("Validating prime set components...")
 
         val ids = context.primeSets
             .map { it.id }
@@ -29,8 +29,8 @@ class PrimeSetComponentRule : ConsistencyRule {
                         if (it.id !in ids) {
 
                             add(
-                                ValidationError(
-                                    FileSource.PRIME_SETS,
+                                LogMetadata(
+                                    FileSource.PRIME_SETS.logName,
                                     "${set.id} references missing PrimeSet '${it.id}'"
                                 )
                             )

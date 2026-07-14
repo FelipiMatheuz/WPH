@@ -1,7 +1,6 @@
 package extractor
 
 import logging.Logger
-import model.domain.FileSource
 import model.domain.prime.PrimeComponent
 import model.domain.prime.PrimePart
 import org.jsoup.nodes.Document
@@ -9,7 +8,7 @@ import org.jsoup.nodes.Element
 
 class PrimeSetDetailsExtractor(private val primeName: String) {
     fun extract(document: Document): List<PrimeComponent>? {
-        Logger.info(FileSource.PRIME_SETS.logName, "Getting more for $primeName...")
+        Logger.info("Getting more details for $primeName...")
         val table = document.selectFirst("table.foundrytable")
             ?: return null
 

@@ -1,7 +1,7 @@
 package consistency.rules
 
 import consistency.model.ConsistencyContext
-import consistency.model.ValidationError
+import logging.LogMetadata
 import logging.Logger
 import model.domain.FileSource
 import model.domain.prime.PrimePart
@@ -10,9 +10,9 @@ import kotlin.collections.forEach
 
 class PrimeSetRule : ConsistencyRule {
 
-    override fun validate(context: ConsistencyContext): List<ValidationError> {
+    override fun validate(context: ConsistencyContext): List<LogMetadata> {
 
-        Logger.info("CONSISTENCY", "Validating prime sets...")
+        Logger.info("Validating prime sets...")
 
         return buildList {
             val primeSets = context.primeSets
@@ -22,22 +22,22 @@ class PrimeSetRule : ConsistencyRule {
         }
     }
 
-    private fun validateNames(primeSets: List<PrimeSet>): List<ValidationError> {
+    private fun validateNames(primeSets: List<PrimeSet>): List<LogMetadata> {
 
-        val listErrors: MutableList<ValidationError> = mutableListOf()
+        val listErrors: MutableList<LogMetadata> = mutableListOf()
         primeSets.forEach {
             if (it.name.isBlank()) {
                 listErrors.add(
-                    ValidationError(
-                        FileSource.PRIME_SETS,
+                    LogMetadata(
+                        FileSource.PRIME_SETS.logName,
                         "PrimeSet '${it.id}' has empty name."
                     )
                 )
             }
             if (it.components.isEmpty()) {
                 listErrors.add(
-                    ValidationError(
-                        FileSource.PRIME_SETS,
+                    LogMetadata(
+                        FileSource.PRIME_SETS.logName,
                         "PrimeSet '${it.id}' has no components."
                     )
                 )
@@ -46,16 +46,16 @@ class PrimeSetRule : ConsistencyRule {
         return listErrors
     }
 
-    private fun validateComponents(primeSets: List<PrimeSet>): List<ValidationError> {
+    private fun validateComponents(primeSets: List<PrimeSet>): List<LogMetadata> {
 
-        val listErrors: MutableList<ValidationError> = mutableListOf()
+        val listErrors: MutableList<LogMetadata> = mutableListOf()
         primeSets.forEach { set ->
             set.components.forEach { component ->
 
                 if (component.quantity <= 0) {
                     listErrors.add(
-                        ValidationError(
-                            FileSource.PRIME_SETS,
+                        LogMetadata(
+                            FileSource.PRIME_SETS.logName,
                             "Component '${component.id}' of '${set.name}' has invalid quantity."
                         )
                     )
@@ -63,8 +63,8 @@ class PrimeSetRule : ConsistencyRule {
 
                 if (component.id.isBlank()) {
                     listErrors.add(
-                        ValidationError(
-                            FileSource.PRIME_SETS,
+                        LogMetadata(
+                            FileSource.PRIME_SETS.logName,
                             "PrimeSet '${set.name}' contains empty component id."
                         )
                     )
@@ -74,10 +74,10 @@ class PrimeSetRule : ConsistencyRule {
         return listErrors
     }
 
-    private fun validateReferences(primeSets: List<PrimeSet>): List<ValidationError> {
+    private fun validateReferences(primeSets: List<PrimeSet>): List<LogMetadata> {
 
         val ids = primeSets.map { it.id }.toSet()
-        val listErrors: MutableList<ValidationError> = mutableListOf()
+        val listErrors: MutableList<LogMetadata> = mutableListOf()
 
         primeSets.forEach { set ->
             set.components
@@ -85,8 +85,8 @@ class PrimeSetRule : ConsistencyRule {
                 .forEach {
                     if (it.id !in ids) {
                         listErrors.add(
-                            ValidationError(
-                                FileSource.PRIME_SETS,
+                            LogMetadata(
+                                FileSource.PRIME_SETS.logName,
                                 "PrimeSet '${set.name}' references unknown PrimeSet '${it.id}'."
                             )
                         )

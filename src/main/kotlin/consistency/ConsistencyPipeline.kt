@@ -10,13 +10,14 @@ class ConsistencyPipeline : Pipeline {
 
     override fun run() {
 
-        Logger.warn("PIPELINE", "===== Consistency Pipeline =====")
+        Logger.pipelineSection("Consistency")
 
         val context = loadContext()
 
         ConsistencyValidator().validate(context)
 
-        Logger.warn("PIPELINE", "Consistency validation completed.")
+        Logger.info("Validation completed")
+        Logger.pipelineSuccess()
 
     }
 

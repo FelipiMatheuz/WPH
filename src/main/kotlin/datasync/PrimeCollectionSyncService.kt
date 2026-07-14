@@ -1,22 +1,24 @@
-package misc
+package datasync
 
 import manager.FileManager
 import kotlinx.serialization.json.Json
+import logging.LogMetadata
 import logging.Logger
+import misc.IdGenerator
 import model.domain.FileSource
 import model.domain.prime.PrimeCollection
 import model.raw.RawPrimeCollection
 
 class PrimeCollectionSyncService {
 
-    fun collectionExists(extracted: RawPrimeCollection): Boolean {
+    fun isSynced(extracted: RawPrimeCollection): Boolean {
 
         val output = FileManager.dataFile(FileSource.PRIME_COLLECTIONS)
 
         if (!output.exists()) {
             Logger.warn(
-                FileSource.PRIME_COLLECTIONS.logName,
-                "prime_collections.json file does not exists."
+                "File ${FileSource.PRIME_COLLECTIONS.path} not found.",
+                listOf(LogMetadata("Path", output.path))
             )
             return false
         }

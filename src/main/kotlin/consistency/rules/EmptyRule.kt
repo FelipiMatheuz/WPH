@@ -1,14 +1,14 @@
 package consistency.rules
 
 import consistency.model.ConsistencyContext
-import consistency.model.ValidationError
+import logging.LogMetadata
 import logging.Logger
 import model.domain.FileSource
 
 class EmptyRule : ConsistencyRule {
-    override fun validate(context: ConsistencyContext): List<ValidationError> {
+    override fun validate(context: ConsistencyContext): List<LogMetadata> {
 
-        Logger.info("CONSISTENCY", "Validating empty files...")
+        Logger.info("Validating empty files...")
 
         return buildList {
             validateEmpty(
@@ -31,11 +31,11 @@ class EmptyRule : ConsistencyRule {
     private inline fun <reified T> validateEmpty(
         source: FileSource,
         list: List<T>
-    ): ValidationError? {
+    ): LogMetadata? {
         return if (list.isEmpty()) {
-            ValidationError(
-                source,
-                "$source file is empty."
+            LogMetadata(
+                source.logName,
+                "${source.path} file is empty."
             )
         } else {
             null

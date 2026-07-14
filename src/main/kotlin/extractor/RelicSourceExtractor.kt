@@ -1,15 +1,15 @@
 package extractor
 
+import logging.LogMetadata
 import logging.Logger
 import model.domain.relic.AcquisitionSource
 import model.raw.RawRelicSource
 import misc.IdGenerator
-import model.domain.FileSource
 import org.jsoup.nodes.Document
 
 class RelicSourceExtractor {
     fun extract(voidDocument: Document, resurgenceDocument: Document): List<RawRelicSource> {
-        Logger.info(FileSource.RELICS.logName, "Extracting list of relics sources...")
+        Logger.info("Extracting list of relics sources...")
         return buildList {
 
             addAll(
@@ -48,17 +48,22 @@ class RelicSourceExtractor {
                 it.selectFirst("caption")
                     ?.text()
                     ?.startsWith(caption) == true
-            } ?: Logger.error(
-            FileSource.RELICS.logName,
-            "No ${source.name.lowercase()} table found"
-        )
+            } ?: Logger.error("No ${source.name.lowercase()} table found")
 
         val relicRegex = Regex("^(Lith|Meso|Neo|Axi)\\s+[A-Z][0-9]+$")
 
         val relicList = table.select("a")
             .map { it.text() }
             .filter { relicRegex.matches(it) }
-        Logger.info(FileSource.RELICS.logName, "$caption: ${relicList.size}")
+
+        Logger.info(
+            "$caption extracted", null, listOf(
+                LogMetadata(
+                    "Count",
+                    relicList.size.toString()
+                )
+            )
+        )
         return relicList.map { RawRelicSource(IdGenerator.generateId(it), source) }
     }
 
@@ -67,10 +72,10 @@ class RelicSourceExtractor {
             .select("tr")
             .firstOrNull {
                 it.selectFirst("div.posTextIcon") != null
-            } ?: Logger.error(FileSource.RELICS.logName, "No active Resurgence found")
+            } ?: Logger.error("No active Resurgence found")
 
         val table = activeRow.selectFirst("table[data-tableid=CollectedRelics]")
-            ?: Logger.error(FileSource.RELICS.logName, "CollectedRelics table not found")
+            ?: Logger.error("No Varzia Resurgence Relics table found")
 
         val relicList = table
             .select("tr[data-rowid]")
@@ -86,7 +91,15 @@ class RelicSourceExtractor {
                     source = AcquisitionSource.RESURGENCE
                 )
             }
-        Logger.info(FileSource.RELICS.logName, "Varzia Resurgence Relics: ${relicList.size}")
+
+        Logger.info(
+            "Varzia Resurgence Relics extracted", null, listOf(
+                LogMetadata(
+                    "Count",
+                    relicList.size.toString()
+                )
+            )
+        )
         return relicList
     }
 }

@@ -1,11 +1,10 @@
 package pipeline
 
-import manager.FileManager
 import extractor.PrimeCollectionExtractor
 import extractor.PrimeCollectionImageExtractor
 import logging.Logger
-import misc.PrimeCollectionSyncService
-import model.domain.FileSource
+import manager.FileManager
+import datasync.PrimeCollectionSyncService
 import normalizer.PrimeCollectionNormalizer
 import remote.DataSources
 import remote.HtmlDownloader
@@ -18,16 +17,13 @@ class PrimeCollectionPipeline(
     private val normalizer: PrimeCollectionNormalizer = PrimeCollectionNormalizer()
 ) : Pipeline {
     override fun run() {
-        Logger.warn("PIPELINE", "===== Prime Collections Pipeline =====")
+        Logger.pipelineSection("Prime collections")
         val collectionDocument = downloader.download(DataSources.PRIME_COLLECTION)
         val currentCollection = extractor.extract(collectionDocument)
 
-        if (syncer.collectionExists(currentCollection)) {
-            Logger.info(
-                FileSource.PRIME_COLLECTIONS.logName,
-                "Prime Collections are already up to date."
-            )
-            Logger.warn("PIPELINE", "Pipeline finished successfully.")
+        if (syncer.isSynced(currentCollection)) {
+            Logger.info("Prime Collections are already up to date.")
+            Logger.pipelineSuccess()
             return
         }
 
@@ -37,6 +33,6 @@ class PrimeCollectionPipeline(
         val primeCollections = normalizer.normalize(currentCollection, promoImage)
 
         FileManager.exportPrimeCollections(primeCollections)
-        Logger.warn("PIPELINE", "Pipeline finished successfully.")
+        Logger.pipelineSuccess()
     }
 }

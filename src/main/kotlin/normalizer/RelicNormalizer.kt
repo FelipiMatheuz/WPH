@@ -2,7 +2,6 @@ package normalizer
 
 import logging.Logger
 import misc.IdGenerator
-import model.domain.FileSource
 import model.domain.relic.AcquisitionSource
 import model.domain.relic.Drop
 import model.domain.relic.Relic
@@ -16,9 +15,9 @@ class RelicNormalizer {
         rawRelicSource: List<RawRelicSource>
     ): List<Relic> {
 
-        Logger.info(FileSource.RELICS.logName, "Normalizing collected data...")
+        Logger.info("Normalizing collected data...")
         val sourceMap = rawRelicSource.associateBy { it.relicId }
-        return relics.map { raw ->
+        val normalizedRelics = relics.map { raw ->
 
             val id = IdGenerator.generateId("${raw.era} ${raw.name}")
             val source = sourceMap[id]?.source ?: AcquisitionSource.VAULT
@@ -36,7 +35,8 @@ class RelicNormalizer {
                 }
             )
         }
-
+        Logger.info("Normalized ${normalizedRelics.size} relic(s) successfully")
+        return normalizedRelics
     }
 
 }

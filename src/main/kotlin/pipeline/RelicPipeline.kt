@@ -15,7 +15,7 @@ class RelicPipeline(
     private val normalizer: RelicNormalizer = RelicNormalizer()
 ) : Pipeline {
     override fun run() {
-        Logger.warn("PIPELINE", "===== Relics Pipeline =====")
+        Logger.pipelineSection("Relics")
         val dropTableDocument = downloader.download(DataSources.DROP_TABLE)
         val rawRelics = extractor.extract(dropTableDocument)
 
@@ -26,6 +26,6 @@ class RelicPipeline(
         val relics = normalizer.normalize(rawRelics, rawRelicSource)
 
         FileManager.exportRelics(relics)
-        Logger.warn("PIPELINE", "Pipeline finished successfully.")
+        Logger.pipelineSuccess()
     }
 }

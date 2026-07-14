@@ -2,6 +2,7 @@ package normalizer
 
 import manager.FileManager
 import kotlinx.serialization.json.Json
+import logging.LogMetadata
 import logging.Logger
 import misc.IdGenerator
 import model.domain.FileSource
@@ -12,7 +13,7 @@ class PrimeCollectionNormalizer {
 
     fun normalize(raw: RawPrimeCollection, imageUrl: String): List<PrimeCollection> {
 
-        Logger.info(FileSource.PRIME_COLLECTIONS.logName, "Normalizing collected data...")
+        Logger.info("Normalizing collected data...")
         val output = FileManager.dataFile(FileSource.PRIME_COLLECTIONS)
         val collections =
             if (output.exists()) {
@@ -24,8 +25,10 @@ class PrimeCollectionNormalizer {
             }
         collections.add(normalizeCollection(raw, imageUrl))
         Logger.info(
-            FileSource.PRIME_COLLECTIONS.logName,
-            "New number of collections: ${collections.size}"
+            "Added a new collection!", null,
+            listOf(
+                LogMetadata("Number of prime collections", collections.size.toString())
+            )
         )
         return collections.sortedByDescending { it.released }
     }

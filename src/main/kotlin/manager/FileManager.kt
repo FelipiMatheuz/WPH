@@ -1,6 +1,7 @@
 package manager
 
 import kotlinx.serialization.json.Json
+import logging.LogMetadata
 import logging.Logger
 import misc.sha256
 import model.domain.FileSource
@@ -20,20 +21,27 @@ object FileManager {
     fun configFile(source: FileSource) = File(configDir, source.path)
 
     inline fun <reified T> load(source: FileSource): T {
+        Logger.info("Loading ${source.path}...")
         val file = dataFile(source)
-        if (!file.exists()) Logger.error(source.logName, "${file.absolutePath} file is missing")
+        if (!file.exists()) Logger.error("${file.absolutePath} file is missing", source.logName)
         return Json.decodeFromString(file.readText())
     }
 
     private inline fun <reified T> save(source: FileSource, data: T) {
 
-        Logger.info(source.logName, "Exporting ${source.path}...")
         val text = json.encodeToString(data)
-
         val file = dataFile(source)
+        Logger.info(
+            "Exporting ${source.path}...", null,
+            listOf(
+                LogMetadata("path", file.absolutePath),
+                LogMetadata("size", "${text.length / 1024} KB")
+            )
+        )
+
         file.parentFile.mkdirs()
         file.writeText(text)
-        Logger.info(source.logName, "${source.path} exported successfully")
+        Logger.info("${source.path} exported successfully")
     }
 
     fun exportRelics(data: List<Relic>) {

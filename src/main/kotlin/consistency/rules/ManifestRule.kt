@@ -1,7 +1,7 @@
 package consistency.rules
 
 import consistency.model.ConsistencyContext
-import consistency.model.ValidationError
+import logging.LogMetadata
 import logging.Logger
 import model.domain.FileSource
 
@@ -9,9 +9,9 @@ class ManifestRule : ConsistencyRule {
 
     override fun validate(
         context: ConsistencyContext
-    ): List<ValidationError> {
+    ): List<LogMetadata> {
 
-        Logger.info("CONSISTENCY", "Validating manifest file logs...")
+        Logger.info("Validating manifest file logs...")
 
         val expected = FileSource.entries.map { it.path }
             .filter { it != FileSource.MANIFEST.path && it.contains(".json") }
@@ -25,8 +25,8 @@ class ManifestRule : ConsistencyRule {
             .minus(files)
             .map {
 
-                ValidationError(
-                    FileSource.MANIFEST,
+                LogMetadata(
+                    FileSource.MANIFEST.logName,
                     "$it missing from manifest."
                 )
 
