@@ -13,9 +13,7 @@
 >
 > Prime Tracker Data continuously extracts, normalizes, validates and publishes structured JSON datasets that power the **Prime Tracker** ecosystem.
 
-# 🚀 Overview
-
----
+## 🚀 Overview
 
 Prime Tracker Data is an open-source ETL (Extract, Transform, Load) project that automates the creation and maintenance of a structured Warframe Prime database.
 
@@ -23,9 +21,7 @@ Instead of manually maintaining hundreds of JSON entries, the project continuous
 
 The generated database is completely independent and can be consumed by mobile applications, websites, dashboards or community tools.
 
-# 🎯 Vision
-
----
+## 🎯 Vision
 
 Prime Tracker Data is more than a JSON generator.
 
@@ -35,9 +31,7 @@ The project follows a simple philosophy:
 
 > **Extract once. Validate everything. Publish reliable data.**
 
-# ✨ Features
-
----
+## ✨ Features
 
 - 🔄 Fully automated ETL workflow
 - 📦 Structured domain models
@@ -50,9 +44,7 @@ The project follows a simple philosophy:
 - 🧩 Modular pipeline architecture
 - 📄 Production-ready JSON database
 
-# 🏗️ Architecture
-
----
+## 🏗️ Architecture
 
 ```
                  Official Sources
@@ -87,9 +79,7 @@ The project follows a simple philosophy:
 
 Each pipeline is isolated and responsible for a single domain, making the project easier to maintain, extend and test independently.
 
----
-
-# 📂 Project Structure
+## 📂 Project Structure
 
 - `src/main/kotlin`:
     - `pipeline/`: Core logic for data processing tasks.
@@ -99,14 +89,9 @@ Each pipeline is isolated and responsible for a single domain, making the projec
     - `consistency/`: Database integrity validation rules.
 - `data/`: Generated JSON database files (Relics, Prime Sets, Collections).
 
+## 🔄 ETL Pipelines
 
----
-
-# 🔄 ETL Pipelines
-
----
-
-## 📋 Relics Pipeline
+### 📋 Relics Pipeline
 
 Responsible for extracting and generating the complete Void Relic database.
 
@@ -118,7 +103,9 @@ Features:
 - Duplicate prevention
 - Incremental updates
 
-## 📋 Prime Sets Pipeline
+---
+
+### 📋 Prime Sets Pipeline
 
 Builds the complete Prime catalog.
 
@@ -130,7 +117,9 @@ Features:
 - Image discovery
 - Metadata generation
 
-## 📋 Prime Collections Pipeline
+---
+
+### 📋 Prime Collections Pipeline
 
 Tracks Prime Access history.
 
@@ -141,7 +130,9 @@ Features:
 - Promotional artwork extraction
 - Collection generation
 
-## 📋 Manifest Pipeline
+---
+
+### 📋 Manifest Pipeline
 
 Generates metadata consumed by client applications.
 
@@ -152,7 +143,9 @@ Includes:
 - File hashes
 - Download metadata
 
-## ✅ Consistency Pipeline
+---
+
+### ✅ Consistency Pipeline
 
 One of the project's core components.
 
@@ -167,9 +160,7 @@ Current rules include:
 
 This guarantees that every published JSON file is coherent with every other database.
 
-# 🤖 Automation Workflow
-
----
+## 🤖 Automation Workflow
 
 The entire ETL is executed automatically through GitHub Actions.
 
@@ -215,9 +206,7 @@ Benefits:
 - Daily scheduled updates
 - Manual execution support
 
-# 📈 Observability
-
----
+## 📈 Observability
 
 Prime Hunt Data includes a lightweight observability layer designed specifically for ETL execution.
 
@@ -241,9 +230,7 @@ Whenever applicable, log entries also include quantitative metadata such as:
 
 This makes workflow execution easier to inspect locally while also producing clean logs inside GitHub Actions.
 
-# 🛠️ Technology Stack
-
----
+## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |------------|---------|
@@ -254,9 +241,7 @@ This makes workflow execution easier to inspect locally while also producing cle
 | Kotlin Serialization | JSON serialization |
 | GitHub Actions | CI/CD automation |
 
-# ▶️ Running Locally
-
----
+## ▶️ Running Locally
 
 Prerequisites:
 
@@ -277,7 +262,7 @@ Run an individual pipeline:
 ./gradlew consistency
 ```
 
-# 📊 Generated Data
+## 📊 Generated Data
 
 The generated JSON files are published inside the `data/` directory.
 
@@ -290,9 +275,7 @@ Current datasets include:
 
 All datasets are generated automatically and validated before publication.
 
-# 🧠 Design Principles
-
----
+## 🧠 Design Principles
 
 The project follows a few core engineering principles:
 
@@ -307,9 +290,7 @@ The project follows a few core engineering principles:
 
 Whenever possible, business rules are inferred directly from source data instead of manually maintained configuration files.
 
-# 🤝 Contributing
-
----
+## 🤝 Contributing
 
 Contributions are always welcome.
 
@@ -324,22 +305,16 @@ Bug reports, discussions and architectural suggestions are also appreciated.
 
 # 📜 License
 
----
-
 This project is licensed under the **GNU General Public License v3.0 (GPL-3.0)**.
 
 See the [LICENSE](LICENSE) file for more information.
 
 ## ⭐ Support the Project
 
----
-
 If this project helps you or inspires your own work, consider giving it a **star** on GitHub.
 
 It helps increase the project's visibility and supports future development.
 
 ## 📢 Contact
-
----
 
 Email: cyberman.studios@gmail.com
