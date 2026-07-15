@@ -46,10 +46,7 @@ class RelicExtractor {
 
         Logger.info(
             "Extraction completed", null, listOf(
-                LogMetadata(
-                    "Count",
-                    relics.size.toString()
-                )
+                LogMetadata("count", relics.size.toString())
             )
         )
         return relics

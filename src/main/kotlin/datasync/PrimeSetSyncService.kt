@@ -23,7 +23,7 @@ class PrimeSetSyncService {
         val existing = if (!output.exists()) {
             Logger.warn(
                 "File ${FileSource.PRIME_SETS.path} not found.",
-                listOf(LogMetadata("Path", output.path))
+                listOf(LogMetadata("path", output.path))
             )
             listOf()
         } else {
@@ -39,8 +39,8 @@ class PrimeSetSyncService {
         Logger.info(
             "Synchronization finished", "Sync Service",
             listOf(
-                LogMetadata("Existing", existing.size.toString()),
-                LogMetadata("New", extractedWithDetails.size.toString())
+                LogMetadata("existing", existing.size.toString()),
+                LogMetadata("new", extractedWithDetails.size.toString())
             )
         )
         return PrimeSetSyncResult(existing, extractedWithDetails)

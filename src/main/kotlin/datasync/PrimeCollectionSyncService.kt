@@ -18,7 +18,7 @@ class PrimeCollectionSyncService {
         if (!output.exists()) {
             Logger.warn(
                 "File ${FileSource.PRIME_COLLECTIONS.path} not found.",
-                listOf(LogMetadata("Path", output.path))
+                listOf(LogMetadata("path", output.path))
             )
             return false
         }

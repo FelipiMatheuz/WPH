@@ -58,10 +58,7 @@ class RelicSourceExtractor {
 
         Logger.info(
             "$caption extracted", null, listOf(
-                LogMetadata(
-                    "Count",
-                    relicList.size.toString()
-                )
+                LogMetadata("count", relicList.size.toString())
             )
         )
         return relicList.map { RawRelicSource(IdGenerator.generateId(it), source) }
@@ -94,10 +91,7 @@ class RelicSourceExtractor {
 
         Logger.info(
             "Varzia Resurgence Relics extracted", null, listOf(
-                LogMetadata(
-                    "Count",
-                    relicList.size.toString()
-                )
+                LogMetadata("count", relicList.size.toString())
             )
         )
         return relicList

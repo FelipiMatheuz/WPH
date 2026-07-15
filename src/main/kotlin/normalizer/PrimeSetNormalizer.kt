@@ -15,7 +15,7 @@ class PrimeSetNormalizer {
         val normalizedPrimeSets = rawPrimeSets.map(::normalize)
         Logger.info(
             "Added ${normalizedPrimeSets.size} prime set(s)!", null,
-            normalizedPrimeSets.map { LogMetadata("New ${it.type}", it.name) }
+            normalizedPrimeSets.map { LogMetadata("new ${it.type}", it.name) }
         )
         return normalizedPrimeSets
     }

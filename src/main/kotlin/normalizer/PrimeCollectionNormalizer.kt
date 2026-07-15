@@ -27,7 +27,7 @@ class PrimeCollectionNormalizer {
         Logger.info(
             "Added a new collection!", null,
             listOf(
-                LogMetadata("Number of prime collections", collections.size.toString())
+                LogMetadata("prime collections count", collections.size.toString())
             )
         )
         return collections.sortedByDescending { it.released }

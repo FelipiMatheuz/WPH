@@ -76,7 +76,7 @@ class PrimeCollectionExtractor {
         )
         Logger.info(
             warframeName, "Current prime collection extracted",
-            listOf(LogMetadata("Release Date", released.toString()))
+            listOf(LogMetadata("release date", released.toString()))
         )
 
         return collection

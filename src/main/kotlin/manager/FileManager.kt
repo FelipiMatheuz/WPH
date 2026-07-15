@@ -12,6 +12,7 @@ import model.raw.Manifest
 import model.raw.ManifestFile
 import java.io.File
 import java.time.Instant
+import java.util.Locale
 
 object FileManager {
     private val json = Json { prettyPrint = true; encodeDefaults = true; ignoreUnknownKeys = true }
@@ -33,7 +34,7 @@ object FileManager {
             "Exporting ${source.path}...", null,
             listOf(
                 LogMetadata("path", file.absolutePath),
-                LogMetadata("size", "${text.length / 1024} KB")
+                LogMetadata("size", fileSize(text.length))
             )
         )
 
@@ -85,5 +86,16 @@ object FileManager {
         )
 
         save(FileSource.MANIFEST, manifest)
+    }
+}
+
+private fun fileSize(size: Int): String {
+    val k = 1024.0
+    val m = 1048576.0
+
+    return when {
+        size >= m -> String.format(Locale.US, "%.2f MB", size / m)
+        size >= k -> String.format(Locale.US, "%.2f KB", size / k)
+        else -> "$size B"
     }
 }

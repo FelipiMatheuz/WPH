@@ -101,8 +101,8 @@ class PrimeSetExtractor {
         Logger.info(
             "Prime sets extracted", null,
             listOf(
-                LogMetadata("Count", result.size.toString()),
-                LogMetadata("Skipped", skippedCount.toString())
+                LogMetadata("count", result.size.toString()),
+                LogMetadata("skipped", skippedCount.toString())
             )
         )
 
