@@ -18,9 +18,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: 21
@@ -38,7 +38,7 @@ jobs:
           cp data/relics.json workspace/data/
 
       - name: Upload Workspace
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: relics
           path: workspace/
@@ -50,9 +50,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: 21
@@ -70,7 +70,7 @@ jobs:
           cp data/prime-sets.json workspace/data/
 
       - name: Upload Workspace
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: prime_sets
           path: workspace/
@@ -82,9 +82,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: 21
@@ -102,7 +102,7 @@ jobs:
           cp data/prime-collections.json workspace/data/
 
       - name: Upload Workspace
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: prime_collections
           path: workspace/
@@ -120,9 +120,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: 21
@@ -131,17 +131,17 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x gradlew
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: relics
           path: artifacts/relics
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: prime_sets
           path: artifacts/prime_sets
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: prime_collections
           path: artifacts/prime_collections
@@ -163,7 +163,7 @@ jobs:
           cp data/manifest.json workspace/data/
 
       - name: Upload Workspace
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: manifest
           path: workspace/
@@ -179,9 +179,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v6
         with:
           distribution: temurin
           java-version: 21
@@ -190,22 +190,22 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x gradlew
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: relics
           path: artifacts/relics
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: prime_sets
           path: artifacts/prime_sets
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: prime_collections
           path: artifacts/prime_collections
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: manifest
           path: artifacts/manifest
@@ -228,7 +228,7 @@ jobs:
           cp -r data workspace/
 
       - name: Upload Validated Database
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: validated_database
           path: workspace/
@@ -247,9 +247,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v6
         with:
           name: validated_database
           path: .
