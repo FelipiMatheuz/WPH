@@ -18,7 +18,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-java@v5
         with:
@@ -50,7 +52,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-java@v5
         with:
@@ -82,7 +86,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-java@v5
         with:
@@ -120,7 +126,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-java@v5
         with:
@@ -131,20 +139,10 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x gradlew
 
-      - uses: actions/download-artifact@v6
+      - name: Download previous generated artifacts
+        uses: actions/download-artifact@v8
         with:
-          name: relics
-          path: artifacts/relics
-
-      - uses: actions/download-artifact@v6
-        with:
-          name: prime_sets
-          path: artifacts/prime_sets
-
-      - uses: actions/download-artifact@v6
-        with:
-          name: prime_collections
-          path: artifacts/prime_collections
+          path: artifacts
 
       - name: Assemble Workspace
         run: |
@@ -179,7 +177,9 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
+        with:
+          ref: main
 
       - uses: actions/setup-java@v5
         with:
@@ -190,28 +190,14 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x gradlew
 
-      - uses: actions/download-artifact@v6
+      - name: Download all artifacts
+        uses: actions/download-artifact@v8
         with:
-          name: relics
-          path: artifacts/relics
-
-      - uses: actions/download-artifact@v6
-        with:
-          name: prime_sets
-          path: artifacts/prime_sets
-
-      - uses: actions/download-artifact@v6
-        with:
-          name: prime_collections
-          path: artifacts/prime_collections
-
-      - uses: actions/download-artifact@v6
-        with:
-          name: manifest
-          path: artifacts/manifest
+          path: artifacts
 
       - name: Assemble Workspace
         run: |
+          rm -rf data
           mkdir -p data
 
           cp artifacts/relics/data/* data/
@@ -221,17 +207,6 @@ jobs:
 
       - name: Execute Consistency Pipeline
         run: ./gradlew consistency
-
-      - name: Prepare Workspace
-        run: |
-          mkdir -p workspace
-          cp -r data workspace/
-
-      - name: Upload Validated Database
-        uses: actions/upload-artifact@v6
-        with:
-          name: validated_database
-          path: workspace/
 
   commit:
 
@@ -247,12 +222,24 @@ jobs:
 
     steps:
 
-      - uses: actions/checkout@v6
-
-      - uses: actions/download-artifact@v6
+      - uses: actions/checkout@v7
         with:
-          name: validated_database
-          path: .
+          ref: main
+
+      - name: Download all artifacts
+        uses: actions/download-artifact@v8
+        with:
+          path: artifacts
+
+      - name: Assemble Workspace
+        run: |
+          rm -rf data
+          mkdir -p data
+
+          cp artifacts/relics/data/* data/
+          cp artifacts/prime_sets/data/* data/
+          cp artifacts/prime_collections/data/* data/
+          cp artifacts/manifest/data/* data/
 
       - name: Debug
         run: |
@@ -265,7 +252,6 @@ jobs:
 
       - name: Commit Changes
         run: |
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
