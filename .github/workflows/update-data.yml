@@ -207,6 +207,16 @@ jobs:
           name: validated_database
           path: .
 
+      - name: Move Artifacts
+        run: |
+
+          mkdir -p data
+
+          mv relics.json data/
+          mv prime-sets.json data/
+          mv prime-collections.json data/
+          mv manifest.json data/
+
       - name: Commit Changes
         run: |
 
@@ -214,16 +224,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add data
-          
-      - name: Debug
-        run: |
-          git status
-          git diff
-
-          if git diff --cached --quiet; then
-            echo "No changes."
-            exit 0
-          fi
 
           git commit -m "chore(data): update generated database"
 
