@@ -19,7 +19,15 @@ jobs:
 
     steps:
 
-      - uses: ./.github/actions/setup-gradle
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - run: chmod +x gradlew
 
       - name: Execute Relics Pipeline
         run: ./gradlew relics
@@ -39,7 +47,15 @@ jobs:
 
     steps:
 
-      - uses: ./.github/actions/setup-gradle
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - run: chmod +x gradlew
 
       - name: Execute Prime Sets Pipeline
         run: ./gradlew prime_sets
@@ -59,7 +75,15 @@ jobs:
 
     steps:
 
-      - uses: ./.github/actions/setup-gradle
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - run: chmod +x gradlew
 
       - name: Execute Prime Collections Pipeline
         run: ./gradlew prime_collections
@@ -84,7 +108,15 @@ jobs:
 
     steps:
 
-      - uses: ./.github/actions/setup-gradle
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - run: chmod +x gradlew
 
       - name: Download generated artifacts
         uses: actions/download-artifact@v8
@@ -121,7 +153,15 @@ jobs:
 
     steps:
 
-      - uses: ./.github/actions/setup-gradle
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - run: chmod +x gradlew
 
       - name: Download generated artifacts
         uses: actions/download-artifact@v8
