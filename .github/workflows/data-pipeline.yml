@@ -1,0 +1,191 @@
+name: Data Pipeline
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+
+  relics:
+
+    name: Update Relics
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: ./.github/actions/setup-gradle
+
+      - name: Execute Relics Pipeline
+        run: ./gradlew relics
+
+      - name: Upload Relics
+        uses: actions/upload-artifact@v6
+        with:
+          name: relics
+          path: data/relics.json
+          if-no-files-found: error
+
+  prime_sets:
+
+    name: Update Prime Sets
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: ./.github/actions/setup-gradle
+
+      - name: Execute Prime Sets Pipeline
+        run: ./gradlew prime_sets
+
+      - name: Upload Prime Sets
+        uses: actions/upload-artifact@v6
+        with:
+          name: prime_sets
+          path: data/prime-sets.json
+          if-no-files-found: error
+
+  prime_collections:
+
+    name: Update Prime Collections
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: ./.github/actions/setup-gradle
+
+      - name: Execute Prime Collections Pipeline
+        run: ./gradlew prime_collections
+
+      - name: Upload Prime Collections
+        uses: actions/upload-artifact@v6
+        with:
+          name: prime_collections
+          path: data/prime-collections.json
+          if-no-files-found: error
+
+  manifest:
+
+    name: Update Manifest
+
+    needs:
+      - relics
+      - prime_sets
+      - prime_collections
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: ./.github/actions/setup-gradle
+
+      - name: Download generated artifacts
+        uses: actions/download-artifact@v8
+        with:
+          path: artifacts
+
+      - name: Assemble Workspace
+        run: |
+          rm -rf data
+          mkdir data
+
+          cp artifacts/relics/* data/
+          cp artifacts/prime_sets/* data/
+          cp artifacts/prime_collections/* data/
+
+      - name: Execute Manifest Pipeline
+        run: ./gradlew manifest
+
+      - name: Upload Manifest
+        uses: actions/upload-artifact@v6
+        with:
+          name: manifest
+          path: data/manifest.json
+          if-no-files-found: error
+
+  consistency:
+
+    name: Validate Database
+
+    needs:
+      - manifest
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: ./.github/actions/setup-gradle
+
+      - name: Download generated artifacts
+        uses: actions/download-artifact@v8
+        with:
+          path: artifacts
+
+      - name: Assemble Workspace
+        run: |
+          rm -rf data
+          mkdir data
+
+          cp artifacts/*/* data/
+
+      - name: Execute Consistency Pipeline
+        run: ./gradlew consistency
+
+  commit:
+
+    name: Publish Database
+
+    needs:
+      - consistency
+
+    permissions:
+      contents: write
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v7
+
+      - name: Download generated artifacts
+        uses: actions/download-artifact@v8
+        with:
+          path: artifacts
+
+      - name: Assemble Workspace
+        run: |
+          rm -rf data
+          mkdir data
+
+          cp artifacts/*/* data/
+
+      - name: Show Git Status
+        run: |
+          echo "=== Git Status ==="
+          git status
+
+          echo ""
+          echo "=== Generated Files ==="
+          find data -type f | sort
+
+      - name: Commit Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data
+
+          if git diff --cached --quiet; then
+            echo "No changes detected."
+            exit 0
+          fi
+
+          git commit -m "chore(data): update generated database"
+          git push
