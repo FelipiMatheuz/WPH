@@ -214,6 +214,11 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add data
+          
+          - name: Debug
+            run: |
+            git status
+            git diff
 
           if git diff --cached --quiet; then
             echo "No changes."
