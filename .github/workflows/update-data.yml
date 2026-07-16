@@ -215,10 +215,10 @@ jobs:
 
           git add data
           
-          - name: Debug
-            run: |
-            git status
-            git diff
+      - name: Debug
+        run: |
+          git status
+          git diff
 
           if git diff --cached --quiet; then
             echo "No changes."
