@@ -61,7 +61,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: prime_sets
-          path: data/prime_sets.json
+          path: data/prime-sets.json
 
   prime_collections:
 
@@ -87,7 +87,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: prime_collections
-          path: data/prime_collections.json
+          path: data/prime-collections.json
 
   manifest:
 
