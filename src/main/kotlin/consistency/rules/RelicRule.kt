@@ -10,11 +10,6 @@ class RelicRule : ConsistencyRule {
 
         Logger.info("Validating relic list...")
 
-        val validRarities = setOf(
-            "Common",
-            "Uncommon",
-            "Rare"
-        )
         val relics = context.relics
         val errors: MutableList<LogMetadata> = mutableListOf()
 
@@ -30,16 +25,6 @@ class RelicRule : ConsistencyRule {
                         )
                     )
                 }
-
-                if (drop.rarity !in validRarities) {
-                    errors.add(
-                        LogMetadata(
-                            FileSource.RELICS.logName,
-                            "Invalid rarity '${drop.rarity}' in relic '${relic.id}'."
-                        )
-                    )
-                }
-
             }
 
         }

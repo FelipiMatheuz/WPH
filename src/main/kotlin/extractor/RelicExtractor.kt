@@ -2,6 +2,7 @@ package extractor
 
 import logging.LogMetadata
 import logging.Logger
+import model.domain.relic.Rarity
 import model.raw.RawDrop
 import model.raw.RawRelic
 import org.jsoup.nodes.Document
@@ -96,14 +97,24 @@ class RelicExtractor {
 
         val fullName = cells[0].text()
 
-        val rarity = cells[1]
+        val namedRarity = cells[1]
             .text()
             .substringBefore(" (")
+
+        val percentageRarity = cells[1]
+            .text()
+            .substringAfter("(").replace(")","")
+
+        val rarity = Rarity.fromTable(namedRarity, percentageRarity)
 
         val itemName = fullName
             .replace("Blueprint", "")
             .replace("Kubrow Collar", "")
             .trim()
+
+        if (rarity == null) {
+            Logger.error("Rarity $rarity unsupported for $itemName")
+        }
 
         return RawDrop(
             itemName = itemName,
