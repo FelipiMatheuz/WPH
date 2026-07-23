@@ -28,7 +28,7 @@ class RelicExtractor {
                     dropsBuffer.clear()
                     val header = row.selectFirst("th")!!.text()
                     pendingHeader =
-                        if (header.endsWith("(Intact)") && !header.contains("Requiem")) {
+                        if (header.endsWith("(Intact)") && !header.contains("Requiem") && !header.contains("Vanguard")) {
                             val raw = parseHeader(row)
                             raw.era to raw.name
                         } else null
@@ -86,7 +86,7 @@ class RelicExtractor {
 
         return RawRelic(
             name = parts[1],
-            era = parts[0],
+            era = parts[0].uppercase(),
             drops = listOf()
         )
     }
