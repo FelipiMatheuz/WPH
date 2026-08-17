@@ -19,7 +19,7 @@ class PrimeSetDetailsExtractor(private val primeName: String) {
             .mapNotNull(::parseComponent)
             .groupBy { it.part to it.id }
             .map { (_, components) ->
-                components.first().copy(quantity = components.size)
+                components.first().copy(quantity = components.sumOf { it.quantity })
             }
     }
 
@@ -33,12 +33,17 @@ class PrimeSetDetailsExtractor(private val primeName: String) {
         if (!name.contains("Prime"))
             return null
 
+        val quantity = td.ownText()
+            .trim()
+            .replace(",", "")
+            .toIntOrNull() ?: 1
+
         val value = name.removePrefix("Prime ").trim()
 
-        return parsePrimeValue(value)
+        return parsePrimeValue(value, quantity)
     }
 
-    private fun parsePrimeValue(value: String): PrimeComponent {
+    private fun parsePrimeValue(value: String, quantity: Int): PrimeComponent {
 
         val normalized = value
             .uppercase()
@@ -51,13 +56,13 @@ class PrimeSetDetailsExtractor(private val primeName: String) {
             PrimeComponent(
                 id = normalizePrimeSetId("$primeName $value"),
                 part = primePart,
-                quantity = 1
+                quantity = quantity
             )
         } else {
             PrimeComponent(
                 id = normalizePrimeSetId(value),
                 part = PrimePart.PRIME_SET,
-                quantity = 1
+                quantity = quantity
             )
         }
     }

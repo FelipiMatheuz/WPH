@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-08-17T01:17:22.049889817Z",
+    "generatedAt": "2026-08-17T12:42:58.750231800Z",
     "generatorVersion": "1.0.0",
     "files": [
         {
@@ -10,12 +10,12 @@
         {
             "name": "prime-sets.json",
             "size": 98516,
-            "sha256": "155e57011089e42fdbd79b974a8c54eabf96803bbc0d6da1aeceb9b86111dbb3"
+            "sha256": "69952162e0639d601f06ef7f4ab14e4a2b7fe05e94c7f04d4e5b8a5c1fb4a836"
         },
         {
             "name": "relics.json",
-            "size": 593509,
-            "sha256": "451840bedefd1dcef9eea152aa544bac1921d419e24f4e6732e6955c0052a746"
+            "size": 617926,
+            "sha256": "40497f6c935d835d782bc1d36eca292a268e05252c0c4f3eae782e533d2a4c0e"
         }
     ]
 }
