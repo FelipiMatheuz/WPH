@@ -99,7 +99,7 @@
         "id": "axi_a12",
         "name": "A12",
         "era": "AXI",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "akbolto_prime_receiver",
@@ -963,7 +963,7 @@
         "id": "axi_b9",
         "name": "B9",
         "era": "AXI",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "baruuk_prime",
@@ -1315,7 +1315,7 @@
         "id": "axi_c9",
         "name": "C9",
         "era": "AXI",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "cobra_and_crane_prime_guard",
@@ -2307,7 +2307,7 @@
         "id": "axi_h5",
         "name": "H5",
         "era": "AXI",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "helios_prime_cerebrum",
@@ -6499,7 +6499,7 @@
         "id": "lith_a9",
         "name": "A9",
         "era": "LITH",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "afuris_prime_receiver",
@@ -8739,7 +8739,7 @@
         "id": "lith_k5",
         "name": "K5",
         "era": "LITH",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "kogake_prime_gauntlet",
@@ -9347,7 +9347,7 @@
         "id": "lith_m7",
         "name": "M7",
         "era": "LITH",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "mirage_prime",
@@ -11427,7 +11427,7 @@
         "id": "lith_t13",
         "name": "T13",
         "era": "LITH",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "tatsu_prime_handle",
@@ -13827,7 +13827,7 @@
         "id": "meso_e5",
         "name": "E5",
         "era": "MESO",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "euphona_prime_receiver",
@@ -16739,7 +16739,7 @@
         "id": "meso_r6",
         "name": "R6",
         "era": "MESO",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "revenant_prime",
@@ -19107,7 +19107,7 @@
         "id": "neo_b6",
         "name": "B6",
         "era": "NEO",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "banshee_prime_chassis",
@@ -22339,7 +22339,7 @@
         "id": "neo_p8",
         "name": "P8",
         "era": "NEO",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "phantasma_prime_barrel",
