@@ -1,5 +1,58 @@
 [
   {
+    "imgLink": "https://www-static.warframe.com/uploads/b48e84d751e6fb9fc957fb63f97135a7.jpg",
+    "status": "ACTIVE",
+    "released": 20260923,
+    "setName": "Citrine",
+    "primeItems": [
+      {
+        "name": "Citrine",
+        "type": "WARFRAME",
+        "components": [
+          {
+            "part": "NEUROPTICS"
+          },
+          {
+            "part": "CHASSIS"
+          },
+          {
+            "part": "SYSTEMS"
+          }
+        ]
+      },
+      {
+        "name": "Steflos",
+        "type": "PRIMARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "STOCK"
+          }
+        ]
+      },
+      {
+        "name": "Corufell",
+        "type": "SECONDARY",
+        "components": [
+          {
+            "part": "BARREL"
+          },
+          {
+            "part": "RECEIVER"
+          },
+          {
+            "part": "HANDLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "imgLink": "https://www-static.warframe.com/uploads/48421377826cf2022df220e9bca363b8.png",
     "status": "ACTIVE",
     "released": 20260617,
