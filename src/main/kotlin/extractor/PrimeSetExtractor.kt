@@ -62,12 +62,21 @@ class PrimeSetExtractor {
                         return@forEach
                     }
 
+                    val name = (galleryText.selectFirst(".tooltip")?.attr("data-param-name")
+                        ?: galleryText.select("a").firstOrNull { it.text().isNotBlank() }?.text()
+                        ?: galleryText.select("a").firstOrNull()?.attr("title")
+                        ?: "")
+                        .replace("/", " ")
+                        .replace("Collar", "")
+                        .trim()
+
+                    if (name.isEmpty()) return@forEach
+
                     val link = galleryText
                         .select("a")
-                        .first()
+                        .firstOrNull { it.attr("href").contains("/Prime") }
+                        ?: galleryText.select("a").first()
                         ?: return@forEach
-
-                    val name = link.attr("title").replace("/", " ").replace("Collar", "").trim()
 
                     val pageUrl = link.attr("href").let {
                         if (it.startsWith("http"))
@@ -114,16 +123,20 @@ class PrimeSetExtractor {
     ): Boolean {
 
         return galleryText
-            .select(".hover-over")
-            .any { it.attr("title") in NON_RELIC_MARKERS }
+            .select(".hover-over, .tooltip, a")
+            .any {
+                it.attr("title") in NON_RELIC_MARKERS ||
+                        it.attr("data-param-name") in NON_RELIC_MARKERS
+            }
 
     }
 
     private companion object {
-
         val NON_RELIC_MARKERS = setOf(
             "Founder-exclusive Prime",
-            "Primes with a special source of acquisition"
+            "Primes with a special source of acquisition",
+            "Founders"
         )
     }
+
 }
