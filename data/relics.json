@@ -480,6 +480,38 @@
         ]
     },
     {
+        "id": "axi_a23",
+        "name": "A23",
+        "era": "AXI",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "aksomati_prime_link",
+                "rarity": "RARE"
+            },
+            {
+                "id": "protea_prime_neuroptics",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "burston_prime_barrel",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "burston_prime_stock",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "velox_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "axi_a3",
         "name": "A3",
         "era": "AXI",
@@ -731,6 +763,38 @@
             },
             {
                 "id": "fang_prime_blade",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "axi_b10",
+        "name": "B10",
+        "era": "AXI",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "ballistica_prime",
+                "rarity": "RARE"
+            },
+            {
+                "id": "epitaph_prime_barrel",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "sevagoth_prime_systems",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "nautilus_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "burston_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
                 "rarity": "COMMON"
             }
         ]
@@ -1083,6 +1147,38 @@
             },
             {
                 "id": "braton_prime_barrel",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "axi_c12",
+        "name": "C12",
+        "era": "AXI",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "citrine_prime_neuroptics",
+                "rarity": "RARE"
+            },
+            {
+                "id": "kestrel_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "corufell_prime_handle",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "vadarya_prime_stock",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "daikyu_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "alternox_prime_receiver",
                 "rarity": "COMMON"
             }
         ]
@@ -3456,6 +3552,38 @@
         ]
     },
     {
+        "id": "axi_n14",
+        "name": "N14",
+        "era": "AXI",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "nami_skyla_prime_blade",
+                "rarity": "RARE"
+            },
+            {
+                "id": "nautilus_prime_carapace",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "ballistica_prime_upper_limb",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "hydroid_prime_chassis",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "bronco_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "axi_n2",
         "name": "N2",
         "era": "AXI",
@@ -4739,7 +4867,7 @@
         "id": "axi_s20",
         "name": "S20",
         "era": "AXI",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "sarofang_prime_blade",
@@ -4763,6 +4891,38 @@
             },
             {
                 "id": "dual_zoren_prime_handle",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "axi_s21",
+        "name": "S21",
+        "era": "AXI",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "steflos_prime_barrel",
+                "rarity": "RARE"
+            },
+            {
+                "id": "2x_forma",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "gyre_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "caliban_prime_chassis",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "dual_zoren_prime_handle",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "cedo_prime_stock",
                 "rarity": "COMMON"
             }
         ]
@@ -5123,7 +5283,7 @@
         "id": "axi_t13",
         "name": "T13",
         "era": "AXI",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "trumna_prime_barrel",
@@ -6243,7 +6403,7 @@
         "id": "lith_a12",
         "name": "A12",
         "era": "LITH",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "alternox_prime",
@@ -6267,6 +6427,38 @@
             },
             {
                 "id": "akbronco_prime",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "lith_a13",
+        "name": "A13",
+        "era": "LITH",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "alternox_prime",
+                "rarity": "RARE"
+            },
+            {
+                "id": "gyre_prime_chassis",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "dual_zoren_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "steflos_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "paris_prime_lower_limb",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "fang_prime_blade",
                 "rarity": "COMMON"
             }
         ]
@@ -6619,6 +6811,38 @@
             },
             {
                 "id": "lex_prime",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "lith_b12",
+        "name": "B12",
+        "era": "LITH",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "baza_prime_stock",
+                "rarity": "RARE"
+            },
+            {
+                "id": "ivara_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "velox_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "aksomati_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "braton_prime_barrel",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
                 "rarity": "COMMON"
             }
         ]
@@ -7067,6 +7291,38 @@
             },
             {
                 "id": "forma",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "lith_c15",
+        "name": "C15",
+        "era": "LITH",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "cedo_prime",
+                "rarity": "RARE"
+            },
+            {
+                "id": "yareli_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "2x_forma",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "corufell_prime_stock",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "burston_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "daikyu_prime_string",
                 "rarity": "COMMON"
             }
         ]
@@ -8611,7 +8867,7 @@
         "id": "lith_k12",
         "name": "K12",
         "era": "LITH",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "kompressa_prime_barrel",
@@ -9115,6 +9371,38 @@
             },
             {
                 "id": "okina_prime_blade",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "lith_l8",
+        "name": "L8",
+        "era": "LITH",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "lavos_prime_systems",
+                "rarity": "RARE"
+            },
+            {
+                "id": "akbronco_prime_link",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "alternox_prime_barrel",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "kestrel_prime_blade",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "perigale_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "orthos_prime_handle",
                 "rarity": "COMMON"
             }
         ]
@@ -10531,7 +10819,7 @@
         "id": "lith_q3",
         "name": "Q3",
         "era": "LITH",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "quassus_prime_blade",
@@ -11040,6 +11328,38 @@
         ]
     },
     {
+        "id": "lith_s19",
+        "name": "S19",
+        "era": "LITH",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "sarofang_prime_blade",
+                "rarity": "RARE"
+            },
+            {
+                "id": "orthos_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "citrine_prime_systems",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "braton_prime_barrel",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "bronco_prime_receiver",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "lith_s2",
         "name": "S2",
         "era": "LITH",
@@ -11068,6 +11388,38 @@
             {
                 "id": "kavasa_prime_band",
                 "rarity": "UNCOMMON"
+            }
+        ]
+    },
+    {
+        "id": "lith_s20",
+        "name": "S20",
+        "era": "LITH",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "sevagoth_prime",
+                "rarity": "RARE"
+            },
+            {
+                "id": "hydroid_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "bronco_prime_barrel",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "ballistica_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "burston_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
             }
         ]
     },
@@ -11459,7 +11811,7 @@
         "id": "lith_t14",
         "name": "T14",
         "era": "LITH",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "trumna_prime_barrel",
@@ -13184,6 +13536,38 @@
         ]
     },
     {
+        "id": "meso_c11",
+        "name": "C11",
+        "era": "MESO",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "citrine_prime",
+                "rarity": "RARE"
+            },
+            {
+                "id": "daikyu_prime_upper_limb",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "2x_forma",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "lavos_prime_chassis",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "paris_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "kompressa_prime",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "meso_c2",
         "name": "C2",
         "era": "MESO",
@@ -13696,6 +14080,38 @@
         ]
     },
     {
+        "id": "meso_d9",
+        "name": "D9",
+        "era": "MESO",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "dual_zoren_prime_blade",
+                "rarity": "RARE"
+            },
+            {
+                "id": "steflos_prime_stock",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "cedo_prime_receiver",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "afentis_prime_handle",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "burston_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "paris_prime_upper_limb",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "meso_e1",
         "name": "E1",
         "era": "MESO",
@@ -13915,6 +14331,38 @@
             },
             {
                 "id": "cedo_prime_stock",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "meso_e8",
+        "name": "E8",
+        "era": "MESO",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "epitaph_prime_receiver",
+                "rarity": "RARE"
+            },
+            {
+                "id": "ballistica_prime_lower_limb",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "hydroid_prime_neuroptics",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "sevagoth_prime_neuroptics",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "bronco_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
                 "rarity": "COMMON"
             }
         ]
@@ -14720,6 +15168,38 @@
         ]
     },
     {
+        "id": "meso_i3",
+        "name": "I3",
+        "era": "MESO",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "ivara_prime_chassis",
+                "rarity": "RARE"
+            },
+            {
+                "id": "baza_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "protea_prime_systems",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "aksomati_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "burston_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "meso_k1",
         "name": "K1",
         "era": "MESO",
@@ -14947,7 +15427,7 @@
         "id": "meso_k8",
         "name": "K8",
         "era": "MESO",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "kestrel_prime_grip",
@@ -14971,6 +15451,38 @@
             },
             {
                 "id": "lex_prime_barrel",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "meso_k9",
+        "name": "K9",
+        "era": "MESO",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "kestrel_prime_grip",
+                "rarity": "RARE"
+            },
+            {
+                "id": "caliban_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "perigale_prime_receiver",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "athodai_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "fang_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "yareli_prime_chassis",
                 "rarity": "COMMON"
             }
         ]
@@ -15107,7 +15619,7 @@
         "id": "meso_l5",
         "name": "L5",
         "era": "MESO",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "lavos_prime_systems",
@@ -17699,7 +18211,7 @@
         "id": "meso_v15",
         "name": "V15",
         "era": "MESO",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "vadarya_prime",
@@ -17723,6 +18235,70 @@
             },
             {
                 "id": "venato_prime_handle",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "meso_v16",
+        "name": "V16",
+        "era": "MESO",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "velox_prime_barrel",
+                "rarity": "RARE"
+            },
+            {
+                "id": "ivara_prime_systems",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "okina_prime_handle",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "baza_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "burston_prime_stock",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "meso_v17",
+        "name": "V17",
+        "era": "MESO",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "voruna_prime_systems",
+                "rarity": "RARE"
+            },
+            {
+                "id": "paris_prime_grip",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "lavos_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "corufell_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "akbronco_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
                 "rarity": "COMMON"
             }
         ]
@@ -18147,7 +18723,7 @@
         "id": "meso_x1",
         "name": "X1",
         "era": "MESO",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "xaku_prime",
@@ -19264,6 +19840,70 @@
         ]
     },
     {
+        "id": "neo_c10",
+        "name": "C10",
+        "era": "NEO",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "corufell_prime_receiver",
+                "rarity": "RARE"
+            },
+            {
+                "id": "styanax_prime_systems",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "afentis_prime_barrel",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "caliban_prime_chassis",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "braton_prime_stock",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "neo_c11",
+        "name": "C11",
+        "era": "NEO",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "caliban_prime_systems",
+                "rarity": "RARE"
+            },
+            {
+                "id": "cedo_prime_barrel",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "vadarya_prime_receiver",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "citrine_prime_chassis",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "lex_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "daikyu_prime",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "neo_c2",
         "name": "C2",
         "era": "NEO",
@@ -19459,7 +20099,7 @@
         "id": "neo_c8",
         "name": "C8",
         "era": "NEO",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "caliban_prime_systems",
@@ -19491,7 +20131,7 @@
         "id": "neo_c9",
         "name": "C9",
         "era": "NEO",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "cedo_prime",
@@ -20512,6 +21152,38 @@
         ]
     },
     {
+        "id": "neo_h5",
+        "name": "H5",
+        "era": "NEO",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "hydroid_prime_systems",
+                "rarity": "RARE"
+            },
+            {
+                "id": "sevagoth_prime_chassis",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "nautilus_prime_systems",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "burston_prime_stock",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "nami_skyla_prime_handle",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "neo_i1",
         "name": "I1",
         "era": "NEO",
@@ -20635,6 +21307,38 @@
             },
             {
                 "id": "euphona_prime",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "neo_k10",
+        "name": "K10",
+        "era": "NEO",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "kompressa_prime_barrel",
+                "rarity": "RARE"
+            },
+            {
+                "id": "venato_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "daikyu_prime_lower_limb",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "bronco_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "gyre_systems",
                 "rarity": "COMMON"
             }
         ]
@@ -21760,6 +22464,38 @@
         ]
     },
     {
+        "id": "neo_n25",
+        "name": "N25",
+        "era": "NEO",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "nautilus_prime_cerebrum",
+                "rarity": "RARE"
+            },
+            {
+                "id": "nami_skyla_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "burston_prime_barrel",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "epitaph_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "ballistica_prime_string",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "neo_n3",
         "name": "N3",
         "era": "NEO",
@@ -22080,6 +22816,38 @@
         ]
     },
     {
+        "id": "neo_o4",
+        "name": "O4",
+        "era": "NEO",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "okina_prime",
+                "rarity": "RARE"
+            },
+            {
+                "id": "baza_prime_barrel",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "braton_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "ivara_prime_neuroptics",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "protea_prime",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "neo_p1",
         "name": "P1",
         "era": "NEO",
@@ -22139,6 +22907,38 @@
             },
             {
                 "id": "burston_prime",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "neo_p11",
+        "name": "P11",
+        "era": "NEO",
+        "source": "VAULT",
+        "drops": [
+            {
+                "id": "protea_prime_chassis",
+                "rarity": "RARE"
+            },
+            {
+                "id": "aksomati_prime_barrel",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "braton_prime_receiver",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "okina_prime_blade",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "burston_prime_receiver",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
                 "rarity": "COMMON"
             }
         ]
@@ -23267,7 +24067,7 @@
         "id": "neo_t11",
         "name": "T11",
         "era": "NEO",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "trumna_prime_receiver",
@@ -23651,7 +24451,7 @@
         "id": "neo_v12",
         "name": "V12",
         "era": "NEO",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "voruna_prime_systems",
@@ -23675,6 +24475,38 @@
             },
             {
                 "id": "yareli_prime_chassis",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "neo_v13",
+        "name": "V13",
+        "era": "NEO",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "vadarya_prime",
+                "rarity": "RARE"
+            },
+            {
+                "id": "lavos_prime_neuroptics",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "2x_forma",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "paris_prime_string",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "sarofang_prime_handle",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "styanax_prime",
                 "rarity": "COMMON"
             }
         ]
@@ -24035,7 +24867,7 @@
         "id": "neo_y1",
         "name": "Y1",
         "era": "NEO",
-        "source": "MISSION",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "yareli_prime_systems",
@@ -24059,6 +24891,38 @@
             },
             {
                 "id": "trumna_prime",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
+        "id": "neo_y2",
+        "name": "Y2",
+        "era": "NEO",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "yareli_prime_systems",
+                "rarity": "RARE"
+            },
+            {
+                "id": "steflos_prime",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "2x_forma",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "burston_prime_stock",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "venato_prime_handle",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "lex_prime",
                 "rarity": "COMMON"
             }
         ]
