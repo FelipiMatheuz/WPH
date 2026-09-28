@@ -15459,7 +15459,7 @@
         "id": "meso_k9",
         "name": "K9",
         "era": "MESO",
-        "source": "VAULT",
+        "source": "MISSION",
         "drops": [
             {
                 "id": "kestrel_prime_grip",
@@ -21338,7 +21338,7 @@
                 "rarity": "COMMON"
             },
             {
-                "id": "gyre_systems",
+                "id": "gyre_prime_systems",
                 "rarity": "COMMON"
             }
         ]

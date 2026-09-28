@@ -729,6 +729,29 @@
         ]
     },
     {
+        "id": "citrine_prime",
+        "name": "Citrine Prime",
+        "type": "WARFRAME",
+        "image": "https://wiki.warframe.com/images/thumb/CitrinePrime_Thumb.png/115px-CitrinePrime_Thumb.png?bd6e5",
+        "components": [
+            {
+                "id": "citrine_prime_neuroptics",
+                "part": "NEUROPTICS",
+                "quantity": 1
+            },
+            {
+                "id": "citrine_prime_chassis",
+                "part": "CHASSIS",
+                "quantity": 1
+            },
+            {
+                "id": "citrine_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
         "id": "cobra_and_crane_prime",
         "name": "Cobra & Crane Prime",
         "type": "MELEE",
@@ -770,6 +793,29 @@
             {
                 "id": "corinth_prime_stock",
                 "part": "STOCK",
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": "corufell_prime",
+        "name": "Corufell Prime",
+        "type": "MELEE",
+        "image": "https://wiki.warframe.com/images/thumb/CorufellPrime.png/115px-CorufellPrime.png?4bbbc",
+        "components": [
+            {
+                "id": "corufell_prime_stock",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "corufell_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "corufell_prime_handle",
+                "part": "HANDLE",
                 "quantity": 1
             }
         ]
@@ -2130,6 +2176,29 @@
         ]
     },
     {
+        "id": "odonata_prime",
+        "name": "Odonata Prime",
+        "type": "ARCHWING",
+        "image": "https://wiki.warframe.com/images/thumb/OdonataPrime.png/115px-OdonataPrime.png?7b651",
+        "components": [
+            {
+                "id": "odonata_prime_harness",
+                "part": "HARNESS",
+                "quantity": 1
+            },
+            {
+                "id": "odonata_prime_systems",
+                "part": "SYSTEMS",
+                "quantity": 1
+            },
+            {
+                "id": "odonata_prime_wings",
+                "part": "WINGS",
+                "quantity": 1
+            }
+        ]
+    },
+    {
         "id": "okina_prime",
         "name": "Okina Prime",
         "type": "MELEE",
@@ -2669,6 +2738,29 @@
                 "id": "spira_prime_blade",
                 "part": "BLADE",
                 "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": "steflos_prime",
+        "name": "Steflos Prime",
+        "type": "PRIMARY",
+        "image": "https://wiki.warframe.com/images/thumb/SteflosPrime.png/115px-SteflosPrime.png?02487",
+        "components": [
+            {
+                "id": "steflos_prime_barrel",
+                "part": "BARREL",
+                "quantity": 1
+            },
+            {
+                "id": "steflos_prime_receiver",
+                "part": "RECEIVER",
+                "quantity": 1
+            },
+            {
+                "id": "steflos_prime_stock",
+                "part": "STOCK",
+                "quantity": 1
             }
         ]
     },
@@ -3382,29 +3474,6 @@
             {
                 "id": "zylok_prime_receiver",
                 "part": "RECEIVER",
-                "quantity": 1
-            }
-        ]
-    },
-    {
-        "id": "odonata_prime",
-        "name": "Odonata Prime",
-        "type": "ARCHWING",
-        "image": "https://wiki.warframe.com/images/thumb/OdonataPrime.png/115px-OdonataPrime.png?7b651",
-        "components": [
-            {
-                "id": "odonata_prime_harness",
-                "part": "HARNESS",
-                "quantity": 1
-            },
-            {
-                "id": "odonata_prime_systems",
-                "part": "SYSTEMS",
-                "quantity": 1
-            },
-            {
-                "id": "odonata_prime_wings",
-                "part": "WINGS",
                 "quantity": 1
             }
         ]

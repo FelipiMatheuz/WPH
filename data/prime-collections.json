@@ -1,5 +1,16 @@
 [
     {
+        "id": "citrine_collection",
+        "name": "Citrine",
+        "promoImage": "https://www-static.warframe.com/images/prime-access/citrine/pa-poster.png",
+        "released": 20260923,
+        "primeSets": [
+            "citrine_prime",
+            "corufell_prime",
+            "steflos_prime"
+        ]
+    },
+    {
         "id": "styanax_collection",
         "name": "Styanax",
         "promoImage": "https://www-static.warframe.com/uploads/48421377826cf2022df220e9bca363b8.png",
