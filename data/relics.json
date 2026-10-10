@@ -778,19 +778,19 @@
                 "rarity": "RARE"
             },
             {
-                "id": "epitaph_prime_barrel",
+                "id": "nami_skyla_prime_handle",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "sevagoth_prime_systems",
+                "id": "burston_prime_barrel",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "nautilus_prime",
+                "id": "nautilus_prime_carapace",
                 "rarity": "COMMON"
             },
             {
-                "id": "burston_prime",
+                "id": "burston_prime_stock",
                 "rarity": "COMMON"
             },
             {
@@ -3558,15 +3558,15 @@
         "source": "VAULT",
         "drops": [
             {
-                "id": "nami_skyla_prime_blade",
+                "id": "nautilus_prime_cerebrum",
                 "rarity": "RARE"
             },
             {
-                "id": "nautilus_prime_carapace",
+                "id": "nami_skyla_prime_blade",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "ballistica_prime_upper_limb",
+                "id": "bronco_prime_barrel",
                 "rarity": "UNCOMMON"
             },
             {
@@ -11398,23 +11398,23 @@
         "source": "VAULT",
         "drops": [
             {
-                "id": "sevagoth_prime",
+                "id": "sevagoth_prime_chassis",
                 "rarity": "RARE"
             },
             {
-                "id": "hydroid_prime",
+                "id": "sevagoth_prime",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "bronco_prime_barrel",
+                "id": "epitaph_prime_barrel",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "ballistica_prime_receiver",
+                "id": "ballistica_prime_lower_limb",
                 "rarity": "COMMON"
             },
             {
-                "id": "burston_prime_receiver",
+                "id": "bronco_prime_receiver",
                 "rarity": "COMMON"
             },
             {
@@ -14346,11 +14346,11 @@
                 "rarity": "RARE"
             },
             {
-                "id": "ballistica_prime_lower_limb",
+                "id": "nautilus_prime_systems",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "hydroid_prime_neuroptics",
+                "id": "hydroid_prime",
                 "rarity": "UNCOMMON"
             },
             {
@@ -14358,7 +14358,7 @@
                 "rarity": "COMMON"
             },
             {
-                "id": "bronco_prime_receiver",
+                "id": "nami_skyla_prime",
                 "rarity": "COMMON"
             },
             {
@@ -21162,19 +21162,19 @@
                 "rarity": "RARE"
             },
             {
-                "id": "sevagoth_prime_chassis",
+                "id": "ballistica_prime_string",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "nautilus_prime_systems",
+                "id": "ballistica_prime_upper_limb",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "burston_prime_stock",
+                "id": "epitaph_prime",
                 "rarity": "COMMON"
             },
             {
-                "id": "nami_skyla_prime_handle",
+                "id": "burston_prime_receiver",
                 "rarity": "COMMON"
             },
             {
@@ -22470,23 +22470,23 @@
         "source": "VAULT",
         "drops": [
             {
-                "id": "nautilus_prime_cerebrum",
+                "id": "nautilus_prime",
                 "rarity": "RARE"
             },
             {
-                "id": "nami_skyla_prime",
+                "id": "hydroid_prime_neuroptics",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "burston_prime_barrel",
+                "id": "ballistica_prime_receiver",
                 "rarity": "UNCOMMON"
             },
             {
-                "id": "epitaph_prime",
+                "id": "sevagoth_prime_systems",
                 "rarity": "COMMON"
             },
             {
-                "id": "ballistica_prime_string",
+                "id": "burston_prime",
                 "rarity": "COMMON"
             },
             {
