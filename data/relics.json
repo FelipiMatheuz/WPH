@@ -1184,6 +1184,38 @@
         ]
     },
     {
+        "id": "axi_c13",
+        "name": "C13",
+        "era": "AXI",
+        "source": "MISSION",
+        "drops": [
+            {
+                "id": "caliban_prime_neuroptics",
+                "rarity": "RARE"
+            },
+            {
+                "id": "voruna_prime_chassis",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "braton_prime_receiver",
+                "rarity": "UNCOMMON"
+            },
+            {
+                "id": "sarofang_prime_handle",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "forma",
+                "rarity": "COMMON"
+            },
+            {
+                "id": "bronco_prime_barrel",
+                "rarity": "COMMON"
+            }
+        ]
+    },
+    {
         "id": "axi_c2",
         "name": "C2",
         "era": "AXI",
