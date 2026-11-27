@@ -771,7 +771,7 @@
         "id": "axi_b10",
         "name": "B10",
         "era": "AXI",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "ballistica_prime",
@@ -3523,7 +3523,7 @@
         "id": "axi_n12",
         "name": "N12",
         "era": "AXI",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "nidus_prime_chassis",
@@ -3587,7 +3587,7 @@
         "id": "axi_n14",
         "name": "N14",
         "era": "AXI",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "nautilus_prime_cerebrum",
@@ -11299,7 +11299,7 @@
         "id": "lith_s17",
         "name": "S17",
         "era": "LITH",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "saryn_prime_chassis",
@@ -11427,7 +11427,7 @@
         "id": "lith_s20",
         "name": "S20",
         "era": "LITH",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "sevagoth_prime_chassis",
@@ -14371,7 +14371,7 @@
         "id": "meso_e8",
         "name": "E8",
         "era": "MESO",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "epitaph_prime_receiver",
@@ -15811,7 +15811,7 @@
         "id": "meso_m5",
         "name": "M5",
         "era": "MESO",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "magnus_prime_barrel",
@@ -17507,7 +17507,7 @@
         "id": "meso_s15",
         "name": "S15",
         "era": "MESO",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "spira_prime_pouch",
@@ -21187,7 +21187,7 @@
         "id": "neo_h5",
         "name": "H5",
         "era": "NEO",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "hydroid_prime_systems",
@@ -22275,7 +22275,7 @@
         "id": "neo_n19",
         "name": "N19",
         "era": "NEO",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "nikana_prime_hilt",
@@ -22499,7 +22499,7 @@
         "id": "neo_n25",
         "name": "N25",
         "era": "NEO",
-        "source": "VAULT",
+        "source": "RESURGENCE",
         "drops": [
             {
                 "id": "nautilus_prime",
@@ -23747,7 +23747,7 @@
         "id": "neo_s19",
         "name": "S19",
         "era": "NEO",
-        "source": "RESURGENCE",
+        "source": "VAULT",
         "drops": [
             {
                 "id": "strun_prime",

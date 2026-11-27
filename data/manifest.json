@@ -1,5 +1,5 @@
 {
-    "generatedAt": "2026-11-26T07:09:01.149003287Z",
+    "generatedAt": "2026-11-27T07:02:59.934235848Z",
     "generatorVersion": "1.0.0",
     "files": [
         {
@@ -15,7 +15,7 @@
         {
             "name": "relics.json",
             "size": 615353,
-            "sha256": "f5266fda784dca0da271db40c4c13114aa390fd18d603ab8c62242bc0ecec7b0"
+            "sha256": "4043ff554740fa817fbfdf50a517b27140b4a4fc80df93cbfb8f2a321b54d794"
         }
     ]
 }
